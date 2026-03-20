@@ -217,7 +217,6 @@ namespace Mem0
                 }
             }
         }
-
         /// <summary>
         /// Perform a semantic search on memories.
         /// </summary>

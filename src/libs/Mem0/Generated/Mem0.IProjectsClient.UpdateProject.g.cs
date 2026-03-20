@@ -19,7 +19,6 @@ namespace Mem0
 
             global::Mem0.UpdateProjectRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Update Project<br/>
         /// Update a specific project's settings.

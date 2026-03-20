@@ -14,7 +14,6 @@ namespace Mem0
 
             global::Mem0.SubmitFeedbackRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Submit feedback for a memory.
         /// </summary>

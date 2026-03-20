@@ -16,7 +16,6 @@ namespace Mem0
 
             global::Mem0.MemoriesUpdateRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Get or Update or delete a memory.
         /// </summary>

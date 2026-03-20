@@ -14,7 +14,6 @@ namespace Mem0
 
             global::Mem0.MemorySearchInputV2 request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Search memories based on a query and filters.
         /// </summary>

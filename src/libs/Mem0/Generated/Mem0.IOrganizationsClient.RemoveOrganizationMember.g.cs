@@ -16,7 +16,6 @@ namespace Mem0
 
             global::Mem0.RemoveOrganizationMemberRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Remove a member from the organization
         /// </summary>

@@ -179,7 +179,6 @@ namespace Mem0
                 }
             }
         }
-
         /// <summary>
         /// Search memories based on a query and filters.
         /// </summary>

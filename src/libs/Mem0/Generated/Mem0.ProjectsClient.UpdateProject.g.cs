@@ -230,7 +230,6 @@ namespace Mem0
                 }
             }
         }
-
         /// <summary>
         /// Update Project<br/>
         /// Update a specific project's settings.

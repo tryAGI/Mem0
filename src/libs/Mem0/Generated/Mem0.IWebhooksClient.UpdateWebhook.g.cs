@@ -17,7 +17,6 @@ namespace Mem0
 
             global::Mem0.UpdateWebhookRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Update Webhook<br/>
         /// Update an existing webhook
