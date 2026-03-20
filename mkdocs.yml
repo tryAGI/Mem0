@@ -2,6 +2,9 @@ site_name: Mem0 .NET Documentation
 nav:
 - Overview: index.md
 # EXAMPLES:START
+- Examples:
+  - Search Memories: examples/search-memories.md
+  - Add Memory: examples/add-memory.md
 # EXAMPLES:END
         
 theme:
