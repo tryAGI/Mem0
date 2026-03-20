@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+set -euo pipefail
+readonly openapi_url="https://raw.githubusercontent.com/mem0ai/mem0/main/docs/openapi.json"
+dotnet tool update --global autosdk.cli --prerelease || dotnet tool install --global autosdk.cli --prerelease
+rm -rf Generated
+curl --fail --silent --show-error --location "$openapi_url" -o openapi.json
+
+# Mem0 spec uses apiKey in Authorization header with "Token " prefix.
+# Convert to http/bearer for AutoSDK constructor generation.
+# Add top-level security array.
+jq '
+  .components.securitySchemes.ApiKeyAuth = {
+    "type": "http",
+    "scheme": "bearer"
+  } |
+  .security = [{"ApiKeyAuth": []}]
+' openapi.json > openapi_fixed.json && mv openapi_fixed.json openapi.json
+
+autosdk generate openapi.json \
+  --namespace Mem0 \
+  --clientClassName Mem0Client \
+  --targetFramework net10.0 \
+  --output Generated \
+  --exclude-deprecated-operations
