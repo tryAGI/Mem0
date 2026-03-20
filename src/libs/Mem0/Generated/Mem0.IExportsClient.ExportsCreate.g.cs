@@ -15,7 +15,6 @@ namespace Mem0
 
             global::Mem0.ExportsCreateRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Create an export job with schema<br/>
         /// Create a structured export of memories based on a provided schema.

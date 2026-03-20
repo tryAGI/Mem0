@@ -19,7 +19,6 @@ namespace Mem0
 
             global::Mem0.AddProjectMemberRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Add member to project<br/>
         /// Add a new member to a specific project within an organization.

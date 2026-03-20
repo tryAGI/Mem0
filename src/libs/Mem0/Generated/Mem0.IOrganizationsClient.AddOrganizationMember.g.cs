@@ -17,7 +17,6 @@ namespace Mem0
 
             global::Mem0.AddOrganizationMemberRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Add organization member<br/>
         /// Add a new member to a specific organization.

@@ -223,7 +223,6 @@ namespace Mem0
                 }
             }
         }
-
         /// <summary>
         /// Remove a member from the organization
         /// </summary>

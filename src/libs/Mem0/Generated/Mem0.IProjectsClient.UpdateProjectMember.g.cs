@@ -19,7 +19,6 @@ namespace Mem0
 
             global::Mem0.UpdateProjectMemberRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Update project member role<br/>
         /// Update the role of a member in a specific project within an organization.

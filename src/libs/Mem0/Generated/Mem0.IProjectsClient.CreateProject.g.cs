@@ -17,7 +17,6 @@ namespace Mem0
 
             global::Mem0.CreateProjectRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Create project<br/>
         /// Create a new project within an organization.

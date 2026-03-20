@@ -15,7 +15,6 @@ namespace Mem0
 
             global::Mem0.ExportsListRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Export data based on filters<br/>
         /// Get the latest memory export.

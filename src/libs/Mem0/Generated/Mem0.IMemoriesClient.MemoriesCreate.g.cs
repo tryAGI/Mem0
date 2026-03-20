@@ -14,7 +14,6 @@ namespace Mem0
 
             global::Mem0.MemoryInput request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Add memories.
         /// </summary>

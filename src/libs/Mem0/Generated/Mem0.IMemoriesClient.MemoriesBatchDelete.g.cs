@@ -14,7 +14,6 @@ namespace Mem0
 
             global::Mem0.MemoriesBatchDeleteRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Batch delete multiple memories (up to 1000) in a single API call.
         /// </summary>

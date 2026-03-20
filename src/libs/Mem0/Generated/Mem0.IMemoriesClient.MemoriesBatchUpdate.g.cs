@@ -14,7 +14,6 @@ namespace Mem0
 
             global::Mem0.MemoriesBatchUpdateRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Batch update multiple memories (up to 1000) in a single API call.
         /// </summary>

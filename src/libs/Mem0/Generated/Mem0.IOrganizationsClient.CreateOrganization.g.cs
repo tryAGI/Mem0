@@ -14,7 +14,6 @@ namespace Mem0
 
             global::Mem0.CreateOrganizationRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Create a new organization.
         /// </summary>
