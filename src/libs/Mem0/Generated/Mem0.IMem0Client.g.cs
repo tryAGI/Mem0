@@ -68,7 +68,27 @@ namespace Mem0
         /// <summary>
         /// 
         /// </summary>
+        public FeedbackClient Feedback { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public MemoriesClient Memories { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public OrganizationsClient Organizations { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public ProjectClient Project { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public ProjectsClient Projects { get; }
 
         /// <summary>
         /// 
@@ -84,26 +104,6 @@ namespace Mem0
         /// 
         /// </summary>
         public UsersClient Users { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public FeedbackClient Feedback { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public OrganizationsClient Organizations { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public ProjectsClient Projects { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public ProjectClient Project { get; }
 
         /// <summary>
         /// 
