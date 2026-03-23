@@ -15,11 +15,11 @@ namespace Mem0
         /// <summary>
         /// 
         /// </summary>
-        Update,
+        Delete,
         /// <summary>
         /// 
         /// </summary>
-        Delete,
+        Update,
     }
 
     /// <summary>
@@ -35,8 +35,8 @@ namespace Mem0
             return value switch
             {
                 MemoriesCreateResponseItemEvent.Add => "ADD",
-                MemoriesCreateResponseItemEvent.Update => "UPDATE",
                 MemoriesCreateResponseItemEvent.Delete => "DELETE",
+                MemoriesCreateResponseItemEvent.Update => "UPDATE",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -48,8 +48,8 @@ namespace Mem0
             return value switch
             {
                 "ADD" => MemoriesCreateResponseItemEvent.Add,
-                "UPDATE" => MemoriesCreateResponseItemEvent.Update,
                 "DELETE" => MemoriesCreateResponseItemEvent.Delete,
+                "UPDATE" => MemoriesCreateResponseItemEvent.Update,
                 _ => null,
             };
         }

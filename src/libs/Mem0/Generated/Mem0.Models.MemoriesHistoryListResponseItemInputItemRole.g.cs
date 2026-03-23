@@ -11,11 +11,11 @@ namespace Mem0
         /// <summary>
         /// 
         /// </summary>
-        User,
+        Assistant,
         /// <summary>
         /// 
         /// </summary>
-        Assistant,
+        User,
     }
 
     /// <summary>
@@ -30,8 +30,8 @@ namespace Mem0
         {
             return value switch
             {
-                MemoriesHistoryListResponseItemInputItemRole.User => "user",
                 MemoriesHistoryListResponseItemInputItemRole.Assistant => "assistant",
+                MemoriesHistoryListResponseItemInputItemRole.User => "user",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -42,8 +42,8 @@ namespace Mem0
         {
             return value switch
             {
-                "user" => MemoriesHistoryListResponseItemInputItemRole.User,
                 "assistant" => MemoriesHistoryListResponseItemInputItemRole.Assistant,
+                "user" => MemoriesHistoryListResponseItemInputItemRole.User,
                 _ => null,
             };
         }

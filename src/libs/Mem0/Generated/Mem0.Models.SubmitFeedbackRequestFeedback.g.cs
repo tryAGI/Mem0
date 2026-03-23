@@ -11,11 +11,11 @@ namespace Mem0
         /// <summary>
         /// 
         /// </summary>
-        Positive,
+        Negative,
         /// <summary>
         /// 
         /// </summary>
-        Negative,
+        Positive,
         /// <summary>
         /// 
         /// </summary>
@@ -34,8 +34,8 @@ namespace Mem0
         {
             return value switch
             {
-                SubmitFeedbackRequestFeedback.Positive => "POSITIVE",
                 SubmitFeedbackRequestFeedback.Negative => "NEGATIVE",
+                SubmitFeedbackRequestFeedback.Positive => "POSITIVE",
                 SubmitFeedbackRequestFeedback.VeryNegative => "VERY_NEGATIVE",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -47,8 +47,8 @@ namespace Mem0
         {
             return value switch
             {
-                "POSITIVE" => SubmitFeedbackRequestFeedback.Positive,
                 "NEGATIVE" => SubmitFeedbackRequestFeedback.Negative,
+                "POSITIVE" => SubmitFeedbackRequestFeedback.Positive,
                 "VERY_NEGATIVE" => SubmitFeedbackRequestFeedback.VeryNegative,
                 _ => null,
             };

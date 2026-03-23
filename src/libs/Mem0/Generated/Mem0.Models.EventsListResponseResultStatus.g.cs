@@ -11,15 +11,15 @@ namespace Mem0
         /// <summary>
         /// 
         /// </summary>
+        Failed,
+        /// <summary>
+        /// 
+        /// </summary>
         Pending,
         /// <summary>
         /// 
         /// </summary>
         Running,
-        /// <summary>
-        /// 
-        /// </summary>
-        Failed,
         /// <summary>
         /// 
         /// </summary>
@@ -38,9 +38,9 @@ namespace Mem0
         {
             return value switch
             {
+                EventsListResponseResultStatus.Failed => "FAILED",
                 EventsListResponseResultStatus.Pending => "PENDING",
                 EventsListResponseResultStatus.Running => "RUNNING",
-                EventsListResponseResultStatus.Failed => "FAILED",
                 EventsListResponseResultStatus.Succeeded => "SUCCEEDED",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -52,9 +52,9 @@ namespace Mem0
         {
             return value switch
             {
+                "FAILED" => EventsListResponseResultStatus.Failed,
                 "PENDING" => EventsListResponseResultStatus.Pending,
                 "RUNNING" => EventsListResponseResultStatus.Running,
-                "FAILED" => EventsListResponseResultStatus.Failed,
                 "SUCCEEDED" => EventsListResponseResultStatus.Succeeded,
                 _ => null,
             };
