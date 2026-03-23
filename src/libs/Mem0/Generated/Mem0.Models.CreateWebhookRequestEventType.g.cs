@@ -15,7 +15,7 @@ namespace Mem0
         /// <summary>
         /// 
         /// </summary>
-        Memory_update,
+        Memory_categorize,
         /// <summary>
         /// 
         /// </summary>
@@ -23,7 +23,7 @@ namespace Mem0
         /// <summary>
         /// 
         /// </summary>
-        Memory_categorize,
+        Memory_update,
     }
 
     /// <summary>
@@ -39,9 +39,9 @@ namespace Mem0
             return value switch
             {
                 CreateWebhookRequestEventType.Memory_add => "memory:add",
-                CreateWebhookRequestEventType.Memory_update => "memory:update",
-                CreateWebhookRequestEventType.Memory_delete => "memory:delete",
                 CreateWebhookRequestEventType.Memory_categorize => "memory:categorize",
+                CreateWebhookRequestEventType.Memory_delete => "memory:delete",
+                CreateWebhookRequestEventType.Memory_update => "memory:update",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -53,9 +53,9 @@ namespace Mem0
             return value switch
             {
                 "memory:add" => CreateWebhookRequestEventType.Memory_add,
-                "memory:update" => CreateWebhookRequestEventType.Memory_update,
-                "memory:delete" => CreateWebhookRequestEventType.Memory_delete,
                 "memory:categorize" => CreateWebhookRequestEventType.Memory_categorize,
+                "memory:delete" => CreateWebhookRequestEventType.Memory_delete,
+                "memory:update" => CreateWebhookRequestEventType.Memory_update,
                 _ => null,
             };
         }

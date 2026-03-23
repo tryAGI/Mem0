@@ -11,10 +11,6 @@ namespace Mem0
         /// <summary>
         /// 
         /// </summary>
-        User,
-        /// <summary>
-        /// 
-        /// </summary>
         Agent,
         /// <summary>
         /// 
@@ -24,6 +20,10 @@ namespace Mem0
         /// 
         /// </summary>
         Run,
+        /// <summary>
+        /// 
+        /// </summary>
+        User,
     }
 
     /// <summary>
@@ -38,10 +38,10 @@ namespace Mem0
         {
             return value switch
             {
-                EntitiesListResponseItemType.User => "user",
                 EntitiesListResponseItemType.Agent => "agent",
                 EntitiesListResponseItemType.App => "app",
                 EntitiesListResponseItemType.Run => "run",
+                EntitiesListResponseItemType.User => "user",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -52,10 +52,10 @@ namespace Mem0
         {
             return value switch
             {
-                "user" => EntitiesListResponseItemType.User,
                 "agent" => EntitiesListResponseItemType.Agent,
                 "app" => EntitiesListResponseItemType.App,
                 "run" => EntitiesListResponseItemType.Run,
+                "user" => EntitiesListResponseItemType.User,
                 _ => null,
             };
         }
