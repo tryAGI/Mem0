@@ -1,6 +1,8 @@
 site_name: Mem0 .NET Documentation
 nav:
 - Overview: index.md
+- Guides:
+  - Authentication: guides/authentication.md
 # EXAMPLES:START
 - Examples:
   - Search Memories: examples/search-memories.md
