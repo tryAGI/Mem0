@@ -6,7 +6,7 @@
 [![Discord](https://img.shields.io/discord/1115206893015662663?label=Discord&logo=discord&logoColor=white&color=d82679)](https://discord.gg/Ca2xhfBf3v)
 
 ## Features 🔥
-- Fully generated C# SDK based on [official Mem0 OpenAPI specification](https://raw.githubusercontent.com/Mem0/assemblyai-api-spec/main/openapi.yml) using [AutoSDK](https://github.com/HavenDV/AutoSDK)
+- Fully generated C# SDK based on [official Mem0 OpenAPI specification](https://raw.githubusercontent.com/mem0ai/mem0/main/docs/openapi.json) using [AutoSDK](https://github.com/HavenDV/AutoSDK)
 - Same day update to support new features
 - Updated and supported automatically if there are no breaking changes
 - All modern .NET features - nullability, trimming, NativeAOT, etc.
