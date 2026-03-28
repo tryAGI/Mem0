@@ -104,13 +104,13 @@ namespace Mem0
                     if (ReadResponseAsString)
                     {
                         __content_400 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                        __value_400 = global::System.Text.Json.JsonSerializer.Deserialize(__content_400, typeof(string), JsonSerializerContext) as string;
+                        __value_400 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_400, typeof(string), JsonSerializerContext);
                     }
                     else
                     {
                         __content_400 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
 
-                        __value_400 = global::System.Text.Json.JsonSerializer.Deserialize(__content_400, typeof(string), JsonSerializerContext) as string;
+                        __value_400 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_400, typeof(string), JsonSerializerContext);
                     }
                 }
                 catch (global::System.Exception __ex)
@@ -154,7 +154,7 @@ namespace Mem0
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::Mem0.MemoriesCreateResponseItem>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::Mem0.MemoriesCreateResponseItem> ??
+                        (global::System.Collections.Generic.IList<global::Mem0.MemoriesCreateResponseItem>?)global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::Mem0.MemoriesCreateResponseItem>), JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -185,7 +185,7 @@ namespace Mem0
                     ).ConfigureAwait(false);
 
                     return
-                        await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::Mem0.MemoriesCreateResponseItem>), JsonSerializerContext).ConfigureAwait(false) as global::System.Collections.Generic.IList<global::Mem0.MemoriesCreateResponseItem> ??
+                        (global::System.Collections.Generic.IList<global::Mem0.MemoriesCreateResponseItem>?)await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::Mem0.MemoriesCreateResponseItem>), JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
