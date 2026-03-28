@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 readonly openapi_url="https://raw.githubusercontent.com/mem0ai/mem0/main/docs/openapi.json"
-dotnet tool update --global autosdk.cli --prerelease || dotnet tool install --global autosdk.cli --prerelease
+dotnet tool install --global autosdk.cli --prerelease
 rm -rf Generated
 curl --fail --silent --show-error --location "$openapi_url" -o openapi.json
 
