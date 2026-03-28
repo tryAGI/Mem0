@@ -108,7 +108,7 @@ namespace Mem0
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::Mem0.GetProjectsResponseItem>), JsonSerializerContext) as global::System.Collections.Generic.IList<global::Mem0.GetProjectsResponseItem> ??
+                        (global::System.Collections.Generic.IList<global::Mem0.GetProjectsResponseItem>?)global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::Mem0.GetProjectsResponseItem>), JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -139,7 +139,7 @@ namespace Mem0
                     ).ConfigureAwait(false);
 
                     return
-                        await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::Mem0.GetProjectsResponseItem>), JsonSerializerContext).ConfigureAwait(false) as global::System.Collections.Generic.IList<global::Mem0.GetProjectsResponseItem> ??
+                        (global::System.Collections.Generic.IList<global::Mem0.GetProjectsResponseItem>?)await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::Mem0.GetProjectsResponseItem>), JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
