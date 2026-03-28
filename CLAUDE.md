@@ -24,7 +24,7 @@ Note: Mem0 uses `Token <key>` format internally (not `Bearer <key>`), but the SD
 
 ## Key Files
 
-- `src/libs/Mem0/generate.sh` — Regeneration script (downloads spec, converts apiKey→bearer, runs autosdk)
+- `src/libs/Mem0/generate.sh` — Regeneration script (downloads spec, runs autosdk with `--security-scheme Http:Header:Bearer`)
 - `src/libs/Mem0/Generated/` — **Never edit** — auto-generated code
 - `src/tests/IntegrationTests/Tests.cs` — Test helper with bearer auth
 - `src/tests/IntegrationTests/Examples/` — Example tests (also generate docs)
@@ -32,5 +32,5 @@ Note: Mem0 uses `Token <key>` format internally (not `Bearer <key>`), but the SD
 ## Spec Notes
 
 - OpenAPI spec: `https://raw.githubusercontent.com/mem0ai/mem0/main/docs/openapi.json`
-- Spec uses `apiKey` type auth with `Token ` prefix; `generate.sh` converts to `http/bearer` via `jq`
+- Spec uses `apiKey` type auth with `Token ` prefix; `--security-scheme Http:Header:Bearer` overrides at generation time
 - Some endpoints have empty response schemas — these return untyped responses
