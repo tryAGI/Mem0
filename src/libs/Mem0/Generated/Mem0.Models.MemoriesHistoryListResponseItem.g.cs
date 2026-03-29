@@ -95,9 +95,6 @@ namespace Mem0
         /// <param name="input">
         /// The conversation input that led to this memory change
         /// </param>
-        /// <param name="oldMemory">
-        /// The previous state of the memory, if applicable
-        /// </param>
         /// <param name="newMemory">
         /// The new or updated state of the memory
         /// </param>
@@ -107,14 +104,17 @@ namespace Mem0
         /// <param name="event">
         /// The type of event that occurred
         /// </param>
-        /// <param name="metadata">
-        /// Additional metadata associated with the memory change
-        /// </param>
         /// <param name="createdAt">
         /// The timestamp when this history entry was created.
         /// </param>
         /// <param name="updatedAt">
         /// The timestamp when this history entry was last updated.
+        /// </param>
+        /// <param name="oldMemory">
+        /// The previous state of the memory, if applicable
+        /// </param>
+        /// <param name="metadata">
+        /// Additional metadata associated with the memory change
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -134,13 +134,13 @@ namespace Mem0
             this.Id = id;
             this.MemoryId = memoryId;
             this.Input = input ?? throw new global::System.ArgumentNullException(nameof(input));
+            this.OldMemory = oldMemory;
             this.NewMemory = newMemory ?? throw new global::System.ArgumentNullException(nameof(newMemory));
             this.UserId = userId ?? throw new global::System.ArgumentNullException(nameof(userId));
             this.Event = @event;
+            this.Metadata = metadata;
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.OldMemory = oldMemory;
-            this.Metadata = metadata;
         }
 
         /// <summary>

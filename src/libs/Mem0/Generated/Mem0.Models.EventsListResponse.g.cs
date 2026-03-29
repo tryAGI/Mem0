@@ -46,14 +46,14 @@ namespace Mem0
         /// <param name="count">
         /// Total number of events matching the filters.
         /// </param>
+        /// <param name="results">
+        /// Array of event objects.
+        /// </param>
         /// <param name="next">
         /// URL for the next page of results.
         /// </param>
         /// <param name="previous">
         /// URL for the previous page of results.
-        /// </param>
-        /// <param name="results">
-        /// Array of event objects.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -65,9 +65,9 @@ namespace Mem0
             string? previous)
         {
             this.Count = count;
-            this.Results = results ?? throw new global::System.ArgumentNullException(nameof(results));
             this.Next = next;
             this.Previous = previous;
+            this.Results = results ?? throw new global::System.ArgumentNullException(nameof(results));
         }
 
         /// <summary>
