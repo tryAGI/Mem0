@@ -94,12 +94,12 @@ namespace Mem0
         /// <param name="query">
         /// The query to search for in the memory.
         /// </param>
+        /// <param name="filters">
+        /// A dictionary of filters to apply to the search. Available fields are: user_id, agent_id, app_id, run_id, created_at, updated_at, categories, keywords. Supports logical operators (AND, OR) and comparison operators (in, gte, lte, gt, lt, ne, contains, icontains). For categories field, use 'contains' for partial matching (e.g., {"categories": {"contains": "finance"}}) or 'in' for exact matching (e.g., {"categories": {"in": ["personal_information"]}}).
+        /// </param>
         /// <param name="version">
         /// The version of the memory to use. This should always be v2.<br/>
         /// Default Value: v2
-        /// </param>
-        /// <param name="filters">
-        /// A dictionary of filters to apply to the search. Available fields are: user_id, agent_id, app_id, run_id, created_at, updated_at, categories, keywords. Supports logical operators (AND, OR) and comparison operators (in, gte, lte, gt, lt, ne, contains, icontains). For categories field, use 'contains' for partial matching (e.g., {"categories": {"contains": "finance"}}) or 'in' for exact matching (e.g., {"categories": {"in": ["personal_information"]}}).
         /// </param>
         /// <param name="topK">
         /// The number of top results to return.<br/>
@@ -147,8 +147,8 @@ namespace Mem0
             string? projectId)
         {
             this.Query = query ?? throw new global::System.ArgumentNullException(nameof(query));
-            this.Filters = filters ?? throw new global::System.ArgumentNullException(nameof(filters));
             this.Version = version;
+            this.Filters = filters ?? throw new global::System.ArgumentNullException(nameof(filters));
             this.TopK = topK;
             this.Fields = fields;
             this.Rerank = rerank;

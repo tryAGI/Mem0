@@ -101,10 +101,10 @@ namespace Mem0
         /// <param name="organization">
         /// Organization the entity belongs to.
         /// </param>
+        /// <param name="type"></param>
         /// <param name="metadata">
         /// Additional metadata associated with the entity
         /// </param>
-        /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -126,8 +126,8 @@ namespace Mem0
             this.TotalMemories = totalMemories;
             this.Owner = owner ?? throw new global::System.ArgumentNullException(nameof(owner));
             this.Organization = organization ?? throw new global::System.ArgumentNullException(nameof(organization));
-            this.Type = type;
             this.Metadata = metadata;
+            this.Type = type;
         }
 
         /// <summary>

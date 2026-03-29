@@ -87,6 +87,12 @@ namespace Mem0
         /// <param name="userId">
         /// The identifier of the user associated with this memory
         /// </param>
+        /// <param name="createdAt">
+        /// The timestamp when the memory was created.
+        /// </param>
+        /// <param name="updatedAt">
+        /// The timestamp when the memory was last updated.
+        /// </param>
         /// <param name="metadata">
         /// Additional metadata associated with the memory
         /// </param>
@@ -100,12 +106,6 @@ namespace Mem0
         /// <param name="expirationDate">
         /// The date and time when the memory will expire. Format: YYYY-MM-DD.<br/>
         /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
-        /// </param>
-        /// <param name="createdAt">
-        /// The timestamp when the memory was created.
-        /// </param>
-        /// <param name="updatedAt">
-        /// The timestamp when the memory was last updated.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -124,12 +124,12 @@ namespace Mem0
             this.Id = id;
             this.Memory = memory ?? throw new global::System.ArgumentNullException(nameof(memory));
             this.UserId = userId ?? throw new global::System.ArgumentNullException(nameof(userId));
-            this.CreatedAt = createdAt;
-            this.UpdatedAt = updatedAt;
             this.Metadata = metadata;
             this.Categories = categories;
             this.Immutable = immutable;
             this.ExpirationDate = expirationDate;
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
         }
 
         /// <summary>

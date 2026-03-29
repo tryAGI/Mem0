@@ -87,10 +87,11 @@ namespace Mem0
         /// </summary>
         /// <param name="id"></param>
         /// <param name="memory"></param>
-        /// <param name="input"></param>
         /// <param name="createdAt"></param>
         /// <param name="updatedAt"></param>
         /// <param name="owner"></param>
+        /// <param name="organization"></param>
+        /// <param name="input"></param>
         /// <param name="immutable">
         /// Whether the memory is immutable.<br/>
         /// Default Value: false
@@ -99,7 +100,6 @@ namespace Mem0
         /// The date and time when the memory will expire. Format: YYYY-MM-DD.<br/>
         /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
         /// </param>
-        /// <param name="organization"></param>
         /// <param name="metadata"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -118,13 +118,13 @@ namespace Mem0
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Memory = memory ?? throw new global::System.ArgumentNullException(nameof(memory));
+            this.Input = input;
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
             this.Owner = owner ?? throw new global::System.ArgumentNullException(nameof(owner));
-            this.Organization = organization ?? throw new global::System.ArgumentNullException(nameof(organization));
-            this.Input = input;
             this.Immutable = immutable;
             this.ExpirationDate = expirationDate;
+            this.Organization = organization ?? throw new global::System.ArgumentNullException(nameof(organization));
             this.Metadata = metadata;
         }
 

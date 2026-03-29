@@ -48,11 +48,11 @@ namespace Mem0
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateWebhookRequest" /> class.
         /// </summary>
-        /// <param name="name">
-        /// Name of the webhook
-        /// </param>
         /// <param name="url">
         /// URL endpoint for the webhook.
+        /// </param>
+        /// <param name="name">
+        /// Name of the webhook
         /// </param>
         /// <param name="eventTypes">
         /// List of event types to subscribe to.
@@ -73,8 +73,8 @@ namespace Mem0
             bool? isActive,
             string? projectId)
         {
-            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
             this.Name = name;
+            this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
             this.EventTypes = eventTypes;
             this.IsActive = isActive;
             this.ProjectId = projectId;
