@@ -229,6 +229,7 @@ namespace Mem0
             global::System.Collections.Generic.IList<global::System.Guid> memoryIds,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Mem0.MemoriesBatchDeleteRequest
             {
                 MemoryIds = memoryIds,
