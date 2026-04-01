@@ -323,7 +323,6 @@ namespace Mem0
             global::System.Collections.Generic.IList<global::Mem0.UpdateWebhookRequestEventType>? eventTypes = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Mem0.UpdateWebhookRequest
             {
                 Name = name,

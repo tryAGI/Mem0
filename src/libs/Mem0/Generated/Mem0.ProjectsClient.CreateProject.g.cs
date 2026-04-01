@@ -277,7 +277,6 @@ namespace Mem0
             string name,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Mem0.CreateProjectRequest
             {
                 Name = name,
