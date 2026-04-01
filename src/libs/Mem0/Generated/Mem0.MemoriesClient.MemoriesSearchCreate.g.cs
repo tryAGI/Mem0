@@ -295,7 +295,6 @@ namespace Mem0
             bool? onlyMetadataBasedSearch = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Mem0.MemorySearchInput
             {
                 Query = query,

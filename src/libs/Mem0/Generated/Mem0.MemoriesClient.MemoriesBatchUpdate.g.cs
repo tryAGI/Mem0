@@ -227,7 +227,6 @@ namespace Mem0
             global::System.Collections.Generic.IList<global::Mem0.MemoriesBatchUpdateRequestMemorie> memories,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Mem0.MemoriesBatchUpdateRequest
             {
                 Memories = memories,

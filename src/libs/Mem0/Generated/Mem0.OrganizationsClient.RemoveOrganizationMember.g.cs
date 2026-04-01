@@ -237,7 +237,6 @@ namespace Mem0
             string email,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Mem0.RemoveOrganizationMemberRequest
             {
                 Email = email,

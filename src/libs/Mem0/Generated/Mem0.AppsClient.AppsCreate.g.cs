@@ -193,7 +193,6 @@ namespace Mem0
             object? metadata = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Mem0.CreateApp
             {
                 AppId = appId,
