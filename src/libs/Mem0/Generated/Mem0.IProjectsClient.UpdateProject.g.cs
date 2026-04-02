@@ -37,6 +37,9 @@ namespace Mem0
         /// <param name="customCategories">
         /// List of custom categories to be used for memory categorization.
         /// </param>
+        /// <param name="multilingual">
+        /// Whether to use the input language for memory storage and retrieval.
+        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Mem0.UpdateProjectResponse> UpdateProjectAsync(
@@ -46,6 +49,7 @@ namespace Mem0
             string? description = default,
             global::System.Collections.Generic.IList<string>? customInstructions = default,
             global::System.Collections.Generic.IList<object>? customCategories = default,
+            bool? multilingual = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
