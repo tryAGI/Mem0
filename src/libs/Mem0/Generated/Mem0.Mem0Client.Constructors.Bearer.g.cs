@@ -15,7 +15,7 @@ namespace Mem0
         {
             Authorizing(HttpClient, ref apiKey);
 
-            AuthorizeUsingApiKeyInHeader(apiKey);
+            AuthorizeUsingBearer(apiKey);
 
             Authorized(HttpClient);
         }
