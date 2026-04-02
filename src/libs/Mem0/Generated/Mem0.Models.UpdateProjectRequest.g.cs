@@ -33,6 +33,12 @@ namespace Mem0
         public global::System.Collections.Generic.IList<object>? CustomCategories { get; set; }
 
         /// <summary>
+        /// Whether to use the input language for memory storage and retrieval.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("multilingual")]
+        public bool? Multilingual { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -53,6 +59,9 @@ namespace Mem0
         /// <param name="customCategories">
         /// List of custom categories to be used for memory categorization.
         /// </param>
+        /// <param name="multilingual">
+        /// Whether to use the input language for memory storage and retrieval.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -60,12 +69,14 @@ namespace Mem0
             string? name,
             string? description,
             global::System.Collections.Generic.IList<string>? customInstructions,
-            global::System.Collections.Generic.IList<object>? customCategories)
+            global::System.Collections.Generic.IList<object>? customCategories,
+            bool? multilingual)
         {
             this.Name = name;
             this.Description = description;
             this.CustomInstructions = customInstructions;
             this.CustomCategories = customCategories;
+            this.Multilingual = multilingual;
         }
 
         /// <summary>
