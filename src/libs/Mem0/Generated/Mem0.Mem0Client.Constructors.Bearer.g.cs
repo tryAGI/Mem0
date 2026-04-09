@@ -6,6 +6,7 @@ namespace Mem0
     public sealed partial class Mem0Client
     {
         /// <inheritdoc cref="Mem0Client(global::System.Net.Http.HttpClient?, global::System.Uri?, global::System.Collections.Generic.List{global::Mem0.EndPointAuthorization}?, bool)"/>
+
         public Mem0Client(
             string apiKey,
             global::System.Net.Http.HttpClient? httpClient = null,

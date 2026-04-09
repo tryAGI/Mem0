@@ -5,6 +5,25 @@ namespace Mem0
 {
     public partial class WebhooksClient
     {
+
+
+        private static readonly global::Mem0.EndPointSecurityRequirement s_UpdateWebhookSecurityRequirement0 =
+            new global::Mem0.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Mem0.EndPointAuthorizationRequirement[]
+                {                    new global::Mem0.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Mem0.EndPointSecurityRequirement[] s_UpdateWebhookSecurityRequirements =
+            new global::Mem0.EndPointSecurityRequirement[]
+            {                s_UpdateWebhookSecurityRequirement0,
+            };
         partial void PrepareUpdateWebhookArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string webhookId,
@@ -46,9 +65,15 @@ namespace Mem0
                 webhookId: ref webhookId,
                 request: request);
 
+
+            var __authorizations = global::Mem0.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_UpdateWebhookSecurityRequirements,
+                operationName: "UpdateWebhookAsync");
+
             var __pathBuilder = new global::Mem0.PathBuilder(
                 path: $"/api/v1/webhooks/{webhookId}/",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Put,
@@ -58,7 +83,7 @@ namespace Mem0
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

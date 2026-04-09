@@ -5,6 +5,25 @@ namespace Mem0
 {
     public partial class EventsClient
     {
+
+
+        private static readonly global::Mem0.EndPointSecurityRequirement s_EventsListSecurityRequirement0 =
+            new global::Mem0.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Mem0.EndPointAuthorizationRequirement[]
+                {                    new global::Mem0.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Mem0.EndPointSecurityRequirement[] s_EventsListSecurityRequirements =
+            new global::Mem0.EndPointSecurityRequirement[]
+            {                s_EventsListSecurityRequirement0,
+            };
         partial void PrepareEventsListArguments(
             global::System.Net.Http.HttpClient httpClient);
         partial void PrepareEventsListRequest(
@@ -32,9 +51,15 @@ namespace Mem0
             PrepareEventsListArguments(
                 httpClient: HttpClient);
 
+
+            var __authorizations = global::Mem0.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_EventsListSecurityRequirements,
+                operationName: "EventsListAsync");
+
             var __pathBuilder = new global::Mem0.PathBuilder(
                 path: "/v1/events/",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -44,7 +69,7 @@ namespace Mem0
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
