@@ -5,6 +5,25 @@ namespace Mem0
 {
     public partial class OrganizationsClient
     {
+
+
+        private static readonly global::Mem0.EndPointSecurityRequirement s_CreateOrganizationSecurityRequirement0 =
+            new global::Mem0.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Mem0.EndPointAuthorizationRequirement[]
+                {                    new global::Mem0.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Mem0.EndPointSecurityRequirement[] s_CreateOrganizationSecurityRequirements =
+            new global::Mem0.EndPointSecurityRequirement[]
+            {                s_CreateOrganizationSecurityRequirement0,
+            };
         partial void PrepareCreateOrganizationArguments(
             global::System.Net.Http.HttpClient httpClient,
             global::Mem0.CreateOrganizationRequest request);
@@ -40,9 +59,15 @@ namespace Mem0
                 httpClient: HttpClient,
                 request: request);
 
+
+            var __authorizations = global::Mem0.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_CreateOrganizationSecurityRequirements,
+                operationName: "CreateOrganizationAsync");
+
             var __pathBuilder = new global::Mem0.PathBuilder(
                 path: "/api/v1/orgs/organizations/",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -52,7 +77,7 @@ namespace Mem0
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

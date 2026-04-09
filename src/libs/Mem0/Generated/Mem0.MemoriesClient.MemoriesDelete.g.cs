@@ -5,6 +5,25 @@ namespace Mem0
 {
     public partial class MemoriesClient
     {
+
+
+        private static readonly global::Mem0.EndPointSecurityRequirement s_MemoriesDeleteSecurityRequirement0 =
+            new global::Mem0.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Mem0.EndPointAuthorizationRequirement[]
+                {                    new global::Mem0.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Mem0.EndPointSecurityRequirement[] s_MemoriesDeleteSecurityRequirements =
+            new global::Mem0.EndPointSecurityRequirement[]
+            {                s_MemoriesDeleteSecurityRequirement0,
+            };
         partial void PrepareMemoriesDeleteArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string? userId,
@@ -67,6 +86,12 @@ namespace Mem0
                 orgId: ref orgId,
                 projectId: ref projectId);
 
+
+            var __authorizations = global::Mem0.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_MemoriesDeleteSecurityRequirements,
+                operationName: "MemoriesDeleteAsync");
+
             var __pathBuilder = new global::Mem0.PathBuilder(
                 path: "/v1/memories/",
                 baseUri: HttpClient.BaseAddress); 
@@ -78,7 +103,7 @@ namespace Mem0
                 .AddOptionalParameter("metadata", metadata?.ToString())
                 .AddOptionalParameter("org_id", orgId)
                 .AddOptionalParameter("project_id", projectId) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Delete,
@@ -88,7 +113,7 @@ namespace Mem0
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

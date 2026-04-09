@@ -5,6 +5,25 @@ namespace Mem0
 {
     public partial class ExportsClient
     {
+
+
+        private static readonly global::Mem0.EndPointSecurityRequirement s_ExportsListSecurityRequirement0 =
+            new global::Mem0.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Mem0.EndPointAuthorizationRequirement[]
+                {                    new global::Mem0.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Mem0.EndPointSecurityRequirement[] s_ExportsListSecurityRequirements =
+            new global::Mem0.EndPointSecurityRequirement[]
+            {                s_ExportsListSecurityRequirement0,
+            };
         partial void PrepareExportsListArguments(
             global::System.Net.Http.HttpClient httpClient,
             global::Mem0.ExportsListRequest request);
@@ -41,9 +60,15 @@ namespace Mem0
                 httpClient: HttpClient,
                 request: request);
 
+
+            var __authorizations = global::Mem0.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_ExportsListSecurityRequirements,
+                operationName: "ExportsListAsync");
+
             var __pathBuilder = new global::Mem0.PathBuilder(
                 path: "/v1/exports/get",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -53,7 +78,7 @@ namespace Mem0
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
