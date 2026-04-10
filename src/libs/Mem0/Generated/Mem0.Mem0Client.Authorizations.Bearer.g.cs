@@ -25,6 +25,7 @@ namespace Mem0
             Authorizations.Add(new global::Mem0.EndPointAuthorization
             {
                 Type = "Http",
+                SchemeId = "HttpBearer",
                 Location = "Header",
                 Name = "Bearer",
                 Value = apiKey,

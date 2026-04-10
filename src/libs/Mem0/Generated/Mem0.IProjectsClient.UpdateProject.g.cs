@@ -11,6 +11,7 @@ namespace Mem0
         /// <param name="orgId"></param>
         /// <param name="projectId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Mem0.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Mem0.UpdateProjectResponse> UpdateProjectAsync(
@@ -18,6 +19,7 @@ namespace Mem0
             string projectId,
 
             global::Mem0.UpdateProjectRequest request,
+            global::Mem0.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Update Project<br/>
@@ -40,6 +42,7 @@ namespace Mem0
         /// <param name="multilingual">
         /// Whether to use the input language for memory storage and retrieval.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Mem0.UpdateProjectResponse> UpdateProjectAsync(
@@ -50,6 +53,7 @@ namespace Mem0
             global::System.Collections.Generic.IList<string>? customInstructions = default,
             global::System.Collections.Generic.IList<object>? customCategories = default,
             bool? multilingual = default,
+            global::Mem0.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
