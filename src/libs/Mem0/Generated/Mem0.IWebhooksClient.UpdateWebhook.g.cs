@@ -10,12 +10,14 @@ namespace Mem0
         /// </summary>
         /// <param name="webhookId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Mem0.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Mem0.UpdateWebhookResponse> UpdateWebhookAsync(
             string webhookId,
 
             global::Mem0.UpdateWebhookRequest request,
+            global::Mem0.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Update Webhook<br/>
@@ -31,6 +33,7 @@ namespace Mem0
         /// <param name="eventTypes">
         /// New list of event types to subscribe to
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Mem0.UpdateWebhookResponse> UpdateWebhookAsync(
@@ -38,6 +41,7 @@ namespace Mem0
             string? name = default,
             string? url = default,
             global::System.Collections.Generic.IList<global::Mem0.UpdateWebhookRequestEventType>? eventTypes = default,
+            global::Mem0.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

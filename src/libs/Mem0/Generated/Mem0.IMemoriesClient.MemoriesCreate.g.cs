@@ -8,11 +8,13 @@ namespace Mem0
         /// Add memories.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Mem0.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Mem0.MemoriesCreateResponseItem>> MemoriesCreateAsync(
 
             global::Mem0.MemoryInput request,
+            global::Mem0.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Add memories.
@@ -78,6 +80,7 @@ namespace Mem0
         /// <param name="version">
         /// The version of the memory to use. The default version is v1, which is deprecated. We recommend using v2 for new applications.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Mem0.MemoriesCreateResponseItem>> MemoriesCreateAsync(
@@ -100,6 +103,7 @@ namespace Mem0
             string? orgId = default,
             string? projectId = default,
             string? version = default,
+            global::Mem0.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
