@@ -49,7 +49,7 @@ namespace Mem0
         public bool? Immutable { get; set; }
 
         /// <summary>
-        /// The date and time when the memory will expire. Format: YYYY-MM-DD.<br/>
+        /// The date when the memory will expire. Format: YYYY-MM-DD.<br/>
         /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("expiration_date")]
@@ -104,7 +104,7 @@ namespace Mem0
         /// Default Value: false
         /// </param>
         /// <param name="expirationDate">
-        /// The date and time when the memory will expire. Format: YYYY-MM-DD.<br/>
+        /// The date when the memory will expire. Format: YYYY-MM-DD.<br/>
         /// Default Value: openapi-json-null-sentinel-value-2BF93600-0FE4-4250-987A-E5DDB203E464
         /// </param>
 #if NET7_0_OR_GREATER

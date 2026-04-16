@@ -6,7 +6,7 @@ namespace Mem0
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class MemoriesDeleteMetadata
+    public sealed partial class MemoriesDeleteAllMetadata
     {
 
         /// <summary>

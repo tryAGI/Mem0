@@ -27,23 +27,11 @@ namespace Mem0
             };
         partial void PrepareMemoriesDeleteArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string? userId,
-            ref string? agentId,
-            ref string? appId,
-            ref string? runId,
-            object? metadata,
-            ref string? orgId,
-            ref string? projectId);
+            ref global::System.Guid memoryId);
         partial void PrepareMemoriesDeleteRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string? userId,
-            string? agentId,
-            string? appId,
-            string? runId,
-            object? metadata,
-            string? orgId,
-            string? projectId);
+            global::System.Guid memoryId);
         partial void ProcessMemoriesDeleteResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -54,26 +42,14 @@ namespace Mem0
             ref string content);
 
         /// <summary>
-        /// Delete memories by filter. At least one filter is required — previously omitting all filters silently deleted everything; now it returns a validation error.
+        /// Get or Update or delete a memory.
         /// </summary>
-        /// <param name="userId"></param>
-        /// <param name="agentId"></param>
-        /// <param name="appId"></param>
-        /// <param name="runId"></param>
-        /// <param name="metadata"></param>
-        /// <param name="orgId"></param>
-        /// <param name="projectId"></param>
+        /// <param name="memoryId"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Mem0.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Mem0.MemoriesDeleteResponse> MemoriesDeleteAsync(
-            string? userId = default,
-            string? agentId = default,
-            string? appId = default,
-            string? runId = default,
-            object? metadata = default,
-            string? orgId = default,
-            string? projectId = default,
+            global::System.Guid memoryId,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -81,13 +57,7 @@ namespace Mem0
                 client: HttpClient);
             PrepareMemoriesDeleteArguments(
                 httpClient: HttpClient,
-                userId: ref userId,
-                agentId: ref agentId,
-                appId: ref appId,
-                runId: ref runId,
-                metadata: metadata,
-                orgId: ref orgId,
-                projectId: ref projectId);
+                memoryId: ref memoryId);
 
 
             var __authorizations = global::Mem0.EndPointSecurityResolver.ResolveAuthorizations(
@@ -112,17 +82,8 @@ namespace Mem0
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
                             var __pathBuilder = new global::Mem0.PathBuilder(
-                                path: "/v1/memories/",
-                                baseUri: HttpClient.BaseAddress); 
-                            __pathBuilder
-                                .AddOptionalParameter("user_id", userId)
-                                .AddOptionalParameter("agent_id", agentId)
-                                .AddOptionalParameter("app_id", appId)
-                                .AddOptionalParameter("run_id", runId)
-                                .AddOptionalParameter("metadata", metadata?.ToString())
-                                .AddOptionalParameter("org_id", orgId)
-                                .AddOptionalParameter("project_id", projectId) 
-                                ;
+                                path: $"/v1/memories/{memoryId}/",
+                                baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::Mem0.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
@@ -163,13 +124,7 @@ namespace Mem0
                 PrepareMemoriesDeleteRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    userId: userId,
-                    agentId: agentId,
-                    appId: appId,
-                    runId: runId,
-                    metadata: metadata,
-                    orgId: orgId,
-                    projectId: projectId);
+                    memoryId: memoryId);
 
                 return __httpRequest;
             }
@@ -188,7 +143,7 @@ namespace Mem0
                             context: global::Mem0.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "MemoriesDelete",
                                 methodName: "MemoriesDeleteAsync",
-                                pathTemplate: "\"/v1/memories/\"",
+                                pathTemplate: "$\"/v1/memories/{memoryId}/\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -215,7 +170,7 @@ namespace Mem0
                             context: global::Mem0.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "MemoriesDelete",
                                 methodName: "MemoriesDeleteAsync",
-                                pathTemplate: "\"/v1/memories/\"",
+                                pathTemplate: "$\"/v1/memories/{memoryId}/\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -250,7 +205,7 @@ namespace Mem0
                             context: global::Mem0.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "MemoriesDelete",
                                 methodName: "MemoriesDeleteAsync",
-                                pathTemplate: "\"/v1/memories/\"",
+                                pathTemplate: "$\"/v1/memories/{memoryId}/\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -297,7 +252,7 @@ namespace Mem0
                             context: global::Mem0.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "MemoriesDelete",
                                 methodName: "MemoriesDeleteAsync",
-                                pathTemplate: "\"/v1/memories/\"",
+                                pathTemplate: "$\"/v1/memories/{memoryId}/\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -317,7 +272,7 @@ namespace Mem0
                             context: global::Mem0.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "MemoriesDelete",
                                 methodName: "MemoriesDeleteAsync",
-                                pathTemplate: "\"/v1/memories/\"",
+                                pathTemplate: "$\"/v1/memories/{memoryId}/\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,

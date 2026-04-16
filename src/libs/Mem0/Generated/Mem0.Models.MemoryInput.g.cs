@@ -104,10 +104,10 @@ namespace Mem0
         public global::System.DateTimeOffset? Timestamp { get; set; }
 
         /// <summary>
-        /// The date and time when the memory will expire. Format: YYYY-MM-DD
+        /// The date when the memory will expire. Format: YYYY-MM-DD
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("expiration_date")]
-        public string? ExpirationDate { get; set; }
+        public global::System.DateTime? ExpirationDate { get; set; }
 
         /// <summary>
         /// The unique identifier of the organization associated with this memory.
@@ -186,7 +186,7 @@ namespace Mem0
         /// The timestamp of the memory. Format: Unix timestamp
         /// </param>
         /// <param name="expirationDate">
-        /// The date and time when the memory will expire. Format: YYYY-MM-DD
+        /// The date when the memory will expire. Format: YYYY-MM-DD
         /// </param>
         /// <param name="orgId">
         /// The unique identifier of the organization associated with this memory.
@@ -216,7 +216,7 @@ namespace Mem0
             bool? immutable,
             bool? asyncMode,
             global::System.DateTimeOffset? timestamp,
-            string? expirationDate,
+            global::System.DateTime? expirationDate,
             string? orgId,
             string? projectId,
             string? version)
