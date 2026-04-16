@@ -5,16 +5,14 @@ namespace Mem0
     public partial interface IMemoriesClient
     {
         /// <summary>
-        /// 
+        /// Get a memory.
         /// </summary>
-        /// <param name="entityType"></param>
-        /// <param name="entityId"></param>
+        /// <param name="memoryId"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Mem0.ApiException"></exception>
-        global::System.Threading.Tasks.Task MemoriesReadAsync(
-            string entityType,
-            string entityId,
+        global::System.Threading.Tasks.Task<global::Mem0.MemoriesReadResponse> MemoriesReadAsync(
+            global::System.Guid memoryId,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

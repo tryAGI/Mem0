@@ -9,9 +9,9 @@ namespace Mem0
     public sealed partial class MemoriesDeleteResponse
     {
         /// <summary>
-        /// Example: Memories deleted successfully!
+        /// Example: Memory deleted successfully!
         /// </summary>
-        /// <example>Memories deleted successfully!</example>
+        /// <example>Memory deleted successfully!</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("message")]
         public string? Message { get; set; }
 
@@ -25,7 +25,7 @@ namespace Mem0
         /// Initializes a new instance of the <see cref="MemoriesDeleteResponse" /> class.
         /// </summary>
         /// <param name="message">
-        /// Example: Memories deleted successfully!
+        /// Example: Memory deleted successfully!
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

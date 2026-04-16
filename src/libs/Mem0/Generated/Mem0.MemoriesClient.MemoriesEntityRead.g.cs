@@ -7,7 +7,7 @@ namespace Mem0
     {
 
 
-        private static readonly global::Mem0.EndPointSecurityRequirement s_MemoriesRead2SecurityRequirement0 =
+        private static readonly global::Mem0.EndPointSecurityRequirement s_MemoriesEntityReadSecurityRequirement0 =
             new global::Mem0.EndPointSecurityRequirement
             {
                 Authorizations = new global::Mem0.EndPointAuthorizationRequirement[]
@@ -21,49 +21,49 @@ namespace Mem0
                     },
                 },
             };
-        private static readonly global::Mem0.EndPointSecurityRequirement[] s_MemoriesRead2SecurityRequirements =
+        private static readonly global::Mem0.EndPointSecurityRequirement[] s_MemoriesEntityReadSecurityRequirements =
             new global::Mem0.EndPointSecurityRequirement[]
-            {                s_MemoriesRead2SecurityRequirement0,
+            {                s_MemoriesEntityReadSecurityRequirement0,
             };
-        partial void PrepareMemoriesRead2Arguments(
+        partial void PrepareMemoriesEntityReadArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::System.Guid memoryId);
-        partial void PrepareMemoriesRead2Request(
+            ref string entityType,
+            ref string entityId);
+        partial void PrepareMemoriesEntityReadRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::System.Guid memoryId);
-        partial void ProcessMemoriesRead2Response(
+            string entityType,
+            string entityId);
+        partial void ProcessMemoriesEntityReadResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessMemoriesRead2ResponseContent(
-            global::System.Net.Http.HttpClient httpClient,
-            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
-            ref string content);
-
         /// <summary>
-        /// Get a memory.
+        /// 
         /// </summary>
-        /// <param name="memoryId"></param>
+        /// <param name="entityType"></param>
+        /// <param name="entityId"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Mem0.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Mem0.MemoriesReadResponse> MemoriesRead2Async(
-            global::System.Guid memoryId,
+        public async global::System.Threading.Tasks.Task MemoriesEntityReadAsync(
+            string entityType,
+            string entityId,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
                 client: HttpClient);
-            PrepareMemoriesRead2Arguments(
+            PrepareMemoriesEntityReadArguments(
                 httpClient: HttpClient,
-                memoryId: ref memoryId);
+                entityType: ref entityType,
+                entityId: ref entityId);
 
 
             var __authorizations = global::Mem0.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_MemoriesRead2SecurityRequirements,
-                operationName: "MemoriesRead2Async");
+                securityRequirements: s_MemoriesEntityReadSecurityRequirements,
+                operationName: "MemoriesEntityReadAsync");
 
             using var __timeoutCancellationTokenSource = global::Mem0.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -82,7 +82,7 @@ namespace Mem0
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
                             var __pathBuilder = new global::Mem0.PathBuilder(
-                                path: $"/v1/memories/{memoryId}/",
+                                path: $"/v1/memories/{entityType}/{entityId}/",
                                 baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::Mem0.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -121,10 +121,11 @@ namespace Mem0
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareMemoriesRead2Request(
+                PrepareMemoriesEntityReadRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    memoryId: memoryId);
+                    entityType: entityType,
+                    entityId: entityId);
 
                 return __httpRequest;
             }
@@ -141,9 +142,9 @@ namespace Mem0
                     await global::Mem0.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Mem0.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "MemoriesRead2",
-                                methodName: "MemoriesRead2Async",
-                                pathTemplate: "$\"/v1/memories/{memoryId}/\"",
+                                operationId: "MemoriesEntityRead",
+                                methodName: "MemoriesEntityReadAsync",
+                                pathTemplate: "$\"/v1/memories/{entityType}/{entityId}/\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -168,9 +169,9 @@ namespace Mem0
                         await global::Mem0.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Mem0.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "MemoriesRead2",
-                                methodName: "MemoriesRead2Async",
-                                pathTemplate: "$\"/v1/memories/{memoryId}/\"",
+                                operationId: "MemoriesEntityRead",
+                                methodName: "MemoriesEntityReadAsync",
+                                pathTemplate: "$\"/v1/memories/{entityType}/{entityId}/\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -203,9 +204,9 @@ namespace Mem0
                         await global::Mem0.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Mem0.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "MemoriesRead2",
-                                methodName: "MemoriesRead2Async",
-                                pathTemplate: "$\"/v1/memories/{memoryId}/\"",
+                                operationId: "MemoriesEntityRead",
+                                methodName: "MemoriesEntityReadAsync",
+                                pathTemplate: "$\"/v1/memories/{entityType}/{entityId}/\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -242,7 +243,7 @@ namespace Mem0
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessMemoriesRead2Response(
+                ProcessMemoriesEntityReadResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -250,9 +251,9 @@ namespace Mem0
                     await global::Mem0.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Mem0.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "MemoriesRead2",
-                                methodName: "MemoriesRead2Async",
-                                pathTemplate: "$\"/v1/memories/{memoryId}/\"",
+                                operationId: "MemoriesEntityRead",
+                                methodName: "MemoriesEntityReadAsync",
+                                pathTemplate: "$\"/v1/memories/{entityType}/{entityId}/\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -270,9 +271,9 @@ namespace Mem0
                     await global::Mem0.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Mem0.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "MemoriesRead2",
-                                methodName: "MemoriesRead2Async",
-                                pathTemplate: "$\"/v1/memories/{memoryId}/\"",
+                                operationId: "MemoriesEntityRead",
+                                methodName: "MemoriesEntityReadAsync",
+                                pathTemplate: "$\"/v1/memories/{entityType}/{entityId}/\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -285,44 +286,6 @@ namespace Mem0
                                 willRetry: false,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
-                            // Memory not found.
-                            if ((int)__response.StatusCode == 404)
-                            {
-                                string? __content_404 = null;
-                                global::System.Exception? __exception_404 = null;
-                                global::Mem0.MemoriesReadResponse2? __value_404 = null;
-                                try
-                                {
-                                    if (__effectiveReadResponseAsString)
-                                    {
-                                        __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_404 = global::Mem0.MemoriesReadResponse2.FromJson(__content_404, JsonSerializerContext);
-                                    }
-                                    else
-                                    {
-                                        __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-
-                                        __value_404 = global::Mem0.MemoriesReadResponse2.FromJson(__content_404, JsonSerializerContext);
-                                    }
-                                }
-                                catch (global::System.Exception __ex)
-                                {
-                                    __exception_404 = __ex;
-                                }
-
-                                throw new global::Mem0.ApiException<global::Mem0.MemoriesReadResponse2>(
-                                    message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
-                                    innerException: __exception_404,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_404,
-                                    ResponseObject = __value_404,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
-                                        __response.Headers,
-                                        h => h.Key,
-                                        h => h.Value),
-                                };
-                            }
 
                             if (__effectiveReadResponseAsString)
                             {
@@ -336,18 +299,11 @@ namespace Mem0
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessMemoriesRead2ResponseContent(
-                                    httpClient: HttpClient,
-                                    httpResponseMessage: __response,
-                                    content: ref __content);
 
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    return
-                                        global::Mem0.MemoriesReadResponse.FromJson(__content, JsonSerializerContext) ??
-                                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -369,15 +325,6 @@ namespace Mem0
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
-                                    using var __content = await __response.Content.ReadAsStreamAsync(
-                #if NET5_0_OR_GREATER
-                                        __effectiveCancellationToken
-                #endif
-                                    ).ConfigureAwait(false);
-
-                                    return
-                                        await global::Mem0.MemoriesReadResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
-                                        throw new global::System.InvalidOperationException("Response deserialization failed.");
                                 }
                                 catch (global::System.Exception __ex)
                                 {

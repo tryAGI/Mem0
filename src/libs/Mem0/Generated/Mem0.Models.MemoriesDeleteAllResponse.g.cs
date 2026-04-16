@@ -6,12 +6,12 @@ namespace Mem0
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class MemoriesDeleteResponse2
+    public sealed partial class MemoriesDeleteAllResponse
     {
         /// <summary>
-        /// Example: Memory deleted successfully!
+        /// Example: Memories deleted successfully!
         /// </summary>
-        /// <example>Memory deleted successfully!</example>
+        /// <example>Memories deleted successfully!</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("message")]
         public string? Message { get; set; }
 
@@ -22,24 +22,24 @@ namespace Mem0
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MemoriesDeleteResponse2" /> class.
+        /// Initializes a new instance of the <see cref="MemoriesDeleteAllResponse" /> class.
         /// </summary>
         /// <param name="message">
-        /// Example: Memory deleted successfully!
+        /// Example: Memories deleted successfully!
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public MemoriesDeleteResponse2(
+        public MemoriesDeleteAllResponse(
             string? message)
         {
             this.Message = message;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MemoriesDeleteResponse2" /> class.
+        /// Initializes a new instance of the <see cref="MemoriesDeleteAllResponse" /> class.
         /// </summary>
-        public MemoriesDeleteResponse2()
+        public MemoriesDeleteAllResponse()
         {
         }
     }

@@ -64,35 +64,35 @@ namespace Mem0
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemorySearchInput? Type9 { get; set; }
+        public global::System.DateTime? Type9 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public int? Type10 { get; set; }
+        public global::Mem0.MemorySearchInput? Type10 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<string>? Type11 { get; set; }
+        public int? Type11 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemorySearchInputV2? Type12 { get; set; }
+        public global::System.Collections.Generic.IList<string>? Type12 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemorySearchInputV2Filters? Type13 { get; set; }
+        public global::Mem0.MemorySearchInputV2? Type13 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemorySearchInputV2Filters2? Type14 { get; set; }
+        public global::Mem0.MemorySearchInputV2Filters? Type14 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public byte[]? Type15 { get; set; }
+        public global::Mem0.MemorySearchInputV2Filters2? Type15 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.DateTime? Type16 { get; set; }
+        public byte[]? Type16 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -376,7 +376,7 @@ namespace Mem0
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesDeleteResponse? Type87 { get; set; }
+        public global::Mem0.MemoriesDeleteAllResponse? Type87 { get; set; }
         /// <summary>
         /// 
         /// </summary>
@@ -424,7 +424,7 @@ namespace Mem0
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesDeleteResponse2? Type99 { get; set; }
+        public global::Mem0.MemoriesDeleteResponse? Type99 { get; set; }
         /// <summary>
         /// 
         /// </summary>

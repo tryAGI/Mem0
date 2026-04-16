@@ -69,7 +69,7 @@ namespace Mem0
         /// The timestamp of the memory. Format: Unix timestamp
         /// </param>
         /// <param name="expirationDate">
-        /// The date and time when the memory will expire. Format: YYYY-MM-DD
+        /// The date when the memory will expire. Format: YYYY-MM-DD
         /// </param>
         /// <param name="orgId">
         /// The unique identifier of the organization associated with this memory.
@@ -99,7 +99,7 @@ namespace Mem0
             bool? immutable = default,
             bool? asyncMode = default,
             global::System.DateTimeOffset? timestamp = default,
-            string? expirationDate = default,
+            global::System.DateTime? expirationDate = default,
             string? orgId = default,
             string? projectId = default,
             string? version = default,
