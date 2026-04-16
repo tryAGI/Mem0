@@ -2,6 +2,17 @@
   "Examples": [
     {
       "Order": 1,
+      "Title": "Add memories (V3)",
+      "Slug": "memories-add-v3",
+      "Description": "Extract and store memories from a conversation using the V3 additive pipeline. Entity IDs (\u0060user_id\u0060 / \u0060agent_id\u0060 / \u0060run_id\u0060) are accepted at the top level. At least one entity ID is required so the memory is scoped to a session.",
+      "Language": "csharp",
+      "Code": "using var client = new Mem0Client(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::Mem0.MemoriesAddV3Request\u003E(\n    @\u0022{\n  \u0022\u0022messages\u0022\u0022: [\n    {\n      \u0022\u0022role\u0022\u0022: \u0022\u0022user\u0022\u0022,\n      \u0022\u0022content\u0022\u0022: \u0022\u0022I just moved to San Francisco from New York.\u0022\u0022\n    },\n    {\n      \u0022\u0022role\u0022\u0022: \u0022\u0022assistant\u0022\u0022,\n      \u0022\u0022content\u0022\u0022: \u0022\u0022Got it \\u2014 I\\u0027ll update your location.\u0022\u0022\n    }\n  ],\n  \u0022\u0022user_id\u0022\u0022: \u0022\u0022alice\u0022\u0022\n}\u0022)!;\n\nvar response = await client.Memories.MemoriesAddV3Async(\n    request: request\n);\n\n// Example response:\n// {\n//   \u0022message\u0022: \u0022Memory processing has been queued for background execution\u0022,\n//   \u0022status\u0022: \u0022PENDING\u0022,\n//   \u0022event_id\u0022: \u00222c4d1f44-4f7b-4b2f-9f6e-7b5b4f5a1234\u0022\n// }",
+      "Format": "sdk",
+      "OperationId": "memories_add_v3",
+      "Setup": "This example assumes \u0060using Mem0;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 2,
       "Title": "Add memories.",
       "Slug": "memories-create",
       "Description": "Add memories.",
@@ -10,6 +21,28 @@
       "Format": "http",
       "OperationId": "memories_create",
       "Setup": null
+    },
+    {
+      "Order": 3,
+      "Title": "Get all memories (V3, paginated)",
+      "Slug": "memories-list-v3",
+      "Description": "List memories scoped by filters, paginated. Entity IDs **must** be passed inside the \u0060filters\u0060 object \u2014 top-level \u0060user_id\u0060 / \u0060agent_id\u0060 / \u0060run_id\u0060 are rejected with 400. \u0060filters\u0060 supports the same operator set as V2 search (\u0060AND\u0060, \u0060OR\u0060, \u0060NOT\u0060, \u0060in\u0060, \u0060gte\u0060, \u0060lte\u0060, etc.). Response is a paginated envelope; pass \u0060page\u0060 and \u0060page_size\u0060 as query parameters to step through results.",
+      "Language": "csharp",
+      "Code": "using var client = new Mem0Client(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::Mem0.MemoriesListV3Request\u003E(\n    @\u0022{\n  \u0022\u0022filters\u0022\u0022: {\n    \u0022\u0022user_id\u0022\u0022: \u0022\u0022alice\u0022\u0022\n  }\n}\u0022)!;\n\nvar response = await client.Memories.MemoriesListV3Async(\n    request: request\n);\n\n// Example response:\n// {\n//   \u0022count\u0022: 123,\n//   \u0022next\u0022: \u0022https://api.mem0.ai/v3/memories/?page=2\\u0026page_size=100\u0022,\n//   \u0022previous\u0022: null,\n//   \u0022results\u0022: [\n//     {\n//       \u0022id\u0022: \u0022mem-uuid\u0022,\n//       \u0022memory\u0022: \u0022User moved to San Francisco from New York in January 2026\u0022,\n//       \u0022metadata\u0022: {},\n//       \u0022categories\u0022: [\n//         \u0022location\u0022\n//       ],\n//       \u0022created_at\u0022: \u00222026-01-15T10:30:00Z\u0022,\n//       \u0022updated_at\u0022: \u00222026-01-15T10:30:00Z\u0022\n//     }\n//   ]\n// }",
+      "Format": "sdk",
+      "OperationId": "memories_list_v3",
+      "Setup": "This example assumes \u0060using Mem0;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 4,
+      "Title": "Search memories (V3)",
+      "Slug": "memories-search-v3",
+      "Description": "Relevance-ranked search across stored memories. V3 uses hybrid retrieval \u2014 the returned \u0060score\u0060 is a combined \u0060[0, 1]\u0060 value; per-signal component scores are not exposed on the response. Entity IDs **must** be passed inside the \u0060filters\u0060 object \u2014 top-level \u0060user_id\u0060 / \u0060agent_id\u0060 / \u0060run_id\u0060 are rejected with 400. At least one entity ID is required.",
+      "Language": "csharp",
+      "Code": "using var client = new Mem0Client(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::Mem0.MemoriesSearchV3Request\u003E(\n    @\u0022{\n  \u0022\u0022query\u0022\u0022: \u0022\u0022where does the user live?\u0022\u0022,\n  \u0022\u0022filters\u0022\u0022: {\n    \u0022\u0022user_id\u0022\u0022: \u0022\u0022alice\u0022\u0022\n  },\n  \u0022\u0022top_k\u0022\u0022: 10\n}\u0022)!;\n\nvar response = await client.Memories.MemoriesSearchV3Async(\n    request: request\n);\n\n// Example response:\n// {\n//   \u0022results\u0022: [\n//     {\n//       \u0022id\u0022: \u0022mem-uuid\u0022,\n//       \u0022memory\u0022: \u0022User moved to San Francisco from New York in January 2026\u0022,\n//       \u0022score\u0022: 0.82,\n//       \u0022metadata\u0022: {},\n//       \u0022categories\u0022: [\n//         \u0022location\u0022\n//       ],\n//       \u0022created_at\u0022: \u00222026-01-15T10:30:00Z\u0022,\n//       \u0022updated_at\u0022: \u00222026-01-15T10:30:00Z\u0022\n//     }\n//   ]\n// }",
+      "Format": "sdk",
+      "OperationId": "memories_search_v3",
+      "Setup": "This example assumes \u0060using Mem0;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     }
   ]
 }
