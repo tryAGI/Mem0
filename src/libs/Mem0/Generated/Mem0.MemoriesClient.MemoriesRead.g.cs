@@ -124,7 +124,7 @@ namespace Mem0
                 PrepareMemoriesReadRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    memoryId: memoryId);
+                    memoryId: memoryId!);
 
                 return __httpRequest;
             }

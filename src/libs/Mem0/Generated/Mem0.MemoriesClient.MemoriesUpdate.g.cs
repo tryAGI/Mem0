@@ -138,7 +138,7 @@ namespace Mem0
                 PrepareMemoriesUpdateRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    memoryId: memoryId,
+                    memoryId: memoryId!,
                     request: request);
 
                 return __httpRequest;

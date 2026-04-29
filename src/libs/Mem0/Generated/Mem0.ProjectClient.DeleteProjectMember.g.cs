@@ -137,9 +137,9 @@ namespace Mem0
                 PrepareDeleteProjectMemberRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    orgId: orgId,
-                    projectId: projectId,
-                    email: email);
+                    orgId: orgId!,
+                    projectId: projectId!,
+                    email: email!);
 
                 return __httpRequest;
             }

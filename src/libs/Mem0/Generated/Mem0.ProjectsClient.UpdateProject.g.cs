@@ -144,8 +144,8 @@ namespace Mem0
                 PrepareUpdateProjectRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    orgId: orgId,
-                    projectId: projectId,
+                    orgId: orgId!,
+                    projectId: projectId!,
                     request: request);
 
                 return __httpRequest;

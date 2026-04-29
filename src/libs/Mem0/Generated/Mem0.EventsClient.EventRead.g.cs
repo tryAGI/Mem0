@@ -124,7 +124,7 @@ namespace Mem0
                 PrepareEventReadRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    eventId: eventId);
+                    eventId: eventId!);
 
                 return __httpRequest;
             }
