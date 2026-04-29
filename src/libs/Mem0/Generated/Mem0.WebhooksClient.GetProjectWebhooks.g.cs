@@ -125,7 +125,7 @@ namespace Mem0
                 PrepareGetProjectWebhooksRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    projectId: projectId);
+                    projectId: projectId!);
 
                 return __httpRequest;
             }

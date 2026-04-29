@@ -139,7 +139,7 @@ namespace Mem0
                 PrepareUpdateWebhookRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    webhookId: webhookId,
+                    webhookId: webhookId!,
                     request: request);
 
                 return __httpRequest;

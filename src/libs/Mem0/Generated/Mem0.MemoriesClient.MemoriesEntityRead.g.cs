@@ -124,8 +124,8 @@ namespace Mem0
                 PrepareMemoriesEntityReadRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    entityType: entityType,
-                    entityId: entityId);
+                    entityType: entityType!,
+                    entityId: entityId!);
 
                 return __httpRequest;
             }

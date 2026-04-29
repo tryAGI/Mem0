@@ -130,8 +130,8 @@ namespace Mem0
                 PrepareGetProjectMembersRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    orgId: orgId,
-                    projectId: projectId);
+                    orgId: orgId!,
+                    projectId: projectId!);
 
                 return __httpRequest;
             }

@@ -129,8 +129,8 @@ namespace Mem0
                 PrepareEntitiesDeleteRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    entityType: entityType,
-                    entityId: entityId);
+                    entityType: entityType!,
+                    entityId: entityId!);
 
                 return __httpRequest;
             }

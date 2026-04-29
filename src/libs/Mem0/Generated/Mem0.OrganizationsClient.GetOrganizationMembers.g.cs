@@ -125,7 +125,7 @@ namespace Mem0
                 PrepareGetOrganizationMembersRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    orgId: orgId);
+                    orgId: orgId!);
 
                 return __httpRequest;
             }
