@@ -31,6 +31,29 @@ namespace Mem0
         /// Search memories (V3)<br/>
         /// Relevance-ranked search across stored memories. V3 uses hybrid retrieval — the returned `score` is a combined `[0, 1]` value; per-signal component scores are not exposed on the response. Entity IDs **must** be passed inside the `filters` object — top-level `user_id` / `agent_id` / `run_id` are rejected with 400. At least one entity ID is required.
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Mem0.ApiException"></exception>
+        /// <remarks>
+        /// curl -X POST https://api.mem0.ai/v3/memories/search/ \<br/>
+        ///   -H "Authorization: Token &lt;api-key&gt;" \<br/>
+        ///   -H "Content-Type: application/json" \<br/>
+        ///   -d '{<br/>
+        ///     "query": "where does the user live?",<br/>
+        ///     "filters": {"user_id": "alice"},<br/>
+        ///     "top_k": 10<br/>
+        ///   }'
+        /// </remarks>
+        global::System.Threading.Tasks.Task<global::Mem0.AutoSDKHttpResponse<global::Mem0.MemoriesSearchV3Response>> MemoriesSearchV3AsResponseAsync(
+
+            global::Mem0.MemoriesSearchV3Request request,
+            global::Mem0.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Search memories (V3)<br/>
+        /// Relevance-ranked search across stored memories. V3 uses hybrid retrieval — the returned `score` is a combined `[0, 1]` value; per-signal component scores are not exposed on the response. Entity IDs **must** be passed inside the `filters` object — top-level `user_id` / `agent_id` / `run_id` are rejected with 400. At least one entity ID is required.
+        /// </summary>
         /// <param name="query">
         /// Natural-language search query.
         /// </param>
