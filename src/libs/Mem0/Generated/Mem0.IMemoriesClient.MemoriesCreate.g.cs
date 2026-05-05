@@ -19,6 +19,18 @@ namespace Mem0
         /// <summary>
         /// Add memories.
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Mem0.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Mem0.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Mem0.MemoriesCreateResponseItem>>> MemoriesCreateAsResponseAsync(
+
+            global::Mem0.MemoryInput request,
+            global::Mem0.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Add memories.
+        /// </summary>
         /// <param name="messages">
         /// An array of message objects representing the content of the memory. Each message object typically contains 'role' and 'content' fields, where 'role' indicates the sender either 'user' or 'assistant' and 'content' contains the actual message text. This structure allows for the representation of conversations or multi-part memories.
         /// </param>
