@@ -55,5 +55,6 @@ namespace Mem0
         public EntityInput()
         {
         }
+
     }
 }

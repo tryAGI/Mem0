@@ -39,5 +39,6 @@ namespace Mem0
         public MemorySearchInputV2FiltersCategories()
         {
         }
+
     }
 }

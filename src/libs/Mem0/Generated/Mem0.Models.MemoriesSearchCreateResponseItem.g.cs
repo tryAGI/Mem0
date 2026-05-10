@@ -138,5 +138,6 @@ namespace Mem0
         public MemoriesSearchCreateResponseItem()
         {
         }
+
     }
 }

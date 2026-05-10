@@ -41,5 +41,6 @@ namespace Mem0
         public AddOrganizationMemberResponse2()
         {
         }
+
     }
 }
