@@ -173,5 +173,6 @@ namespace Mem0
         public GetOrganizationResponse()
         {
         }
+
     }
 }

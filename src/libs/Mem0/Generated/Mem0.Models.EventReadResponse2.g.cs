@@ -39,5 +39,6 @@ namespace Mem0
         public EventReadResponse2()
         {
         }
+
     }
 }
