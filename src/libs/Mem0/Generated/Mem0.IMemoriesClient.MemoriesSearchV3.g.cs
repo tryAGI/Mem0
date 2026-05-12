@@ -6,7 +6,7 @@ namespace Mem0
     {
         /// <summary>
         /// Search memories (V3)<br/>
-        /// Relevance-ranked search across stored memories. V3 uses hybrid retrieval — the returned `score` is a combined `[0, 1]` value; per-signal component scores are not exposed on the response. Entity IDs **must** be passed inside the `filters` object — top-level `user_id` / `agent_id` / `run_id` are rejected with 400. At least one entity ID is required.
+        /// Relevance-ranked search across stored memories. V3 uses hybrid retrieval and can also apply temporal reasoning for time-aware queries. Entity IDs **must** be passed inside the `filters` object — top-level `user_id` / `agent_id` / `run_id` are rejected with 400. At least one entity ID is required.
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -29,7 +29,7 @@ namespace Mem0
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Search memories (V3)<br/>
-        /// Relevance-ranked search across stored memories. V3 uses hybrid retrieval — the returned `score` is a combined `[0, 1]` value; per-signal component scores are not exposed on the response. Entity IDs **must** be passed inside the `filters` object — top-level `user_id` / `agent_id` / `run_id` are rejected with 400. At least one entity ID is required.
+        /// Relevance-ranked search across stored memories. V3 uses hybrid retrieval and can also apply temporal reasoning for time-aware queries. Entity IDs **must** be passed inside the `filters` object — top-level `user_id` / `agent_id` / `run_id` are rejected with 400. At least one entity ID is required.
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -52,7 +52,7 @@ namespace Mem0
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Search memories (V3)<br/>
-        /// Relevance-ranked search across stored memories. V3 uses hybrid retrieval — the returned `score` is a combined `[0, 1]` value; per-signal component scores are not exposed on the response. Entity IDs **must** be passed inside the `filters` object — top-level `user_id` / `agent_id` / `run_id` are rejected with 400. At least one entity ID is required.
+        /// Relevance-ranked search across stored memories. V3 uses hybrid retrieval and can also apply temporal reasoning for time-aware queries. Entity IDs **must** be passed inside the `filters` object — top-level `user_id` / `agent_id` / `run_id` are rejected with 400. At least one entity ID is required.
         /// </summary>
         /// <param name="query">
         /// Natural-language search query.
@@ -72,6 +72,9 @@ namespace Mem0
         /// Apply the managed reranker for better ordering (adds latency).<br/>
         /// Default Value: false
         /// </param>
+        /// <param name="referenceDate">
+        /// Optional query anchor time for relative temporal interpretation. Accepts Unix epoch, YYYY-MM-DD, or ISO datetime.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -81,6 +84,7 @@ namespace Mem0
             int? topK = default,
             double? threshold = default,
             bool? rerank = default,
+            global::Mem0.OneOf<int?, double?, string>? referenceDate = default,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
