@@ -40,7 +40,7 @@ namespace Mem0
         public object? Metadata { get; set; }
 
         /// <summary>
-        /// Array of results produced by the event.
+        /// Array of results produced by the event. For add events, this confirms the write completed; temporal reasoning enrichment runs asynchronously by default.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("results")]
         public byte[]? Results { get; set; }
@@ -100,7 +100,7 @@ namespace Mem0
         /// Additional metadata associated with the event.
         /// </param>
         /// <param name="results">
-        /// Array of results produced by the event.
+        /// Array of results produced by the event. For add events, this confirms the write completed; temporal reasoning enrichment runs asynchronously by default.
         /// </param>
         /// <param name="createdAt">
         /// Timestamp when the event was created.

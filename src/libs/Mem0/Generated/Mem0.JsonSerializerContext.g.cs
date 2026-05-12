@@ -73,6 +73,8 @@ namespace Mem0
 
             typeof(global::Mem0.JsonConverters.SubmitFeedbackResponseFeedbackNullableJsonConverter),
 
+            typeof(global::Mem0.JsonConverters.OneOfJsonConverter<int?, double?, string>),
+
             typeof(global::Mem0.JsonConverters.UnixTimestampJsonConverter),
         })]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.JsonSerializerContextTypes))]
@@ -119,6 +121,7 @@ namespace Mem0
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesAddV3RequestMessage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesAddV3RequestMessageRole), TypeInfoPropertyName = "MemoriesAddV3RequestMessageRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesSearchV3Request))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.OneOf<int?, double?, string>), TypeInfoPropertyName = "OneOfInt32DoubleString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesUpdateRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.SubmitFeedbackRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.SubmitFeedbackRequestFeedback), TypeInfoPropertyName = "SubmitFeedbackRequestFeedback2")]
