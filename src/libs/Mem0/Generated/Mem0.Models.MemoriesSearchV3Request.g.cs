@@ -44,6 +44,13 @@ namespace Mem0
         public bool? Rerank { get; set; }
 
         /// <summary>
+        /// Optional query anchor time for relative temporal interpretation. Accepts Unix epoch, YYYY-MM-DD, or ISO datetime.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("reference_date")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Mem0.JsonConverters.OneOfJsonConverter<int?, double?, string>))]
+        public global::Mem0.OneOf<int?, double?, string>? ReferenceDate { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -70,6 +77,9 @@ namespace Mem0
         /// Apply the managed reranker for better ordering (adds latency).<br/>
         /// Default Value: false
         /// </param>
+        /// <param name="referenceDate">
+        /// Optional query anchor time for relative temporal interpretation. Accepts Unix epoch, YYYY-MM-DD, or ISO datetime.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -78,13 +88,15 @@ namespace Mem0
             object filters,
             int? topK,
             double? threshold,
-            bool? rerank)
+            bool? rerank,
+            global::Mem0.OneOf<int?, double?, string>? referenceDate)
         {
             this.Query = query ?? throw new global::System.ArgumentNullException(nameof(query));
             this.Filters = filters ?? throw new global::System.ArgumentNullException(nameof(filters));
             this.TopK = topK;
             this.Threshold = threshold;
             this.Rerank = rerank;
+            this.ReferenceDate = referenceDate;
         }
 
         /// <summary>
@@ -93,5 +105,6 @@ namespace Mem0
         public MemoriesSearchV3Request()
         {
         }
+
     }
 }

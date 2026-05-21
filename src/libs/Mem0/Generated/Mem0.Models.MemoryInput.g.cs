@@ -248,5 +248,6 @@ namespace Mem0
         public MemoryInput()
         {
         }
+
     }
 }

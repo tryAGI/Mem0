@@ -67,6 +67,41 @@ namespace Mem0
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await MemoriesAddV3AsResponseAsync(
+
+                request: request,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// Add memories (V3)<br/>
+        /// Extract and store memories from a conversation using the V3 additive pipeline. Entity IDs (`user_id` / `agent_id` / `run_id`) are accepted at the top level. At least one entity ID is required so the memory is scoped to a session.
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Mem0.ApiException"></exception>
+        /// <remarks>
+        /// curl -X POST https://api.mem0.ai/v3/memories/add/ \<br/>
+        ///   -H "Authorization: Token &lt;api-key&gt;" \<br/>
+        ///   -H "Content-Type: application/json" \<br/>
+        ///   -d '{<br/>
+        ///     "messages": [<br/>
+        ///       {"role": "user", "content": "I just moved to San Francisco from New York."},<br/>
+        ///       {"role": "assistant", "content": "Got it — I\u0027ll update your location."}<br/>
+        ///     ],<br/>
+        ///     "user_id": "alice"<br/>
+        ///   }'
+        /// </remarks>
+        public async global::System.Threading.Tasks.Task<global::Mem0.AutoSDKHttpResponse<global::Mem0.MemoriesAddV3Response>> MemoriesAddV3AsResponseAsync(
+
+            global::Mem0.MemoriesAddV3Request request,
+            global::Mem0.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
 
             PrepareArguments(
@@ -97,6 +132,7 @@ namespace Mem0
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::Mem0.PathBuilder(
                                 path: "/v3/memories/add/",
                                 baseUri: HttpClient.BaseAddress);
@@ -176,6 +212,8 @@ namespace Mem0
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -186,6 +224,11 @@ namespace Mem0
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::Mem0.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::Mem0.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -203,6 +246,8 @@ namespace Mem0
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -212,8 +257,7 @@ namespace Mem0
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Mem0.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -222,6 +266,11 @@ namespace Mem0
                         __attempt < __maxAttempts &&
                         global::Mem0.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::Mem0.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::Mem0.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Mem0.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -238,14 +287,15 @@ namespace Mem0
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Mem0.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -285,6 +335,8 @@ namespace Mem0
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -305,6 +357,8 @@ namespace Mem0
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                             // 
@@ -395,9 +449,13 @@ namespace Mem0
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    return
-                                        global::Mem0.MemoriesAddV3Response.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Mem0.MemoriesAddV3Response.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                                    return new global::Mem0.AutoSDKHttpResponse<global::Mem0.MemoriesAddV3Response>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Mem0.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -425,9 +483,13 @@ namespace Mem0
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    return
-                                        await global::Mem0.MemoriesAddV3Response.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Mem0.MemoriesAddV3Response.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                                    return new global::Mem0.AutoSDKHttpResponse<global::Mem0.MemoriesAddV3Response>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Mem0.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
