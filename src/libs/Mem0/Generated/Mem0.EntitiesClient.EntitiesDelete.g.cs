@@ -111,7 +111,7 @@ namespace Mem0
             {
 
                             var __pathBuilder = new global::Mem0.PathBuilder(
-                                path: $"/v2/entities/{entityType}/{entityId}/",
+                                path: $"/v2/entities/{(global::System.Uri.EscapeDataString(entityType.ToValueString()))}/{entityId}/",
                                 baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::Mem0.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -173,7 +173,7 @@ namespace Mem0
                             context: global::Mem0.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "EntitiesDelete",
                                 methodName: "EntitiesDeleteAsync",
-                                pathTemplate: "$\"/v2/entities/{entityType}/{entityId}/\"",
+                                pathTemplate: "$\"/v2/entities/{(global::System.Uri.EscapeDataString(entityType.ToValueString()))}/{entityId}/\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -207,7 +207,7 @@ namespace Mem0
                             context: global::Mem0.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "EntitiesDelete",
                                 methodName: "EntitiesDeleteAsync",
-                                pathTemplate: "$\"/v2/entities/{entityType}/{entityId}/\"",
+                                pathTemplate: "$\"/v2/entities/{(global::System.Uri.EscapeDataString(entityType.ToValueString()))}/{entityId}/\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -248,7 +248,7 @@ namespace Mem0
                             context: global::Mem0.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "EntitiesDelete",
                                 methodName: "EntitiesDeleteAsync",
-                                pathTemplate: "$\"/v2/entities/{entityType}/{entityId}/\"",
+                                pathTemplate: "$\"/v2/entities/{(global::System.Uri.EscapeDataString(entityType.ToValueString()))}/{entityId}/\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -296,7 +296,7 @@ namespace Mem0
                             context: global::Mem0.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "EntitiesDelete",
                                 methodName: "EntitiesDeleteAsync",
-                                pathTemplate: "$\"/v2/entities/{entityType}/{entityId}/\"",
+                                pathTemplate: "$\"/v2/entities/{(global::System.Uri.EscapeDataString(entityType.ToValueString()))}/{entityId}/\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -318,7 +318,7 @@ namespace Mem0
                             context: global::Mem0.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "EntitiesDelete",
                                 methodName: "EntitiesDeleteAsync",
-                                pathTemplate: "$\"/v2/entities/{entityType}/{entityId}/\"",
+                                pathTemplate: "$\"/v2/entities/{(global::System.Uri.EscapeDataString(entityType.ToValueString()))}/{entityId}/\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
