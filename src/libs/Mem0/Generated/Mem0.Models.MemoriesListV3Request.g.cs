@@ -16,6 +16,13 @@ namespace Mem0
         public required object Filters { get; set; }
 
         /// <summary>
+        /// When true, include memories whose `expiration_date` has passed. Expired memories are hidden by default.<br/>
+        /// Default Value: false
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("show_expired")]
+        public bool? ShowExpired { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -27,13 +34,19 @@ namespace Mem0
         /// <param name="filters">
         /// Entity and metadata filters. Must include at least one entity ID (`user_id`, `agent_id`, `app_id`, or `run_id`).
         /// </param>
+        /// <param name="showExpired">
+        /// When true, include memories whose `expiration_date` has passed. Expired memories are hidden by default.<br/>
+        /// Default Value: false
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public MemoriesListV3Request(
-            object filters)
+            object filters,
+            bool? showExpired)
         {
             this.Filters = filters ?? throw new global::System.ArgumentNullException(nameof(filters));
+            this.ShowExpired = showExpired;
         }
 
         /// <summary>

@@ -71,6 +71,10 @@ namespace Mem0
         /// <param name="filters">
         /// Entity and metadata filters. Must include at least one entity ID (`user_id`, `agent_id`, `app_id`, or `run_id`).
         /// </param>
+        /// <param name="showExpired">
+        /// When true, include memories whose `expiration_date` has passed. Expired memories are hidden by default.<br/>
+        /// Default Value: false
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -78,6 +82,7 @@ namespace Mem0
             object filters,
             int? page = default,
             int? pageSize = default,
+            bool? showExpired = default,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

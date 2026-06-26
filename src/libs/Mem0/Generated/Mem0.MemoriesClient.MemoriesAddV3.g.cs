@@ -540,6 +540,9 @@ namespace Mem0
         /// <param name="metadata">
         /// User-supplied metadata to attach to each extracted memory.
         /// </param>
+        /// <param name="expirationDate">
+        /// Optional expiration date in YYYY-MM-DD format. After this date, memories are hidden from search and get-all unless `show_expired` is true.
+        /// </param>
         /// <param name="customInstructions">
         /// Project-level instructions that guide extraction for this call.
         /// </param>
@@ -556,6 +559,7 @@ namespace Mem0
             string? agentId = default,
             string? runId = default,
             object? metadata = default,
+            global::System.DateTime? expirationDate = default,
             string? customInstructions = default,
             bool? infer = default,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
@@ -568,6 +572,7 @@ namespace Mem0
                 AgentId = agentId,
                 RunId = runId,
                 Metadata = metadata,
+                ExpirationDate = expirationDate,
                 CustomInstructions = customInstructions,
                 Infer = infer,
             };
