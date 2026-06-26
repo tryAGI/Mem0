@@ -21,6 +21,12 @@ namespace Mem0
         public object? Metadata { get; set; }
 
         /// <summary>
+        /// Expiration date in YYYY-MM-DD format, or null to clear the expiration date.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("expiration_date")]
+        public global::System.DateTime? ExpirationDate { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -35,15 +41,20 @@ namespace Mem0
         /// <param name="metadata">
         /// Additional metadata associated with the memory
         /// </param>
+        /// <param name="expirationDate">
+        /// Expiration date in YYYY-MM-DD format, or null to clear the expiration date.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public MemoriesUpdateRequest(
             string? text,
-            object? metadata)
+            object? metadata,
+            global::System.DateTime? expirationDate)
         {
             this.Text = text;
             this.Metadata = metadata;
+            this.ExpirationDate = expirationDate;
         }
 
         /// <summary>

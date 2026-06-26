@@ -527,6 +527,10 @@ namespace Mem0
         /// <param name="filters">
         /// Entity and metadata filters. Must include at least one entity ID (`user_id`, `agent_id`, `app_id`, or `run_id`). Supports `AND`, `OR`, `NOT`, and comparison operators (`in`, `gte`, `lte`, `gt`, `lt`, `contains`, `icontains`, `ne`).
         /// </param>
+        /// <param name="showExpired">
+        /// When true, include memories whose `expiration_date` has passed. Expired memories are hidden by default.<br/>
+        /// Default Value: false
+        /// </param>
         /// <param name="topK">
         /// Number of results to return.<br/>
         /// Default Value: 10
@@ -548,6 +552,7 @@ namespace Mem0
         public async global::System.Threading.Tasks.Task<global::Mem0.MemoriesSearchV3Response> MemoriesSearchV3Async(
             string query,
             object filters,
+            bool? showExpired = default,
             int? topK = default,
             double? threshold = default,
             bool? rerank = default,
@@ -559,6 +564,7 @@ namespace Mem0
             {
                 Query = query,
                 Filters = filters,
+                ShowExpired = showExpired,
                 TopK = topK,
                 Threshold = threshold,
                 Rerank = rerank,

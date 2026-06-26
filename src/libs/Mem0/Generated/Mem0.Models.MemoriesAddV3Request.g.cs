@@ -40,6 +40,12 @@ namespace Mem0
         public object? Metadata { get; set; }
 
         /// <summary>
+        /// Optional expiration date in YYYY-MM-DD format. After this date, memories are hidden from search and get-all unless `show_expired` is true.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("expiration_date")]
+        public global::System.DateTime? ExpirationDate { get; set; }
+
+        /// <summary>
         /// Project-level instructions that guide extraction for this call.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("custom_instructions")]
@@ -76,6 +82,9 @@ namespace Mem0
         /// <param name="metadata">
         /// User-supplied metadata to attach to each extracted memory.
         /// </param>
+        /// <param name="expirationDate">
+        /// Optional expiration date in YYYY-MM-DD format. After this date, memories are hidden from search and get-all unless `show_expired` is true.
+        /// </param>
         /// <param name="customInstructions">
         /// Project-level instructions that guide extraction for this call.
         /// </param>
@@ -92,6 +101,7 @@ namespace Mem0
             string? agentId,
             string? runId,
             object? metadata,
+            global::System.DateTime? expirationDate,
             string? customInstructions,
             bool? infer)
         {
@@ -100,6 +110,7 @@ namespace Mem0
             this.AgentId = agentId;
             this.RunId = runId;
             this.Metadata = metadata;
+            this.ExpirationDate = expirationDate;
             this.CustomInstructions = customInstructions;
             this.Infer = infer;
         }

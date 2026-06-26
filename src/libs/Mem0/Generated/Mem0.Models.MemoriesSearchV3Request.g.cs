@@ -23,6 +23,13 @@ namespace Mem0
         public required object Filters { get; set; }
 
         /// <summary>
+        /// When true, include memories whose `expiration_date` has passed. Expired memories are hidden by default.<br/>
+        /// Default Value: false
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("show_expired")]
+        public bool? ShowExpired { get; set; }
+
+        /// <summary>
         /// Number of results to return.<br/>
         /// Default Value: 10
         /// </summary>
@@ -65,6 +72,10 @@ namespace Mem0
         /// <param name="filters">
         /// Entity and metadata filters. Must include at least one entity ID (`user_id`, `agent_id`, `app_id`, or `run_id`). Supports `AND`, `OR`, `NOT`, and comparison operators (`in`, `gte`, `lte`, `gt`, `lt`, `contains`, `icontains`, `ne`).
         /// </param>
+        /// <param name="showExpired">
+        /// When true, include memories whose `expiration_date` has passed. Expired memories are hidden by default.<br/>
+        /// Default Value: false
+        /// </param>
         /// <param name="topK">
         /// Number of results to return.<br/>
         /// Default Value: 10
@@ -86,6 +97,7 @@ namespace Mem0
         public MemoriesSearchV3Request(
             string query,
             object filters,
+            bool? showExpired,
             int? topK,
             double? threshold,
             bool? rerank,
@@ -93,6 +105,7 @@ namespace Mem0
         {
             this.Query = query ?? throw new global::System.ArgumentNullException(nameof(query));
             this.Filters = filters ?? throw new global::System.ArgumentNullException(nameof(filters));
+            this.ShowExpired = showExpired;
             this.TopK = topK;
             this.Threshold = threshold;
             this.Rerank = rerank;

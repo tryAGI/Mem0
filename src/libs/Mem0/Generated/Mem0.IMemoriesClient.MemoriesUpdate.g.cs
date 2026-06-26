@@ -42,6 +42,9 @@ namespace Mem0
         /// <param name="metadata">
         /// Additional metadata associated with the memory
         /// </param>
+        /// <param name="expirationDate">
+        /// Expiration date in YYYY-MM-DD format, or null to clear the expiration date.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -49,6 +52,7 @@ namespace Mem0
             global::System.Guid memoryId,
             string? text = default,
             object? metadata = default,
+            global::System.DateTime? expirationDate = default,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
