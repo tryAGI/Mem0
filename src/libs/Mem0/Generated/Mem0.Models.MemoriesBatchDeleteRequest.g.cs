@@ -9,11 +9,11 @@ namespace Mem0
     public sealed partial class MemoriesBatchDeleteRequest
     {
         /// <summary>
-        /// Array of memory IDs to delete.
+        /// Array of memory objects to delete.
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("memory_ids")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("memories")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::System.Guid> MemoryIds { get; set; }
+        public required global::System.Collections.Generic.IList<global::Mem0.MemoriesBatchDeleteRequestMemorie> Memories { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -24,16 +24,16 @@ namespace Mem0
         /// <summary>
         /// Initializes a new instance of the <see cref="MemoriesBatchDeleteRequest" /> class.
         /// </summary>
-        /// <param name="memoryIds">
-        /// Array of memory IDs to delete.
+        /// <param name="memories">
+        /// Array of memory objects to delete.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public MemoriesBatchDeleteRequest(
-            global::System.Collections.Generic.IList<global::System.Guid> memoryIds)
+            global::System.Collections.Generic.IList<global::Mem0.MemoriesBatchDeleteRequestMemorie> memories)
         {
-            this.MemoryIds = memoryIds ?? throw new global::System.ArgumentNullException(nameof(memoryIds));
+            this.Memories = memories ?? throw new global::System.ArgumentNullException(nameof(memories));
         }
 
         /// <summary>

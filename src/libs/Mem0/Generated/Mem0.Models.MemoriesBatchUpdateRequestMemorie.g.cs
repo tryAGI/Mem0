@@ -19,8 +19,13 @@ namespace Mem0
         /// The new text content for the memory
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("text")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Text { get; set; }
+        public string? Text { get; set; }
+
+        /// <summary>
+        /// Updated metadata to associate with the memory.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
+        public object? Metadata { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -37,15 +42,20 @@ namespace Mem0
         /// <param name="text">
         /// The new text content for the memory
         /// </param>
+        /// <param name="metadata">
+        /// Updated metadata to associate with the memory.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public MemoriesBatchUpdateRequestMemorie(
             global::System.Guid memoryId,
-            string text)
+            string? text,
+            object? metadata)
         {
             this.MemoryId = memoryId;
-            this.Text = text ?? throw new global::System.ArgumentNullException(nameof(text));
+            this.Text = text;
+            this.Metadata = metadata;
         }
 
         /// <summary>
