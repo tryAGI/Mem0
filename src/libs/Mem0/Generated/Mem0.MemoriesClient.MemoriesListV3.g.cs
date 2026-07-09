@@ -47,7 +47,7 @@ namespace Mem0
 
         /// <summary>
         /// Get all memories (V3, paginated)<br/>
-        /// List memories scoped by filters, paginated. Entity IDs **must** be passed inside the `filters` object — top-level `user_id` / `agent_id` / `run_id` are rejected with 400. `filters` supports the same operator set as V2 search (`AND`, `OR`, `NOT`, `in`, `gte`, `lte`, etc.). Response is a paginated envelope; pass `page` and `page_size` as query parameters to step through results.
+        /// List memories scoped by filters, paginated. Entity IDs **must** be passed inside the `filters` object. Top-level `user_id` / `agent_id` / `run_id` are rejected with 400. `filters` supports the same operator set as V2 search (`AND`, `OR`, `NOT`, `in`, `gte`, `lte`, etc.). Response is a paginated envelope; pass `page` and `page_size` as query parameters to step through results.
         /// </summary>
         /// <param name="page">
         /// Default Value: 1
@@ -86,7 +86,7 @@ namespace Mem0
         }
         /// <summary>
         /// Get all memories (V3, paginated)<br/>
-        /// List memories scoped by filters, paginated. Entity IDs **must** be passed inside the `filters` object — top-level `user_id` / `agent_id` / `run_id` are rejected with 400. `filters` supports the same operator set as V2 search (`AND`, `OR`, `NOT`, `in`, `gte`, `lte`, etc.). Response is a paginated envelope; pass `page` and `page_size` as query parameters to step through results.
+        /// List memories scoped by filters, paginated. Entity IDs **must** be passed inside the `filters` object. Top-level `user_id` / `agent_id` / `run_id` are rejected with 400. `filters` supports the same operator set as V2 search (`AND`, `OR`, `NOT`, `in`, `gte`, `lte`, etc.). Response is a paginated envelope; pass `page` and `page_size` as query parameters to step through results.
         /// </summary>
         /// <param name="page">
         /// Default Value: 1
@@ -541,7 +541,7 @@ namespace Mem0
         }
         /// <summary>
         /// Get all memories (V3, paginated)<br/>
-        /// List memories scoped by filters, paginated. Entity IDs **must** be passed inside the `filters` object — top-level `user_id` / `agent_id` / `run_id` are rejected with 400. `filters` supports the same operator set as V2 search (`AND`, `OR`, `NOT`, `in`, `gte`, `lte`, etc.). Response is a paginated envelope; pass `page` and `page_size` as query parameters to step through results.
+        /// List memories scoped by filters, paginated. Entity IDs **must** be passed inside the `filters` object. Top-level `user_id` / `agent_id` / `run_id` are rejected with 400. `filters` supports the same operator set as V2 search (`AND`, `OR`, `NOT`, `in`, `gte`, `lte`, etc.). Response is a paginated envelope; pass `page` and `page_size` as query parameters to step through results.
         /// </summary>
         /// <param name="page">
         /// Default Value: 1
