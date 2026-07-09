@@ -19,7 +19,7 @@ namespace Mem0
         ///   -d '{<br/>
         ///     "messages": [<br/>
         ///       {"role": "user", "content": "I just moved to San Francisco from New York."},<br/>
-        ///       {"role": "assistant", "content": "Got it — I\u0027ll update your location."}<br/>
+        ///       {"role": "assistant", "content": "Got it, I\u0027ll update your location."}<br/>
         ///     ],<br/>
         ///     "user_id": "alice"<br/>
         ///   }'
@@ -44,7 +44,7 @@ namespace Mem0
         ///   -d '{<br/>
         ///     "messages": [<br/>
         ///       {"role": "user", "content": "I just moved to San Francisco from New York."},<br/>
-        ///       {"role": "assistant", "content": "Got it — I\u0027ll update your location."}<br/>
+        ///       {"role": "assistant", "content": "Got it, I\u0027ll update your location."}<br/>
         ///     ],<br/>
         ///     "user_id": "alice"<br/>
         ///   }'

@@ -6,7 +6,7 @@ namespace Mem0
     {
         /// <summary>
         /// Search memories (V3)<br/>
-        /// Relevance-ranked search across stored memories. V3 uses hybrid retrieval and can also apply temporal reasoning for time-aware queries. Entity IDs **must** be passed inside the `filters` object — top-level `user_id` / `agent_id` / `run_id` are rejected with 400. At least one entity ID is required.
+        /// Relevance-ranked search across stored memories. V3 uses hybrid retrieval and can also apply temporal reasoning for time-aware queries. Entity IDs **must** be passed inside the `filters` object. Top-level `user_id` / `agent_id` / `run_id` are rejected with 400. At least one entity ID is required.
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -29,7 +29,7 @@ namespace Mem0
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Search memories (V3)<br/>
-        /// Relevance-ranked search across stored memories. V3 uses hybrid retrieval and can also apply temporal reasoning for time-aware queries. Entity IDs **must** be passed inside the `filters` object — top-level `user_id` / `agent_id` / `run_id` are rejected with 400. At least one entity ID is required.
+        /// Relevance-ranked search across stored memories. V3 uses hybrid retrieval and can also apply temporal reasoning for time-aware queries. Entity IDs **must** be passed inside the `filters` object. Top-level `user_id` / `agent_id` / `run_id` are rejected with 400. At least one entity ID is required.
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -52,7 +52,7 @@ namespace Mem0
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Search memories (V3)<br/>
-        /// Relevance-ranked search across stored memories. V3 uses hybrid retrieval and can also apply temporal reasoning for time-aware queries. Entity IDs **must** be passed inside the `filters` object — top-level `user_id` / `agent_id` / `run_id` are rejected with 400. At least one entity ID is required.
+        /// Relevance-ranked search across stored memories. V3 uses hybrid retrieval and can also apply temporal reasoning for time-aware queries. Entity IDs **must** be passed inside the `filters` object. Top-level `user_id` / `agent_id` / `run_id` are rejected with 400. At least one entity ID is required.
         /// </summary>
         /// <param name="query">
         /// Natural-language search query.

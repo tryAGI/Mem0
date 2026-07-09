@@ -54,7 +54,7 @@ namespace Mem0
             ref string content);
 
         /// <summary>
-        /// Delete memories by filter. At least one filter is required — previously omitting all filters silently deleted everything; now it returns a validation error.
+        /// Delete memories by filter. At least one filter is required. Previously, omitting all filters silently deleted everything; now it returns a validation error.
         /// </summary>
         /// <param name="userId"></param>
         /// <param name="agentId"></param>
@@ -92,7 +92,7 @@ namespace Mem0
             return __response.Body;
         }
         /// <summary>
-        /// Delete memories by filter. At least one filter is required — previously omitting all filters silently deleted everything; now it returns a validation error.
+        /// Delete memories by filter. At least one filter is required. Previously, omitting all filters silently deleted everything; now it returns a validation error.
         /// </summary>
         /// <param name="userId"></param>
         /// <param name="agentId"></param>

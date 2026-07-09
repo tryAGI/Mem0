@@ -5,7 +5,7 @@ namespace Mem0
     public partial interface IMemoriesClient
     {
         /// <summary>
-        /// Delete memories by filter. At least one filter is required — previously omitting all filters silently deleted everything; now it returns a validation error.
+        /// Delete memories by filter. At least one filter is required. Previously, omitting all filters silently deleted everything; now it returns a validation error.
         /// </summary>
         /// <param name="userId"></param>
         /// <param name="agentId"></param>
@@ -28,7 +28,7 @@ namespace Mem0
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Delete memories by filter. At least one filter is required — previously omitting all filters silently deleted everything; now it returns a validation error.
+        /// Delete memories by filter. At least one filter is required. Previously, omitting all filters silently deleted everything; now it returns a validation error.
         /// </summary>
         /// <param name="userId"></param>
         /// <param name="agentId"></param>
