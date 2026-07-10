@@ -52,6 +52,12 @@ namespace Mem0
         public string? CustomInstructions { get; set; }
 
         /// <summary>
+        /// Category catalog for this call. Replaces the project-level list rather than merging with it. Omit to fall back to the project list, then the default catalog.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("custom_categories")]
+        public global::System.Collections.Generic.IList<global::System.Collections.Generic.Dictionary<string, string>>? CustomCategories { get; set; }
+
+        /// <summary>
         /// When `false`, stores each message verbatim without running the extraction LLM.<br/>
         /// Default Value: true
         /// </summary>
@@ -88,6 +94,9 @@ namespace Mem0
         /// <param name="customInstructions">
         /// Project-level instructions that guide extraction for this call.
         /// </param>
+        /// <param name="customCategories">
+        /// Category catalog for this call. Replaces the project-level list rather than merging with it. Omit to fall back to the project list, then the default catalog.
+        /// </param>
         /// <param name="infer">
         /// When `false`, stores each message verbatim without running the extraction LLM.<br/>
         /// Default Value: true
@@ -103,6 +112,7 @@ namespace Mem0
             object? metadata,
             global::System.DateTime? expirationDate,
             string? customInstructions,
+            global::System.Collections.Generic.IList<global::System.Collections.Generic.Dictionary<string, string>>? customCategories,
             bool? infer)
         {
             this.Messages = messages ?? throw new global::System.ArgumentNullException(nameof(messages));
@@ -112,6 +122,7 @@ namespace Mem0
             this.Metadata = metadata;
             this.ExpirationDate = expirationDate;
             this.CustomInstructions = customInstructions;
+            this.CustomCategories = customCategories;
             this.Infer = infer;
         }
 

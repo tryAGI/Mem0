@@ -546,6 +546,9 @@ namespace Mem0
         /// <param name="customInstructions">
         /// Project-level instructions that guide extraction for this call.
         /// </param>
+        /// <param name="customCategories">
+        /// Category catalog for this call. Replaces the project-level list rather than merging with it. Omit to fall back to the project list, then the default catalog.
+        /// </param>
         /// <param name="infer">
         /// When `false`, stores each message verbatim without running the extraction LLM.<br/>
         /// Default Value: true
@@ -561,6 +564,7 @@ namespace Mem0
             object? metadata = default,
             global::System.DateTime? expirationDate = default,
             string? customInstructions = default,
+            global::System.Collections.Generic.IList<global::System.Collections.Generic.Dictionary<string, string>>? customCategories = default,
             bool? infer = default,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -574,6 +578,7 @@ namespace Mem0
                 Metadata = metadata,
                 ExpirationDate = expirationDate,
                 CustomInstructions = customInstructions,
+                CustomCategories = customCategories,
                 Infer = infer,
             };
 
