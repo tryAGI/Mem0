@@ -9,7 +9,7 @@ namespace Mem0
     public sealed partial class MemoriesAddV3Response
     {
         /// <summary>
-        /// 
+        /// Only present when `infer` is `false`, where processing is synchronous.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("message")]
         public string? Message { get; set; }
@@ -36,7 +36,9 @@ namespace Mem0
         /// <summary>
         /// Initializes a new instance of the <see cref="MemoriesAddV3Response" /> class.
         /// </summary>
-        /// <param name="message"></param>
+        /// <param name="message">
+        /// Only present when `infer` is `false`, where processing is synchronous.
+        /// </param>
         /// <param name="status"></param>
         /// <param name="eventId"></param>
 #if NET7_0_OR_GREATER
