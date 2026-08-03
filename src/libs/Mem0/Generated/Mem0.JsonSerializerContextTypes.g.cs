@@ -320,659 +320,699 @@ namespace Mem0
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.EntitiesListResponse? Type73 { get; set; }
+        public global::Mem0.MemoriesEntityReadEntityType? Type73 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.EntitiesListResponseResult>? Type74 { get; set; }
+        public global::Mem0.EntitiesListResponse? Type74 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.EntitiesListResponseResult? Type75 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.EntitiesListResponseResult>? Type75 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.EntitiesListResponseResultType? Type76 { get; set; }
+        public global::Mem0.EntitiesListResponseResult? Type76 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.EntitiesFiltersListResponse? Type77 { get; set; }
+        public global::Mem0.EntitiesListResponseResultType? Type77 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.EntitiesFiltersListResponseParameter>? Type78 { get; set; }
+        public global::Mem0.EntitiesFiltersListResponse? Type78 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.EntitiesFiltersListResponseParameter? Type79 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.EntitiesFiltersListResponseParameter>? Type79 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.EntitiesFiltersListResponseParameterOption>? Type80 { get; set; }
+        public global::Mem0.EntitiesFiltersListResponseParameter? Type80 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.EntitiesFiltersListResponseParameterOption? Type81 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.EntitiesFiltersListResponseParameterOption>? Type81 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.EntitiesDeleteV1Response? Type82 { get; set; }
+        public global::Mem0.EntitiesFiltersListResponseParameterOption? Type82 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.EntitiesDeleteV1Response2? Type83 { get; set; }
+        public global::Mem0.EntitiesDeleteV1Response? Type83 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.EntitiesReadResponseItem>? Type84 { get; set; }
+        public global::Mem0.EntitiesDeleteV1Response2? Type84 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.EntitiesReadResponseItem? Type85 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.EntitiesReadResponseItem>? Type85 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.EntitiesDeleteResponse? Type86 { get; set; }
+        public global::Mem0.EntitiesReadResponseItem? Type86 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.EntitiesDeleteResponse2? Type87 { get; set; }
+        public global::Mem0.EntitiesDeleteResponse? Type87 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.EventsListResponse? Type88 { get; set; }
+        public global::Mem0.EntitiesDeleteResponse2? Type88 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.EventsListResponseResult>? Type89 { get; set; }
+        public global::Mem0.EventsListResponse? Type89 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.EventsListResponseResult? Type90 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.EventsListResponseResult>? Type90 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.EventsListResponseResultStatus? Type91 { get; set; }
+        public global::Mem0.EventsListResponseResult? Type91 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.EventReadResponse? Type92 { get; set; }
+        public global::Mem0.EventsListResponseResultStatus? Type92 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.EventReadResponseStatus? Type93 { get; set; }
+        public global::Mem0.EventReadResponse? Type93 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.EventReadResponse2? Type94 { get; set; }
+        public global::Mem0.EventReadResponseStatus? Type94 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.ExportsCreateResponse? Type95 { get; set; }
+        public global::Mem0.EventReadResponse2? Type95 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.OneOf<global::Mem0.ExportsCreateResponseVariant1, global::Mem0.ExportsCreateResponseVariant2>? Type96 { get; set; }
+        public global::Mem0.ExportsCreateResponse? Type96 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.ExportsCreateResponseVariant1? Type97 { get; set; }
+        public global::Mem0.OneOf<global::Mem0.ExportsCreateResponseVariant1, global::Mem0.ExportsCreateResponseVariant2>? Type97 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.ExportsCreateResponseVariant2? Type98 { get; set; }
+        public global::Mem0.ExportsCreateResponseVariant1? Type98 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.ExportsListResponse2? Type99 { get; set; }
+        public global::Mem0.ExportsCreateResponseVariant2? Type99 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.ExportsListResponse3? Type100 { get; set; }
+        public global::Mem0.ExportsListResponse2? Type100 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.OneOf<global::System.Collections.Generic.IList<global::Mem0.MemoriesListResponseItem>, global::Mem0.MemoriesListResponse2>? Type101 { get; set; }
+        public global::Mem0.ExportsListResponse3? Type101 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.MemoriesListResponseItem>? Type102 { get; set; }
+        public global::Mem0.OneOf<global::System.Collections.Generic.IList<global::Mem0.MemoriesListResponseItem>, global::Mem0.MemoriesListResponse2>? Type102 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesListResponseItem? Type103 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.MemoriesListResponseItem>? Type103 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesListResponse2? Type104 { get; set; }
+        public global::Mem0.MemoriesListResponseItem? Type104 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.MemoriesListResponseResult>? Type105 { get; set; }
+        public global::Mem0.MemoriesListResponse2? Type105 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesListResponseResult? Type106 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.MemoriesListResponseResult>? Type106 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesListResponse3? Type107 { get; set; }
+        public global::Mem0.MemoriesListResponseResult? Type107 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.OneOf<global::System.Collections.Generic.IList<global::Mem0.MemoriesCreateResponseItem>, global::Mem0.MemoriesCreateResponse2>? Type108 { get; set; }
+        public global::Mem0.OneOf<global::System.Collections.Generic.IList<string>, global::Mem0.MemoriesListResponse4>? Type108 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.MemoriesCreateResponseItem>? Type109 { get; set; }
+        public global::Mem0.MemoriesListResponse4? Type109 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesCreateResponseItem? Type110 { get; set; }
+        public global::Mem0.MemoriesListResponse5? Type110 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesCreateResponse2? Type111 { get; set; }
+        public global::Mem0.OneOf<global::System.Collections.Generic.IList<global::Mem0.MemoriesCreateResponseItem>, global::Mem0.MemoriesCreateResponse2>? Type111 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.MemoriesCreateResponseResult>? Type112 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.MemoriesCreateResponseItem>? Type112 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesCreateResponseResult? Type113 { get; set; }
+        public global::Mem0.MemoriesCreateResponseItem? Type113 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesDeleteAllResponse? Type114 { get; set; }
+        public global::Mem0.MemoriesCreateResponse2? Type114 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.MemoriesListV2ResponseItem>? Type115 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.MemoriesCreateResponseResult>? Type115 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesListV2ResponseItem? Type116 { get; set; }
+        public global::Mem0.MemoriesCreateResponseResult? Type116 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesListV2Response? Type117 { get; set; }
+        public global::Mem0.MemoriesDeleteAllResponse? Type117 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesEventsListResponse? Type118 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.MemoriesListV2ResponseItem>? Type118 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.MemoriesEventsListResponseResult>? Type119 { get; set; }
+        public global::Mem0.MemoriesListV2ResponseItem? Type119 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesEventsListResponseResult? Type120 { get; set; }
+        public global::Mem0.MemoriesListV2Response? Type120 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.MemoriesEventsListResponseResultInputItem>? Type121 { get; set; }
+        public global::Mem0.MemoriesEventsListResponse? Type121 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesEventsListResponseResultInputItem? Type122 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.MemoriesEventsListResponseResult>? Type122 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesEventsListResponseResultEvent? Type123 { get; set; }
+        public global::Mem0.MemoriesEventsListResponseResult? Type123 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.OneOf<global::System.Collections.Generic.IList<global::Mem0.MemoriesSearchCreateResponseItem>, global::Mem0.MemoriesSearchCreateResponse2>? Type124 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.MemoriesEventsListResponseResultInputItem>? Type124 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.MemoriesSearchCreateResponseItem>? Type125 { get; set; }
+        public global::Mem0.MemoriesEventsListResponseResultInputItem? Type125 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesSearchCreateResponseItem? Type126 { get; set; }
+        public global::Mem0.MemoriesEventsListResponseResultEvent? Type126 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesSearchCreateResponse2? Type127 { get; set; }
+        public global::Mem0.MemoriesEventsListResponse2? Type127 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.MemoriesSearchCreateResponseResult>? Type128 { get; set; }
+        public global::Mem0.OneOf<global::System.Collections.Generic.IList<global::Mem0.MemoriesSearchCreateResponseItem>, global::Mem0.MemoriesSearchCreateResponse2>? Type128 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesSearchCreateResponseResult? Type129 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.MemoriesSearchCreateResponseItem>? Type129 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesSearchCreateResponse3? Type130 { get; set; }
+        public global::Mem0.MemoriesSearchCreateResponseItem? Type130 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.MemoriesSearchV2ResponseItem>? Type131 { get; set; }
+        public global::Mem0.MemoriesSearchCreateResponse2? Type131 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesSearchV2ResponseItem? Type132 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.MemoriesSearchCreateResponseResult>? Type132 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public float? Type133 { get; set; }
+        public global::Mem0.MemoriesSearchCreateResponseResult? Type133 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesListV3Response? Type134 { get; set; }
+        public global::Mem0.MemoriesSearchCreateResponse3? Type134 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.MemoriesListV3ResponseResult>? Type135 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.MemoriesSearchV2ResponseItem>? Type135 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesListV3ResponseResult? Type136 { get; set; }
+        public global::Mem0.MemoriesSearchV2ResponseItem? Type136 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesAddV3Response? Type137 { get; set; }
+        public float? Type137 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesAddV3ResponseStatus? Type138 { get; set; }
+        public global::Mem0.MemoriesListV3Response? Type138 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.MemoriesAddV3ResponseResult>? Type139 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.MemoriesListV3ResponseResult>? Type139 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesAddV3ResponseResult? Type140 { get; set; }
+        public global::Mem0.MemoriesListV3ResponseResult? Type140 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesAddV3ResponseResultData? Type141 { get; set; }
+        public global::Mem0.MemoriesAddV3Response? Type141 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesSearchV3Response? Type142 { get; set; }
+        public global::Mem0.MemoriesAddV3ResponseStatus? Type142 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.MemoriesSearchV3ResponseResult>? Type143 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.MemoriesAddV3ResponseResult>? Type143 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesSearchV3ResponseResult? Type144 { get; set; }
+        public global::Mem0.MemoriesAddV3ResponseResult? Type144 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesSearchV3ResponseResultScoreBreakdown? Type145 { get; set; }
+        public global::Mem0.MemoriesAddV3ResponseResultData? Type145 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesEntityReadResponse? Type146 { get; set; }
+        public global::Mem0.MemoriesSearchV3Response? Type146 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.MemoriesEntityReadResponseResult>? Type147 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.MemoriesSearchV3ResponseResult>? Type147 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesEntityReadResponseResult? Type148 { get; set; }
+        public global::Mem0.MemoriesSearchV3ResponseResult? Type148 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.MemoriesEntityReadResponseResultInputItem>? Type149 { get; set; }
+        public global::Mem0.MemoriesSearchV3ResponseResultScoreBreakdown? Type149 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesEntityReadResponseResultInputItem? Type150 { get; set; }
+        public global::Mem0.MemoriesEntityReadResponse? Type150 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesEntityReadResponse2? Type151 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.MemoriesEntityReadResponseResult>? Type151 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesReadResponse? Type152 { get; set; }
+        public global::Mem0.MemoriesEntityReadResponseResult? Type152 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesReadResponse2? Type153 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.MemoriesEntityReadResponseResultInputItem>? Type153 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesUpdateResponse? Type154 { get; set; }
+        public global::Mem0.MemoriesEntityReadResponseResultInputItem? Type154 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesDeleteResponse? Type155 { get; set; }
+        public global::Mem0.MemoriesEntityReadResponse2? Type155 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.MemoriesHistoryListResponseItem>? Type156 { get; set; }
+        public global::Mem0.MemoriesEntityReadResponse3? Type156 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesHistoryListResponseItem? Type157 { get; set; }
+        public global::Mem0.MemoriesReadResponse? Type157 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.MemoriesHistoryListResponseItemInputItem>? Type158 { get; set; }
+        public global::Mem0.MemoriesReadResponse2? Type158 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesHistoryListResponseItemInputItem? Type159 { get; set; }
+        public global::Mem0.MemoriesReadResponse3? Type159 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesHistoryListResponseItemInputItemRole? Type160 { get; set; }
+        public global::Mem0.MemoriesUpdateResponse? Type160 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesHistoryListResponseItemEvent? Type161 { get; set; }
+        public global::Mem0.MemoriesUpdateResponse2? Type161 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.StatsListResponse? Type162 { get; set; }
+        public global::Mem0.MemoriesUpdateResponse3? Type162 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.PingReadResponse? Type163 { get; set; }
+        public global::Mem0.MemoriesDeleteResponse? Type163 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.PingReadResponse2? Type164 { get; set; }
+        public global::Mem0.MemoriesDeleteResponse2? Type164 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.SubmitFeedbackResponse? Type165 { get; set; }
+        public global::Mem0.MemoriesDeleteResponse3? Type165 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.SubmitFeedbackResponseFeedback? Type166 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.MemoriesHistoryListResponseItem>? Type166 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.OrganizationsReadResponseItem>? Type167 { get; set; }
+        public global::Mem0.MemoriesHistoryListResponseItem? Type167 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.OrganizationsReadResponseItem? Type168 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.MemoriesHistoryListResponseItemInputItem>? Type168 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.OrganizationsReadResponseItemMember>? Type169 { get; set; }
+        public global::Mem0.MemoriesHistoryListResponseItemInputItem? Type169 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.OrganizationsReadResponseItemMember? Type170 { get; set; }
+        public global::Mem0.MemoriesHistoryListResponseItemInputItemRole? Type170 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.CreateOrganizationResponse? Type171 { get; set; }
+        public global::Mem0.MemoriesHistoryListResponseItemEvent? Type171 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.CreateOrganizationResponse2? Type172 { get; set; }
+        public global::Mem0.StatsListResponse? Type172 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, global::System.Collections.Generic.IList<string>>? Type173 { get; set; }
+        public global::Mem0.PingReadResponse? Type173 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.GetOrganizationResponse? Type174 { get; set; }
+        public global::Mem0.PingReadResponse2? Type174 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.GetOrganizationResponseMember>? Type175 { get; set; }
+        public global::Mem0.SubmitFeedbackResponse? Type175 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.GetOrganizationResponseMember? Type176 { get; set; }
+        public global::Mem0.SubmitFeedbackResponseFeedback? Type176 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.GetOrganizationResponse2? Type177 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.OrganizationsReadResponseItem>? Type177 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.DeleteOrganizationResponse? Type178 { get; set; }
+        public global::Mem0.OrganizationsReadResponseItem? Type178 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.DeleteOrganizationResponse2? Type179 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.OrganizationsReadResponseItemMember>? Type179 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.DeleteOrganizationResponse3? Type180 { get; set; }
+        public global::Mem0.OrganizationsReadResponseItemMember? Type180 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.GetOrganizationMembersResponse? Type181 { get; set; }
+        public global::Mem0.CreateOrganizationResponse? Type181 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.GetOrganizationMembersResponseMember>? Type182 { get; set; }
+        public global::Mem0.CreateOrganizationResponse2? Type182 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.GetOrganizationMembersResponseMember? Type183 { get; set; }
+        public global::System.Collections.Generic.Dictionary<string, global::System.Collections.Generic.IList<string>>? Type183 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.GetOrganizationMembersResponse2? Type184 { get; set; }
+        public global::Mem0.GetOrganizationResponse? Type184 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.UpdateOrganizationMemberRoleResponse? Type185 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.GetOrganizationResponseMember>? Type185 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.UpdateOrganizationMemberRoleResponse2? Type186 { get; set; }
+        public global::Mem0.GetOrganizationResponseMember? Type186 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.UpdateOrganizationMemberRoleResponse3? Type187 { get; set; }
+        public global::Mem0.GetOrganizationResponse2? Type187 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.AddOrganizationMemberResponse? Type188 { get; set; }
+        public global::Mem0.DeleteOrganizationResponse? Type188 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.AddOrganizationMemberResponse2? Type189 { get; set; }
+        public global::Mem0.DeleteOrganizationResponse2? Type189 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.AddOrganizationMemberResponse3? Type190 { get; set; }
+        public global::Mem0.DeleteOrganizationResponse3? Type190 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.RemoveOrganizationMemberResponse? Type191 { get; set; }
+        public global::Mem0.GetOrganizationMembersResponse? Type191 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.RemoveOrganizationMemberResponse2? Type192 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.GetOrganizationMembersResponseMember>? Type192 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.GetProjectsResponseItem>? Type193 { get; set; }
+        public global::Mem0.GetOrganizationMembersResponseMember? Type193 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.GetProjectsResponseItem? Type194 { get; set; }
+        public global::Mem0.GetOrganizationMembersResponse2? Type194 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.GetProjectsResponseItemMember>? Type195 { get; set; }
+        public global::Mem0.UpdateOrganizationMemberRoleResponse? Type195 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.GetProjectsResponseItemMember? Type196 { get; set; }
+        public global::Mem0.UpdateOrganizationMemberRoleResponse2? Type196 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.CreateProjectResponse? Type197 { get; set; }
+        public global::Mem0.UpdateOrganizationMemberRoleResponse3? Type197 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.CreateProjectResponse2? Type198 { get; set; }
+        public global::Mem0.AddOrganizationMemberResponse? Type198 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.CreateProjectResponse3? Type199 { get; set; }
+        public global::Mem0.AddOrganizationMemberResponse2? Type199 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.GetProjectResponse? Type200 { get; set; }
+        public global::Mem0.AddOrganizationMemberResponse3? Type200 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.GetProjectResponseMember>? Type201 { get; set; }
+        public global::Mem0.RemoveOrganizationMemberResponse? Type201 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.GetProjectResponseMember? Type202 { get; set; }
+        public global::Mem0.RemoveOrganizationMemberResponse2? Type202 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.GetProjectResponse2? Type203 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.GetProjectsResponseItem>? Type203 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.UpdateProjectResponse? Type204 { get; set; }
+        public global::Mem0.GetProjectsResponseItem? Type204 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.UpdateProjectResponse2? Type205 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.GetProjectsResponseItemMember>? Type205 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.DeleteProjectResponse? Type206 { get; set; }
+        public global::Mem0.GetProjectsResponseItemMember? Type206 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.DeleteProjectResponse2? Type207 { get; set; }
+        public global::Mem0.CreateProjectResponse? Type207 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.DeleteProjectResponse3? Type208 { get; set; }
+        public global::Mem0.CreateProjectResponse2? Type208 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.GetProjectMembersResponse? Type209 { get; set; }
+        public global::Mem0.CreateProjectResponse3? Type209 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.GetProjectMembersResponseMember>? Type210 { get; set; }
+        public global::Mem0.GetProjectResponse? Type210 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.GetProjectMembersResponseMember? Type211 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.GetProjectResponseMember>? Type211 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.GetProjectMembersResponse2? Type212 { get; set; }
+        public global::Mem0.GetProjectResponseMember? Type212 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.AddProjectMemberResponse? Type213 { get; set; }
+        public global::Mem0.GetProjectResponse2? Type213 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.AddProjectMemberResponse2? Type214 { get; set; }
+        public global::Mem0.UpdateProjectResponse? Type214 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.AddProjectMemberResponse3? Type215 { get; set; }
+        public global::Mem0.UpdateProjectResponse2? Type215 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.UpdateProjectMemberResponse? Type216 { get; set; }
+        public global::Mem0.DeleteProjectResponse? Type216 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.UpdateProjectMemberResponse2? Type217 { get; set; }
+        public global::Mem0.DeleteProjectResponse2? Type217 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.UpdateProjectMemberResponse3? Type218 { get; set; }
+        public global::Mem0.DeleteProjectResponse3? Type218 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.DeleteProjectMemberResponse? Type219 { get; set; }
+        public global::Mem0.GetProjectMembersResponse? Type219 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.DeleteProjectMemberResponse2? Type220 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.GetProjectMembersResponseMember>? Type220 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.DeleteProjectMemberResponse3? Type221 { get; set; }
+        public global::Mem0.GetProjectMembersResponseMember? Type221 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesBatchUpdateResponse? Type222 { get; set; }
+        public global::Mem0.GetProjectMembersResponse2? Type222 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesBatchUpdateResponse2? Type223 { get; set; }
+        public global::Mem0.AddProjectMemberResponse? Type223 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesBatchDeleteResponse? Type224 { get; set; }
+        public global::Mem0.AddProjectMemberResponse2? Type224 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.MemoriesBatchDeleteResponse2? Type225 { get; set; }
+        public global::Mem0.AddProjectMemberResponse3? Type225 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Mem0.GetProjectWebhooksResponseItem>? Type226 { get; set; }
+        public global::Mem0.UpdateProjectMemberResponse? Type226 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.GetProjectWebhooksResponseItem? Type227 { get; set; }
+        public global::Mem0.UpdateProjectMemberResponse2? Type227 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.GetProjectWebhooksResponse? Type228 { get; set; }
+        public global::Mem0.UpdateProjectMemberResponse3? Type228 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.CreateWebhookResponse? Type229 { get; set; }
+        public global::Mem0.DeleteProjectMemberResponse? Type229 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.CreateWebhookResponse3? Type230 { get; set; }
+        public global::Mem0.DeleteProjectMemberResponse2? Type230 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.UpdateWebhookResponse? Type231 { get; set; }
+        public global::Mem0.DeleteProjectMemberResponse3? Type231 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.UpdateWebhookResponse3? Type232 { get; set; }
+        public global::Mem0.MemoriesBatchUpdateResponse? Type232 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.UpdateWebhookResponse4? Type233 { get; set; }
+        public global::Mem0.MemoriesBatchUpdateResponse2? Type233 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.DeleteWebhookResponse? Type234 { get; set; }
+        public global::Mem0.MemoriesBatchDeleteResponse? Type234 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.DeleteWebhookResponse2? Type235 { get; set; }
+        public global::Mem0.MemoriesBatchDeleteResponse2? Type235 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.DeleteWebhookResponse3? Type236 { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.GetProjectWebhooksResponseItem>? Type236 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Mem0.GetProjectWebhooksResponseItem? Type237 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Mem0.GetProjectWebhooksResponse? Type238 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Mem0.CreateWebhookResponse? Type239 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Mem0.CreateWebhookResponse3? Type240 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Mem0.UpdateWebhookResponse? Type241 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Mem0.UpdateWebhookResponse3? Type242 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Mem0.UpdateWebhookResponse4? Type243 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Mem0.DeleteWebhookResponse? Type244 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Mem0.DeleteWebhookResponse2? Type245 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Mem0.DeleteWebhookResponse3? Type246 { get; set; }
 
         /// <summary>
         /// 
@@ -1037,110 +1077,114 @@ namespace Mem0
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.OneOf<global::System.Collections.Generic.List<global::Mem0.MemoriesCreateResponseItem>, global::Mem0.MemoriesCreateResponse2>? ListType15 { get; set; }
+        public global::Mem0.OneOf<global::System.Collections.Generic.List<string>, global::Mem0.MemoriesListResponse4>? ListType15 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Mem0.MemoriesCreateResponseItem>? ListType16 { get; set; }
+        public global::Mem0.OneOf<global::System.Collections.Generic.List<global::Mem0.MemoriesCreateResponseItem>, global::Mem0.MemoriesCreateResponse2>? ListType16 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Mem0.MemoriesCreateResponseResult>? ListType17 { get; set; }
+        public global::System.Collections.Generic.List<global::Mem0.MemoriesCreateResponseItem>? ListType17 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Mem0.MemoriesListV2ResponseItem>? ListType18 { get; set; }
+        public global::System.Collections.Generic.List<global::Mem0.MemoriesCreateResponseResult>? ListType18 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Mem0.MemoriesEventsListResponseResult>? ListType19 { get; set; }
+        public global::System.Collections.Generic.List<global::Mem0.MemoriesListV2ResponseItem>? ListType19 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Mem0.MemoriesEventsListResponseResultInputItem>? ListType20 { get; set; }
+        public global::System.Collections.Generic.List<global::Mem0.MemoriesEventsListResponseResult>? ListType20 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Mem0.OneOf<global::System.Collections.Generic.List<global::Mem0.MemoriesSearchCreateResponseItem>, global::Mem0.MemoriesSearchCreateResponse2>? ListType21 { get; set; }
+        public global::System.Collections.Generic.List<global::Mem0.MemoriesEventsListResponseResultInputItem>? ListType21 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Mem0.MemoriesSearchCreateResponseItem>? ListType22 { get; set; }
+        public global::Mem0.OneOf<global::System.Collections.Generic.List<global::Mem0.MemoriesSearchCreateResponseItem>, global::Mem0.MemoriesSearchCreateResponse2>? ListType22 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Mem0.MemoriesSearchCreateResponseResult>? ListType23 { get; set; }
+        public global::System.Collections.Generic.List<global::Mem0.MemoriesSearchCreateResponseItem>? ListType23 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Mem0.MemoriesSearchV2ResponseItem>? ListType24 { get; set; }
+        public global::System.Collections.Generic.List<global::Mem0.MemoriesSearchCreateResponseResult>? ListType24 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Mem0.MemoriesListV3ResponseResult>? ListType25 { get; set; }
+        public global::System.Collections.Generic.List<global::Mem0.MemoriesSearchV2ResponseItem>? ListType25 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Mem0.MemoriesAddV3ResponseResult>? ListType26 { get; set; }
+        public global::System.Collections.Generic.List<global::Mem0.MemoriesListV3ResponseResult>? ListType26 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Mem0.MemoriesSearchV3ResponseResult>? ListType27 { get; set; }
+        public global::System.Collections.Generic.List<global::Mem0.MemoriesAddV3ResponseResult>? ListType27 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Mem0.MemoriesEntityReadResponseResult>? ListType28 { get; set; }
+        public global::System.Collections.Generic.List<global::Mem0.MemoriesSearchV3ResponseResult>? ListType28 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Mem0.MemoriesEntityReadResponseResultInputItem>? ListType29 { get; set; }
+        public global::System.Collections.Generic.List<global::Mem0.MemoriesEntityReadResponseResult>? ListType29 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Mem0.MemoriesHistoryListResponseItem>? ListType30 { get; set; }
+        public global::System.Collections.Generic.List<global::Mem0.MemoriesEntityReadResponseResultInputItem>? ListType30 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Mem0.MemoriesHistoryListResponseItemInputItem>? ListType31 { get; set; }
+        public global::System.Collections.Generic.List<global::Mem0.MemoriesHistoryListResponseItem>? ListType31 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Mem0.OrganizationsReadResponseItem>? ListType32 { get; set; }
+        public global::System.Collections.Generic.List<global::Mem0.MemoriesHistoryListResponseItemInputItem>? ListType32 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Mem0.OrganizationsReadResponseItemMember>? ListType33 { get; set; }
+        public global::System.Collections.Generic.List<global::Mem0.OrganizationsReadResponseItem>? ListType33 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, global::System.Collections.Generic.List<string>>? ListType34 { get; set; }
+        public global::System.Collections.Generic.List<global::Mem0.OrganizationsReadResponseItemMember>? ListType34 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Mem0.GetOrganizationResponseMember>? ListType35 { get; set; }
+        public global::System.Collections.Generic.Dictionary<string, global::System.Collections.Generic.List<string>>? ListType35 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Mem0.GetOrganizationMembersResponseMember>? ListType36 { get; set; }
+        public global::System.Collections.Generic.List<global::Mem0.GetOrganizationResponseMember>? ListType36 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Mem0.GetProjectsResponseItem>? ListType37 { get; set; }
+        public global::System.Collections.Generic.List<global::Mem0.GetOrganizationMembersResponseMember>? ListType37 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Mem0.GetProjectsResponseItemMember>? ListType38 { get; set; }
+        public global::System.Collections.Generic.List<global::Mem0.GetProjectsResponseItem>? ListType38 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Mem0.GetProjectResponseMember>? ListType39 { get; set; }
+        public global::System.Collections.Generic.List<global::Mem0.GetProjectsResponseItemMember>? ListType39 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Mem0.GetProjectMembersResponseMember>? ListType40 { get; set; }
+        public global::System.Collections.Generic.List<global::Mem0.GetProjectResponseMember>? ListType40 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.List<global::Mem0.GetProjectWebhooksResponseItem>? ListType41 { get; set; }
+        public global::System.Collections.Generic.List<global::Mem0.GetProjectMembersResponseMember>? ListType41 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::System.Collections.Generic.List<global::Mem0.GetProjectWebhooksResponseItem>? ListType42 { get; set; }
     }
 }

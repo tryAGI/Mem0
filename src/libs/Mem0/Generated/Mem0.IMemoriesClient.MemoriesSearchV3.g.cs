@@ -77,7 +77,7 @@ namespace Mem0
         /// Default Value: false
         /// </param>
         /// <param name="referenceDate">
-        /// Optional query anchor time for relative temporal interpretation. Accepts Unix epoch, YYYY-MM-DD, or ISO datetime.
+        /// Date and time to simulate the search from. Accepts a Unix epoch, YYYY-MM-DD, or ISO datetime.
         /// </param>
         /// <param name="fields">
         /// Restrict the fields returned per memory.

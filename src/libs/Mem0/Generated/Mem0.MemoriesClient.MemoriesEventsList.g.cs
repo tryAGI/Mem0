@@ -26,10 +26,14 @@ namespace Mem0
             {                s_MemoriesEventsListSecurityRequirement0,
             };
         partial void PrepareMemoriesEventsListArguments(
-            global::System.Net.Http.HttpClient httpClient);
+            global::System.Net.Http.HttpClient httpClient,
+            ref int? page,
+            ref int? limit);
         partial void PrepareMemoriesEventsListRequest(
             global::System.Net.Http.HttpClient httpClient,
-            global::System.Net.Http.HttpRequestMessage httpRequestMessage);
+            global::System.Net.Http.HttpRequestMessage httpRequestMessage,
+            int? page,
+            int? limit);
         partial void ProcessMemoriesEventsListResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -42,14 +46,20 @@ namespace Mem0
         /// <summary>
         /// Despite the endpoint name, this returns memory history entries (the same shape as `GET /v1/memories/{memory_id}/history/`), not event/ingestion-job records. For event/ingestion-job status, use `GET /v1/event/{event_id}/`.
         /// </summary>
+        /// <param name="page"></param>
+        /// <param name="limit"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Mem0.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Mem0.MemoriesEventsListResponse> MemoriesEventsListAsync(
+            int? page = default,
+            int? limit = default,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __response = await MemoriesEventsListAsResponseAsync(
+                page: page,
+                limit: limit,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -59,17 +69,23 @@ namespace Mem0
         /// <summary>
         /// Despite the endpoint name, this returns memory history entries (the same shape as `GET /v1/memories/{memory_id}/history/`), not event/ingestion-job records. For event/ingestion-job status, use `GET /v1/event/{event_id}/`.
         /// </summary>
+        /// <param name="page"></param>
+        /// <param name="limit"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Mem0.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Mem0.AutoSDKHttpResponse<global::Mem0.MemoriesEventsListResponse>> MemoriesEventsListAsResponseAsync(
+            int? page = default,
+            int? limit = default,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
                 client: HttpClient);
             PrepareMemoriesEventsListArguments(
-                httpClient: HttpClient);
+                httpClient: HttpClient,
+                page: ref page,
+                limit: ref limit);
 
 
             var __authorizations = global::Mem0.EndPointSecurityResolver.ResolveAuthorizations(
@@ -97,6 +113,10 @@ namespace Mem0
                             var __pathBuilder = new global::Mem0.PathBuilder(
                                 path: "/v1/memories/events/",
                                 baseUri: HttpClient.BaseAddress);
+                            __pathBuilder
+                                .AddOptionalParameter("page", page?.ToString())
+                                .AddOptionalParameter("limit", limit?.ToString())
+                                ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Mem0.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
@@ -136,7 +156,9 @@ namespace Mem0
                     request: __httpRequest);
                 PrepareMemoriesEventsListRequest(
                     httpClient: HttpClient,
-                    httpRequestMessage: __httpRequest);
+                    httpRequestMessage: __httpRequest,
+                    page: page,
+                    limit: limit);
 
                 return __httpRequest;
             }
@@ -315,6 +337,43 @@ namespace Mem0
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
+                            // Invalid page.
+                            if ((int)__response.StatusCode == 404)
+                            {
+                                string? __content_404 = null;
+                                global::System.Exception? __exception_404 = null;
+                                global::Mem0.MemoriesEventsListResponse2? __value_404 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_404 = global::Mem0.MemoriesEventsListResponse2.FromJson(__content_404, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_404 = global::Mem0.MemoriesEventsListResponse2.FromJson(__content_404, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_404 = __ex;
+                                }
+
+
+                                throw global::Mem0.ApiException<global::Mem0.MemoriesEventsListResponse2>.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_404,
+                                    responseBody: __content_404,
+                                    responseObject: __value_404,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
 
                             if (__effectiveReadResponseAsString)
                             {

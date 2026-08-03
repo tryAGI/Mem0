@@ -4,14 +4,14 @@
 namespace Mem0
 {
     /// <summary>
-    /// 
+    /// Returned when the `limit` query parameter is invalid.<br/>
+    /// Example: {"error":"limit must be \u003C= 200"}
     /// </summary>
-    public sealed partial class MemoriesReadResponse2
+    public sealed partial class MemoriesListResponse4
     {
         /// <summary>
-        /// Example: memory_id should be a valid UUID
+        /// 
         /// </summary>
-        /// <example>memory_id should be a valid UUID</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("error")]
         public string? Error { get; set; }
 
@@ -22,24 +22,22 @@ namespace Mem0
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MemoriesReadResponse2" /> class.
+        /// Initializes a new instance of the <see cref="MemoriesListResponse4" /> class.
         /// </summary>
-        /// <param name="error">
-        /// Example: memory_id should be a valid UUID
-        /// </param>
+        /// <param name="error"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public MemoriesReadResponse2(
+        public MemoriesListResponse4(
             string? error)
         {
             this.Error = error;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MemoriesReadResponse2" /> class.
+        /// Initializes a new instance of the <see cref="MemoriesListResponse4" /> class.
         /// </summary>
-        public MemoriesReadResponse2()
+        public MemoriesListResponse4()
         {
         }
 

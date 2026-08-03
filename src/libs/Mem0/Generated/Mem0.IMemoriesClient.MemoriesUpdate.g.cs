@@ -5,7 +5,7 @@ namespace Mem0
     public partial interface IMemoriesClient
     {
         /// <summary>
-        /// Get or Update or delete a memory.
+        /// Update a memory's text, metadata, or expiration date.
         /// </summary>
         /// <param name="memoryId"></param>
         /// <param name="request"></param>
@@ -19,7 +19,7 @@ namespace Mem0
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Get or Update or delete a memory.
+        /// Update a memory's text, metadata, or expiration date.
         /// </summary>
         /// <param name="memoryId"></param>
         /// <param name="request"></param>
@@ -33,7 +33,7 @@ namespace Mem0
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Get or Update or delete a memory.
+        /// Update a memory's text, metadata, or expiration date.
         /// </summary>
         /// <param name="memoryId"></param>
         /// <param name="text">
