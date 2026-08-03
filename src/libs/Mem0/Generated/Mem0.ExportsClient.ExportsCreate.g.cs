@@ -342,19 +342,19 @@ namespace Mem0
                             {
                                 string? __content_400 = null;
                                 global::System.Exception? __exception_400 = null;
-                                global::Mem0.ExportsCreateResponse2? __value_400 = null;
+                                global::Mem0.OneOf<global::Mem0.ExportsCreateResponseVariant1, global::Mem0.ExportsCreateResponseVariant2>? __value_400 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_400 = global::Mem0.ExportsCreateResponse2.FromJson(__content_400, JsonSerializerContext);
+                                        __value_400 = global::Mem0.OneOf<global::Mem0.ExportsCreateResponseVariant1, global::Mem0.ExportsCreateResponseVariant2>.FromJson(__content_400, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_400 = global::Mem0.ExportsCreateResponse2.FromJson(__content_400, JsonSerializerContext);
+                                        __value_400 = global::Mem0.OneOf<global::Mem0.ExportsCreateResponseVariant1, global::Mem0.ExportsCreateResponseVariant2>.FromJson(__content_400, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -363,7 +363,7 @@ namespace Mem0
                                 }
 
 
-                                throw global::Mem0.ApiException<global::Mem0.ExportsCreateResponse2>.Create(
+                                throw global::Mem0.ApiException<global::Mem0.OneOf<global::Mem0.ExportsCreateResponseVariant1, global::Mem0.ExportsCreateResponseVariant2>?>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_400,
@@ -478,7 +478,7 @@ namespace Mem0
         /// Schema definition for the export
         /// </param>
         /// <param name="filters">
-        /// Filters to apply while exporting memories. Available fields are: user_id, agent_id, app_id, run_id.
+        /// Filters to apply while exporting memories, using the structured AND/OR filter format (see `/v2/memories/search/`), e.g. `{"AND": [{"user_id": "&lt;user_id&gt;"}]}`. Available fields are: user_id, agent_id, app_id, run_id. Flat filter objects (e.g. `{"user_id": "&lt;user_id&gt;"}`) are rejected with a 400 error.
         /// </param>
         /// <param name="orgId">
         /// Filter exports by organization ID.
@@ -491,7 +491,7 @@ namespace Mem0
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::Mem0.ExportsCreateResponse> ExportsCreateAsync(
             object schema,
-            global::Mem0.ExportsCreateRequestFilters? filters = default,
+            object? filters = default,
             string? orgId = default,
             string? projectId = default,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,

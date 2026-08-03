@@ -11,19 +11,35 @@ namespace Mem0
         /// <summary>
         /// 
         /// </summary>
-        Memory_add,
+        IngestJobCancelled,
         /// <summary>
         /// 
         /// </summary>
-        Memory_categorize,
+        IngestJobCompleted,
         /// <summary>
         /// 
         /// </summary>
-        Memory_delete,
+        IngestJobFailed,
         /// <summary>
         /// 
         /// </summary>
-        Memory_update,
+        IngestJobPartiallyCompleted,
+        /// <summary>
+        /// 
+        /// </summary>
+        MemoryAdd,
+        /// <summary>
+        /// 
+        /// </summary>
+        MemoryCategorize,
+        /// <summary>
+        /// 
+        /// </summary>
+        MemoryDelete,
+        /// <summary>
+        /// 
+        /// </summary>
+        MemoryUpdate,
     }
 
     /// <summary>
@@ -38,10 +54,14 @@ namespace Mem0
         {
             return value switch
             {
-                UpdateWebhookRequestEventType.Memory_add => "memory:add",
-                UpdateWebhookRequestEventType.Memory_categorize => "memory:categorize",
-                UpdateWebhookRequestEventType.Memory_delete => "memory:delete",
-                UpdateWebhookRequestEventType.Memory_update => "memory:update",
+                UpdateWebhookRequestEventType.IngestJobCancelled => "ingest_job_cancelled",
+                UpdateWebhookRequestEventType.IngestJobCompleted => "ingest_job_completed",
+                UpdateWebhookRequestEventType.IngestJobFailed => "ingest_job_failed",
+                UpdateWebhookRequestEventType.IngestJobPartiallyCompleted => "ingest_job_partially_completed",
+                UpdateWebhookRequestEventType.MemoryAdd => "memory_add",
+                UpdateWebhookRequestEventType.MemoryCategorize => "memory_categorize",
+                UpdateWebhookRequestEventType.MemoryDelete => "memory_delete",
+                UpdateWebhookRequestEventType.MemoryUpdate => "memory_update",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -52,10 +72,14 @@ namespace Mem0
         {
             return value switch
             {
-                "memory:add" => UpdateWebhookRequestEventType.Memory_add,
-                "memory:categorize" => UpdateWebhookRequestEventType.Memory_categorize,
-                "memory:delete" => UpdateWebhookRequestEventType.Memory_delete,
-                "memory:update" => UpdateWebhookRequestEventType.Memory_update,
+                "ingest_job_cancelled" => UpdateWebhookRequestEventType.IngestJobCancelled,
+                "ingest_job_completed" => UpdateWebhookRequestEventType.IngestJobCompleted,
+                "ingest_job_failed" => UpdateWebhookRequestEventType.IngestJobFailed,
+                "ingest_job_partially_completed" => UpdateWebhookRequestEventType.IngestJobPartiallyCompleted,
+                "memory_add" => UpdateWebhookRequestEventType.MemoryAdd,
+                "memory_categorize" => UpdateWebhookRequestEventType.MemoryCategorize,
+                "memory_delete" => UpdateWebhookRequestEventType.MemoryDelete,
+                "memory_update" => UpdateWebhookRequestEventType.MemoryUpdate,
                 _ => null,
             };
         }

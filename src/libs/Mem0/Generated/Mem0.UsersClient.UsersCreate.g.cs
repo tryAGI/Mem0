@@ -48,7 +48,7 @@ namespace Mem0
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Mem0.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Mem0.CreateUser> UsersCreateAsync(
+        public async global::System.Threading.Tasks.Task<global::Mem0.UserResponse> UsersCreateAsync(
 
             global::Mem0.CreateUser request,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
@@ -70,7 +70,7 @@ namespace Mem0
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Mem0.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Mem0.AutoSDKHttpResponse<global::Mem0.CreateUser>> UsersCreateAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Mem0.AutoSDKHttpResponse<global::Mem0.UserResponse>> UsersCreateAsResponseAsync(
 
             global::Mem0.CreateUser request,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
@@ -357,9 +357,9 @@ namespace Mem0
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Mem0.CreateUser.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Mem0.UserResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Mem0.AutoSDKHttpResponse<global::Mem0.CreateUser>(
+                                    return new global::Mem0.AutoSDKHttpResponse<global::Mem0.UserResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Mem0.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -389,9 +389,9 @@ namespace Mem0
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::Mem0.CreateUser.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Mem0.UserResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Mem0.AutoSDKHttpResponse<global::Mem0.CreateUser>(
+                                    return new global::Mem0.AutoSDKHttpResponse<global::Mem0.UserResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Mem0.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -439,7 +439,7 @@ namespace Mem0
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Mem0.CreateUser> UsersCreateAsync(
+        public async global::System.Threading.Tasks.Task<global::Mem0.UserResponse> UsersCreateAsync(
             string userId,
             object? metadata = default,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,

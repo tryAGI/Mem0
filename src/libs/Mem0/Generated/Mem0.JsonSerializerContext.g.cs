@@ -33,6 +33,10 @@ namespace Mem0
 
             typeof(global::Mem0.JsonConverters.UpdateWebhookRequestEventTypeNullableJsonConverter),
 
+            typeof(global::Mem0.JsonConverters.EntitiesDeleteV1EntityTypeJsonConverter),
+
+            typeof(global::Mem0.JsonConverters.EntitiesDeleteV1EntityTypeNullableJsonConverter),
+
             typeof(global::Mem0.JsonConverters.EntitiesReadEntityTypeJsonConverter),
 
             typeof(global::Mem0.JsonConverters.EntitiesReadEntityTypeNullableJsonConverter),
@@ -41,9 +45,9 @@ namespace Mem0
 
             typeof(global::Mem0.JsonConverters.EntitiesDeleteEntityTypeNullableJsonConverter),
 
-            typeof(global::Mem0.JsonConverters.EntitiesListResponseItemTypeJsonConverter),
+            typeof(global::Mem0.JsonConverters.EntitiesListResponseResultTypeJsonConverter),
 
-            typeof(global::Mem0.JsonConverters.EntitiesListResponseItemTypeNullableJsonConverter),
+            typeof(global::Mem0.JsonConverters.EntitiesListResponseResultTypeNullableJsonConverter),
 
             typeof(global::Mem0.JsonConverters.EventsListResponseResultStatusJsonConverter),
 
@@ -53,9 +57,9 @@ namespace Mem0
 
             typeof(global::Mem0.JsonConverters.EventReadResponseStatusNullableJsonConverter),
 
-            typeof(global::Mem0.JsonConverters.MemoriesCreateResponseItemEventJsonConverter),
+            typeof(global::Mem0.JsonConverters.MemoriesEventsListResponseResultEventJsonConverter),
 
-            typeof(global::Mem0.JsonConverters.MemoriesCreateResponseItemEventNullableJsonConverter),
+            typeof(global::Mem0.JsonConverters.MemoriesEventsListResponseResultEventNullableJsonConverter),
 
             typeof(global::Mem0.JsonConverters.MemoriesAddV3ResponseStatusJsonConverter),
 
@@ -75,21 +79,31 @@ namespace Mem0
 
             typeof(global::Mem0.JsonConverters.OneOfJsonConverter<int?, double?, string>),
 
+            typeof(global::Mem0.JsonConverters.OneOfJsonConverter<global::Mem0.ExportsCreateResponseVariant1, global::Mem0.ExportsCreateResponseVariant2>),
+
+            typeof(global::Mem0.JsonConverters.OneOfJsonConverter<global::System.Collections.Generic.IList<global::Mem0.MemoriesListResponseItem>, global::Mem0.MemoriesListResponse2>),
+
+            typeof(global::Mem0.JsonConverters.OneOfJsonConverter<global::System.Collections.Generic.IList<global::Mem0.MemoriesCreateResponseItem>, global::Mem0.MemoriesCreateResponse2>),
+
+            typeof(global::Mem0.JsonConverters.OneOfJsonConverter<global::System.Collections.Generic.IList<global::Mem0.MemoriesSearchCreateResponseItem>, global::Mem0.MemoriesSearchCreateResponse2>),
+
             typeof(global::Mem0.JsonConverters.UnixTimestampJsonConverter),
         })]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.JsonSerializerContextTypes))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.CreateAgent))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(object))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.AgentResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.CreateApp))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.AppResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoryInput))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::System.Collections.Generic.Dictionary<string, string?>>), TypeInfoPropertyName = "IListDictionaryStringString_System_Collections_Generic_IList_global_System_Collections_Generic_Dictionary_string_string")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, string?>), TypeInfoPropertyName = "DictionaryStringString_System_Collections_Generic_Dictionary_string_string")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTimeOffset))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemorySearchInput))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemorySearchInputV2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemorySearchInputV2Filters))]
@@ -104,7 +118,9 @@ namespace Mem0
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoryGetInputV2FiltersKeywords))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoryGetInputV2FiltersCategories))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.CreateRun))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.RunResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.CreateUser))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.UserResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.DeleteMemoriesInput))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.GetMemoryInput))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid))]
@@ -112,7 +128,6 @@ namespace Mem0
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.EntityInput))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.EntityInputEntityType), TypeInfoPropertyName = "EntityInputEntityType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ExportsCreateRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ExportsCreateRequestFilters))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ExportsListRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ExportsListRequestFilters))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesListV3Request))]
@@ -125,6 +140,7 @@ namespace Mem0
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesSearchV3Request))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.OneOf<int?, double?, string>), TypeInfoPropertyName = "OneOfInt32DoubleString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesUpdateRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.SummaryCreateRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.SubmitFeedbackRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.SubmitFeedbackRequestFeedback), TypeInfoPropertyName = "SubmitFeedbackRequestFeedback2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.CreateOrganizationRequest))]
@@ -148,11 +164,22 @@ namespace Mem0
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.UpdateWebhookRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.UpdateWebhookRequestEventType>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.UpdateWebhookRequestEventType), TypeInfoPropertyName = "UpdateWebhookRequestEventType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.EntitiesDeleteV1EntityType), TypeInfoPropertyName = "EntitiesDeleteV1EntityType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.EntitiesReadEntityType), TypeInfoPropertyName = "EntitiesReadEntityType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.EntitiesDeleteEntityType), TypeInfoPropertyName = "EntitiesDeleteEntityType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.EntitiesListResponseItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.EntitiesListResponseItem))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.EntitiesListResponseItemType), TypeInfoPropertyName = "EntitiesListResponseItemType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.EntitiesListResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.EntitiesListResponseResult>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.EntitiesListResponseResult))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.EntitiesListResponseResultType), TypeInfoPropertyName = "EntitiesListResponseResultType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.EntitiesFiltersListResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.EntitiesFiltersListResponseParameter>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.EntitiesFiltersListResponseParameter))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.EntitiesFiltersListResponseParameterOption>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.EntitiesFiltersListResponseParameterOption))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.EntitiesDeleteV1Response))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.EntitiesDeleteV1Response2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.EntitiesReadResponseItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.EntitiesReadResponseItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.EntitiesDeleteResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.EntitiesDeleteResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.EventsListResponse))]
@@ -163,36 +190,62 @@ namespace Mem0
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.EventReadResponseStatus), TypeInfoPropertyName = "EventReadResponseStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.EventReadResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ExportsCreateResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ExportsCreateResponse2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.OneOf<global::Mem0.ExportsCreateResponseVariant1, global::Mem0.ExportsCreateResponseVariant2>), TypeInfoPropertyName = "OneOfExportsCreateResponseVariant1ExportsCreateResponseVariant22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ExportsCreateResponseVariant1))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ExportsCreateResponseVariant2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ExportsListResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ExportsListResponse3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.OneOf<global::System.Collections.Generic.IList<global::Mem0.MemoriesListResponseItem>, global::Mem0.MemoriesListResponse2>), TypeInfoPropertyName = "OneOfIListMemoriesListResponseItemMemoriesListResponse22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.MemoriesListResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesListResponseItem))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.MemoriesListResponseItemInputItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesListResponseItemInputItem))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesListResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesListResponse2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.MemoriesListResponseResult>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesListResponseResult))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesListResponse3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.OneOf<global::System.Collections.Generic.IList<global::Mem0.MemoriesCreateResponseItem>, global::Mem0.MemoriesCreateResponse2>), TypeInfoPropertyName = "OneOfIListMemoriesCreateResponseItemMemoriesCreateResponse22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.MemoriesCreateResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesCreateResponseItem))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesCreateResponseItemData))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesCreateResponseItemEvent), TypeInfoPropertyName = "MemoriesCreateResponseItemEvent2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesCreateResponse2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.MemoriesCreateResponseResult>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesCreateResponseResult))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesDeleteAllResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.MemoriesListV2ResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesListV2ResponseItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesListV2Response))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesEventsListResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.MemoriesEventsListResponseResult>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesEventsListResponseResult))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.MemoriesEventsListResponseResultInputItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesEventsListResponseResultInputItem))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesEventsListResponseResultEvent), TypeInfoPropertyName = "MemoriesEventsListResponseResultEvent2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.OneOf<global::System.Collections.Generic.IList<global::Mem0.MemoriesSearchCreateResponseItem>, global::Mem0.MemoriesSearchCreateResponse2>), TypeInfoPropertyName = "OneOfIListMemoriesSearchCreateResponseItemMemoriesSearchCreateResponse22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.MemoriesSearchCreateResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesSearchCreateResponseItem))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesSearchCreateResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesSearchCreateResponse2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.MemoriesSearchCreateResponseResult>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesSearchCreateResponseResult))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesSearchCreateResponse3))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.MemoriesSearchV2ResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesSearchV2ResponseItem))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(float))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesListV3Response))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.MemoriesListV3ResponseResult>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesListV3ResponseResult))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(float))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesAddV3Response))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesAddV3ResponseStatus), TypeInfoPropertyName = "MemoriesAddV3ResponseStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.MemoriesAddV3ResponseResult>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesAddV3ResponseResult))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesAddV3ResponseResultData))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesSearchV3Response))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.MemoriesSearchV3ResponseResult>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesSearchV3ResponseResult))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesSearchV3ResponseResultScoreBreakdown))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesEntityReadResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.MemoriesEntityReadResponseResult>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesEntityReadResponseResult))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.MemoriesEntityReadResponseResultInputItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesEntityReadResponseResultInputItem))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesEntityReadResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesReadResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesReadResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesUpdateResponse))]
@@ -203,15 +256,21 @@ namespace Mem0
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesHistoryListResponseItemInputItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesHistoryListResponseItemInputItemRole), TypeInfoPropertyName = "MemoriesHistoryListResponseItemInputItemRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesHistoryListResponseItemEvent), TypeInfoPropertyName = "MemoriesHistoryListResponseItemEvent2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.StatsListResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.PingReadResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.PingReadResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.SubmitFeedbackResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.SubmitFeedbackResponseFeedback), TypeInfoPropertyName = "SubmitFeedbackResponseFeedback2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.OrganizationsReadResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.OrganizationsReadResponseItem))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<int>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.OrganizationsReadResponseItemMember>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.OrganizationsReadResponseItemMember))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.CreateOrganizationResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.CreateOrganizationResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::System.Collections.Generic.IList<string>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.GetOrganizationResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.GetOrganizationResponseMember>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.GetOrganizationResponseMember))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.GetOrganizationResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.DeleteOrganizationResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.DeleteOrganizationResponse2))]
@@ -265,10 +324,8 @@ namespace Mem0
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.GetProjectWebhooksResponseItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.GetProjectWebhooksResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.CreateWebhookResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.CreateWebhookResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.CreateWebhookResponse3))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.UpdateWebhookResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.UpdateWebhookResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.UpdateWebhookResponse3))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.UpdateWebhookResponse4))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.DeleteWebhookResponse))]
@@ -283,21 +340,35 @@ namespace Mem0
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.MemoriesBatchDeleteRequestMemorie>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.CreateWebhookRequestEventType>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.UpdateWebhookRequestEventType>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.EntitiesListResponseItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.EntitiesListResponseResult>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.EntitiesFiltersListResponseParameter>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.EntitiesFiltersListResponseParameterOption>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.EntitiesReadResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.EventsListResponseResult>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.OneOf<global::System.Collections.Generic.List<global::Mem0.MemoriesListResponseItem>, global::Mem0.MemoriesListResponse2>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.MemoriesListResponseItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.MemoriesListResponseItemInputItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.MemoriesListResponseResult>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.OneOf<global::System.Collections.Generic.List<global::Mem0.MemoriesCreateResponseItem>, global::Mem0.MemoriesCreateResponse2>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.MemoriesCreateResponseItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.MemoriesCreateResponseResult>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.MemoriesListV2ResponseItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.MemoriesEventsListResponseResult>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.MemoriesEventsListResponseResultInputItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.OneOf<global::System.Collections.Generic.List<global::Mem0.MemoriesSearchCreateResponseItem>, global::Mem0.MemoriesSearchCreateResponse2>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.MemoriesSearchCreateResponseItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.MemoriesSearchCreateResponseResult>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.MemoriesSearchV2ResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.MemoriesListV3ResponseResult>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.MemoriesAddV3ResponseResult>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.MemoriesSearchV3ResponseResult>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.MemoriesEntityReadResponseResult>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.MemoriesEntityReadResponseResultInputItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.MemoriesHistoryListResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.MemoriesHistoryListResponseItemInputItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.OrganizationsReadResponseItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<int>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.OrganizationsReadResponseItemMember>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::System.Collections.Generic.List<string>>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.GetOrganizationResponseMember>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.GetOrganizationMembersResponseMember>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.GetProjectsResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.GetProjectsResponseItemMember>))]

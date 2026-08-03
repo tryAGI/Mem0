@@ -28,6 +28,12 @@ namespace Mem0
         public global::System.Guid? EventId { get; set; }
 
         /// <summary>
+        /// Only present when `infer` is `false`, where processing is synchronous and memories are stored verbatim without extraction.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("results")]
+        public global::System.Collections.Generic.IList<global::Mem0.MemoriesAddV3ResponseResult>? Results { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -41,17 +47,22 @@ namespace Mem0
         /// </param>
         /// <param name="status"></param>
         /// <param name="eventId"></param>
+        /// <param name="results">
+        /// Only present when `infer` is `false`, where processing is synchronous and memories are stored verbatim without extraction.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public MemoriesAddV3Response(
             string? message,
             global::Mem0.MemoriesAddV3ResponseStatus? status,
-            global::System.Guid? eventId)
+            global::System.Guid? eventId,
+            global::System.Collections.Generic.IList<global::Mem0.MemoriesAddV3ResponseResult>? results)
         {
             this.Message = message;
             this.Status = status;
             this.EventId = eventId;
+            this.Results = results;
         }
 
         /// <summary>

@@ -110,7 +110,7 @@ namespace Mem0
             {
 
                             var __pathBuilder = new global::Mem0.PathBuilder(
-                                path: "/v1/exports/get",
+                                path: "/v1/exports/get/",
                                 baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::Mem0.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -177,7 +177,7 @@ namespace Mem0
                             context: global::Mem0.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "ExportsList",
                                 methodName: "ExportsListAsync",
-                                pathTemplate: "\"/v1/exports/get\"",
+                                pathTemplate: "\"/v1/exports/get/\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -211,7 +211,7 @@ namespace Mem0
                             context: global::Mem0.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "ExportsList",
                                 methodName: "ExportsListAsync",
-                                pathTemplate: "\"/v1/exports/get\"",
+                                pathTemplate: "\"/v1/exports/get/\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -252,7 +252,7 @@ namespace Mem0
                             context: global::Mem0.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "ExportsList",
                                 methodName: "ExportsListAsync",
-                                pathTemplate: "\"/v1/exports/get\"",
+                                pathTemplate: "\"/v1/exports/get/\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -300,7 +300,7 @@ namespace Mem0
                             context: global::Mem0.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "ExportsList",
                                 methodName: "ExportsListAsync",
-                                pathTemplate: "\"/v1/exports/get\"",
+                                pathTemplate: "\"/v1/exports/get/\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -322,7 +322,7 @@ namespace Mem0
                             context: global::Mem0.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "ExportsList",
                                 methodName: "ExportsListAsync",
-                                pathTemplate: "\"/v1/exports/get\"",
+                                pathTemplate: "\"/v1/exports/get/\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,

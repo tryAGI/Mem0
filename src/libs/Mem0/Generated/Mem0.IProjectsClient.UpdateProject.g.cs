@@ -59,6 +59,18 @@ namespace Mem0
         /// <param name="multilingual">
         /// Whether to use the input language for memory storage and retrieval.
         /// </param>
+        /// <param name="memoryDepth">
+        /// Memory extraction depth setting for this project.
+        /// </param>
+        /// <param name="decay">
+        /// Whether memory decay is enabled for this project.
+        /// </param>
+        /// <param name="enableGraph">
+        /// Whether graph memory is enabled for this project.
+        /// </param>
+        /// <param name="version">
+        /// API version used by this project.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -70,6 +82,10 @@ namespace Mem0
             global::System.Collections.Generic.IList<string>? customInstructions = default,
             global::System.Collections.Generic.IList<object>? customCategories = default,
             bool? multilingual = default,
+            string? memoryDepth = default,
+            bool? decay = default,
+            bool? enableGraph = default,
+            string? version = default,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

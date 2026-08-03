@@ -13,17 +13,6 @@
     },
     {
       "Order": 2,
-      "Title": "Add memories.",
-      "Slug": "memories-create",
-      "Description": "Add memories.",
-      "Language": "http",
-      "Code": "### Add memories.\n# @name memories_create\nPOST {{host}}/v1/memories/\nAuthorization: Bearer {{token}}\nContent-Type: application/json\nAccept: application/json\n\n{\n  \u0022messages\u0022: [\n    {}\n  ],\n  \u0022agent_id\u0022: \u0022string\u0022,\n  \u0022user_id\u0022: \u0022string\u0022,\n  \u0022app_id\u0022: \u0022string\u0022,\n  \u0022run_id\u0022: \u0022string\u0022,\n  \u0022metadata\u0022: {},\n  \u0022includes\u0022: \u0022string\u0022,\n  \u0022excludes\u0022: \u0022string\u0022,\n  \u0022infer\u0022: true,\n  \u0022output_format\u0022: \u0022v1.1\u0022,\n  \u0022custom_categories\u0022: {},\n  \u0022custom_instructions\u0022: \u0022string\u0022,\n  \u0022immutable\u0022: false,\n  \u0022async_mode\u0022: true,\n  \u0022timestamp\u0022: 0,\n  \u0022expiration_date\u0022: \u00222025-01-01\u0022,\n  \u0022org_id\u0022: \u0022string\u0022,\n  \u0022project_id\u0022: \u0022string\u0022,\n  \u0022version\u0022: \u0022string\u0022\n}\n\n## Responses\n# 200\n# Description: Successful memory creation.\n# Content-Type: application/json\n# 400\n# Description: Bad Request. Invalid input data. Please refer to the memory creation documentation at https://docs.mem0.ai/platform/quickstart#4-1-create-memories for correct formatting and required fields.\n# Content-Type: application/json",
-      "Format": "http",
-      "OperationId": "memories_create",
-      "Setup": null
-    },
-    {
-      "Order": 3,
       "Title": "Get all memories (V3, paginated)",
       "Slug": "memories-list-v3",
       "Description": "List memories scoped by filters, paginated. Entity IDs **must** be passed inside the \u0060filters\u0060 object. Top-level \u0060user_id\u0060 / \u0060agent_id\u0060 / \u0060run_id\u0060 are rejected with 400. \u0060filters\u0060 supports the same operator set as V2 search (\u0060AND\u0060, \u0060OR\u0060, \u0060NOT\u0060, \u0060in\u0060, \u0060gte\u0060, \u0060lte\u0060, etc.). Response is a paginated envelope; pass \u0060page\u0060 and \u0060page_size\u0060 as query parameters to step through results.",
@@ -34,7 +23,7 @@
       "Setup": "This example assumes \u0060using Mem0;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 4,
+      "Order": 3,
       "Title": "Search memories (V3)",
       "Slug": "memories-search-v3",
       "Description": "Relevance-ranked search across stored memories. V3 uses hybrid retrieval and can also apply temporal reasoning for time-aware queries. Entity IDs **must** be passed inside the \u0060filters\u0060 object. Top-level \u0060user_id\u0060 / \u0060agent_id\u0060 / \u0060run_id\u0060 are rejected with 400. At least one entity ID is required.",
@@ -43,6 +32,28 @@
       "Format": "sdk",
       "OperationId": "memories_search_v3",
       "Setup": "This example assumes \u0060using Mem0;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 4,
+      "Title": "Create Webhook",
+      "Slug": "create-webhook",
+      "Description": "Create a new webhook for a specific project",
+      "Language": "http",
+      "Code": "### Create Webhook\n# @name create_webhook\nPOST {{host}}/api/v1/webhooks/projects/{{project_id}}/\nAuthorization: Bearer {{token}}\nContent-Type: application/json\nAccept: application/json\n\n{\n  \u0022name\u0022: \u0022string\u0022,\n  \u0022url\u0022: \u0022string\u0022,\n  \u0022event_types\u0022: [\n    \u0022memory_add\u0022\n  ],\n  \u0022is_active\u0022: true,\n  \u0022project_id\u0022: \u0022string\u0022\n}\n\n## Responses\n# 201\n# Description: Webhook created successfully\n# Content-Type: application/json\n# 400\n# Description: Invalid request\n# Content-Type: application/json\n# 403\n# Description: Unauthorized access\n# Content-Type: application/json",
+      "Format": "http",
+      "OperationId": "create_webhook",
+      "Setup": null
+    },
+    {
+      "Order": 5,
+      "Title": "Update Webhook",
+      "Slug": "update-webhook",
+      "Description": "Update an existing webhook",
+      "Language": "http",
+      "Code": "### Update Webhook\n# @name update_webhook\nPUT {{host}}/api/v1/webhooks/{{webhook_id}}/\nAuthorization: Bearer {{token}}\nContent-Type: application/json\nAccept: application/json\n\n{\n  \u0022name\u0022: \u0022string\u0022,\n  \u0022url\u0022: \u0022string\u0022,\n  \u0022event_types\u0022: [\n    \u0022memory_add\u0022\n  ]\n}\n\n## Responses\n# 200\n# Description: Webhook updated successfully\n# Content-Type: application/json\n# 400\n# Description: Invalid request\n# Content-Type: application/json\n# 403\n# Description: Unauthorized access\n# Content-Type: application/json\n# 404\n# Description: Webhook not found\n# Content-Type: application/json",
+      "Format": "http",
+      "OperationId": "update_webhook",
+      "Setup": null
     }
   ]
 }

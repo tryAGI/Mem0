@@ -27,11 +27,13 @@ namespace Mem0
             };
         partial void PrepareMemoriesDeleteArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::System.Guid memoryId);
+            ref global::System.Guid memoryId,
+            ref bool? deleteLinked);
         partial void PrepareMemoriesDeleteRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::System.Guid memoryId);
+            global::System.Guid memoryId,
+            bool? deleteLinked);
         partial void ProcessMemoriesDeleteResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -45,16 +47,21 @@ namespace Mem0
         /// Get or Update or delete a memory.
         /// </summary>
         /// <param name="memoryId"></param>
+        /// <param name="deleteLinked">
+        /// Default Value: false
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Mem0.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Mem0.MemoriesDeleteResponse> MemoriesDeleteAsync(
             global::System.Guid memoryId,
+            bool? deleteLinked = default,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __response = await MemoriesDeleteAsResponseAsync(
                 memoryId: memoryId,
+                deleteLinked: deleteLinked,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -65,11 +72,15 @@ namespace Mem0
         /// Get or Update or delete a memory.
         /// </summary>
         /// <param name="memoryId"></param>
+        /// <param name="deleteLinked">
+        /// Default Value: false
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Mem0.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Mem0.AutoSDKHttpResponse<global::Mem0.MemoriesDeleteResponse>> MemoriesDeleteAsResponseAsync(
             global::System.Guid memoryId,
+            bool? deleteLinked = default,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -77,7 +88,8 @@ namespace Mem0
                 client: HttpClient);
             PrepareMemoriesDeleteArguments(
                 httpClient: HttpClient,
-                memoryId: ref memoryId);
+                memoryId: ref memoryId,
+                deleteLinked: ref deleteLinked);
 
 
             var __authorizations = global::Mem0.EndPointSecurityResolver.ResolveAuthorizations(
@@ -105,6 +117,9 @@ namespace Mem0
                             var __pathBuilder = new global::Mem0.PathBuilder(
                                 path: $"/v1/memories/{memoryId}/",
                                 baseUri: HttpClient.BaseAddress);
+                            __pathBuilder
+                                .AddOptionalParameter("delete_linked", deleteLinked?.ToString().ToLowerInvariant())
+                                ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Mem0.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
@@ -145,7 +160,8 @@ namespace Mem0
                 PrepareMemoriesDeleteRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    memoryId: memoryId!);
+                    memoryId: memoryId!,
+                    deleteLinked: deleteLinked);
 
                 return __httpRequest;
             }

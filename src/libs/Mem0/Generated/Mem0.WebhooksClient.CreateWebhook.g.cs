@@ -351,19 +351,19 @@ namespace Mem0
                             {
                                 string? __content_400 = null;
                                 global::System.Exception? __exception_400 = null;
-                                global::Mem0.CreateWebhookResponse2? __value_400 = null;
+                                string? __value_400 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_400 = global::Mem0.CreateWebhookResponse2.FromJson(__content_400, JsonSerializerContext);
+                                        __value_400 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_400, typeof(string), JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_400 = global::Mem0.CreateWebhookResponse2.FromJson(__content_400, JsonSerializerContext);
+                                        __value_400 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_400, typeof(string), JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -372,7 +372,7 @@ namespace Mem0
                                 }
 
 
-                                throw global::Mem0.ApiException<global::Mem0.CreateWebhookResponse2>.Create(
+                                throw global::Mem0.ApiException<string>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_400,
@@ -528,7 +528,7 @@ namespace Mem0
         /// URL endpoint for the webhook.
         /// </param>
         /// <param name="eventTypes">
-        /// List of event types to subscribe to.
+        /// List of event types to subscribe to. Required: omitting this field does not fall back to a usable default.
         /// </param>
         /// <param name="isActive">
         /// Whether the webhook is active
@@ -541,9 +541,9 @@ namespace Mem0
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::Mem0.CreateWebhookResponse> CreateWebhookAsync(
             string projectId,
+            string name,
             string url,
-            string? name = default,
-            global::System.Collections.Generic.IList<global::Mem0.CreateWebhookRequestEventType>? eventTypes = default,
+            global::System.Collections.Generic.IList<global::Mem0.CreateWebhookRequestEventType> eventTypes,
             bool? isActive = default,
             string? requestProjectId = default,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,

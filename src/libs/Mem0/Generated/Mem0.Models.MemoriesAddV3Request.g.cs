@@ -65,6 +65,85 @@ namespace Mem0
         public bool? Infer { get; set; }
 
         /// <summary>
+        /// Scope memories to this app.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("app_id")]
+        public string? AppId { get; set; }
+
+        /// <summary>
+        /// Mark stored memories as immutable, excluding them from future update/consolidation.<br/>
+        /// Default Value: false
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("immutable")]
+        public bool? Immutable { get; set; }
+
+        /// <summary>
+        /// Free-text hint of what to include during extraction, e.g. "vehicles".
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("includes")]
+        public string? Includes { get; set; }
+
+        /// <summary>
+        /// Free-text hint of what to exclude during extraction, e.g. "politics".
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("excludes")]
+        public string? Excludes { get; set; }
+
+        /// <summary>
+        /// Enable graph memory extraction for this call.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("enable_graph")]
+        public bool? EnableGraph { get; set; }
+
+        /// <summary>
+        /// Optional schema constraining structured extraction. Exact shape not fully characterized; observed only as null in captured traffic.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("structured_data_schema")]
+        public object? StructuredDataSchema { get; set; }
+
+        /// <summary>
+        /// Response envelope version, e.g. "v1.1". Full set of accepted values not confirmed.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("output_format")]
+        public string? OutputFormat { get; set; }
+
+        /// <summary>
+        /// ID of a saved prompt profile to use for extraction.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("prompt_profile_id")]
+        public string? PromptProfileId { get; set; }
+
+        /// <summary>
+        /// Enable temporal reasoning during extraction.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("temporal_reasoning")]
+        public bool? TemporalReasoning { get; set; }
+
+        /// <summary>
+        /// IANA timezone used to interpret observation_datetime and observation_date, e.g. "UTC".
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timezone")]
+        public string? Timezone { get; set; }
+
+        /// <summary>
+        /// ISO 8601 datetime the conversation was observed.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("observation_datetime")]
+        public global::System.DateTime? ObservationDatetime { get; set; }
+
+        /// <summary>
+        /// Date the conversation was observed (YYYY-MM-DD).
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("observation_date")]
+        public global::System.DateTime? ObservationDate { get; set; }
+
+        /// <summary>
+        /// Unix epoch seconds used to backdate created_at on the stored memories. Not echoed back in the event payload but confirmed applied.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timestamp")]
+        public int? Timestamp { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -101,6 +180,46 @@ namespace Mem0
         /// When `false`, stores each message verbatim without running the extraction LLM.<br/>
         /// Default Value: true
         /// </param>
+        /// <param name="appId">
+        /// Scope memories to this app.
+        /// </param>
+        /// <param name="immutable">
+        /// Mark stored memories as immutable, excluding them from future update/consolidation.<br/>
+        /// Default Value: false
+        /// </param>
+        /// <param name="includes">
+        /// Free-text hint of what to include during extraction, e.g. "vehicles".
+        /// </param>
+        /// <param name="excludes">
+        /// Free-text hint of what to exclude during extraction, e.g. "politics".
+        /// </param>
+        /// <param name="enableGraph">
+        /// Enable graph memory extraction for this call.
+        /// </param>
+        /// <param name="structuredDataSchema">
+        /// Optional schema constraining structured extraction. Exact shape not fully characterized; observed only as null in captured traffic.
+        /// </param>
+        /// <param name="outputFormat">
+        /// Response envelope version, e.g. "v1.1". Full set of accepted values not confirmed.
+        /// </param>
+        /// <param name="promptProfileId">
+        /// ID of a saved prompt profile to use for extraction.
+        /// </param>
+        /// <param name="temporalReasoning">
+        /// Enable temporal reasoning during extraction.
+        /// </param>
+        /// <param name="timezone">
+        /// IANA timezone used to interpret observation_datetime and observation_date, e.g. "UTC".
+        /// </param>
+        /// <param name="observationDatetime">
+        /// ISO 8601 datetime the conversation was observed.
+        /// </param>
+        /// <param name="observationDate">
+        /// Date the conversation was observed (YYYY-MM-DD).
+        /// </param>
+        /// <param name="timestamp">
+        /// Unix epoch seconds used to backdate created_at on the stored memories. Not echoed back in the event payload but confirmed applied.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -113,7 +232,20 @@ namespace Mem0
             global::System.DateTime? expirationDate,
             string? customInstructions,
             global::System.Collections.Generic.IList<global::System.Collections.Generic.Dictionary<string, string>>? customCategories,
-            bool? infer)
+            bool? infer,
+            string? appId,
+            bool? immutable,
+            string? includes,
+            string? excludes,
+            bool? enableGraph,
+            object? structuredDataSchema,
+            string? outputFormat,
+            string? promptProfileId,
+            bool? temporalReasoning,
+            string? timezone,
+            global::System.DateTime? observationDatetime,
+            global::System.DateTime? observationDate,
+            int? timestamp)
         {
             this.Messages = messages ?? throw new global::System.ArgumentNullException(nameof(messages));
             this.UserId = userId;
@@ -124,6 +256,19 @@ namespace Mem0
             this.CustomInstructions = customInstructions;
             this.CustomCategories = customCategories;
             this.Infer = infer;
+            this.AppId = appId;
+            this.Immutable = immutable;
+            this.Includes = includes;
+            this.Excludes = excludes;
+            this.EnableGraph = enableGraph;
+            this.StructuredDataSchema = structuredDataSchema;
+            this.OutputFormat = outputFormat;
+            this.PromptProfileId = promptProfileId;
+            this.TemporalReasoning = temporalReasoning;
+            this.Timezone = timezone;
+            this.ObservationDatetime = observationDatetime;
+            this.ObservationDate = observationDate;
+            this.Timestamp = timestamp;
         }
 
         /// <summary>

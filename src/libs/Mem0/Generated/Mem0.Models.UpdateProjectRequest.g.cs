@@ -39,6 +39,30 @@ namespace Mem0
         public bool? Multilingual { get; set; }
 
         /// <summary>
+        /// Memory extraction depth setting for this project.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("memory_depth")]
+        public string? MemoryDepth { get; set; }
+
+        /// <summary>
+        /// Whether memory decay is enabled for this project.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("decay")]
+        public bool? Decay { get; set; }
+
+        /// <summary>
+        /// Whether graph memory is enabled for this project.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("enable_graph")]
+        public bool? EnableGraph { get; set; }
+
+        /// <summary>
+        /// API version used by this project.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("version")]
+        public string? Version { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -62,6 +86,18 @@ namespace Mem0
         /// <param name="multilingual">
         /// Whether to use the input language for memory storage and retrieval.
         /// </param>
+        /// <param name="memoryDepth">
+        /// Memory extraction depth setting for this project.
+        /// </param>
+        /// <param name="decay">
+        /// Whether memory decay is enabled for this project.
+        /// </param>
+        /// <param name="enableGraph">
+        /// Whether graph memory is enabled for this project.
+        /// </param>
+        /// <param name="version">
+        /// API version used by this project.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -70,13 +106,21 @@ namespace Mem0
             string? description,
             global::System.Collections.Generic.IList<string>? customInstructions,
             global::System.Collections.Generic.IList<object>? customCategories,
-            bool? multilingual)
+            bool? multilingual,
+            string? memoryDepth,
+            bool? decay,
+            bool? enableGraph,
+            string? version)
         {
             this.Name = name;
             this.Description = description;
             this.CustomInstructions = customInstructions;
             this.CustomCategories = customCategories;
             this.Multilingual = multilingual;
+            this.MemoryDepth = memoryDepth;
+            this.Decay = decay;
+            this.EnableGraph = enableGraph;
+            this.Version = version;
         }
 
         /// <summary>

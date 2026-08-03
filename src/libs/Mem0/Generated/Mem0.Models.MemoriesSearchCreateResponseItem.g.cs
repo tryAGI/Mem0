@@ -30,6 +30,12 @@ namespace Mem0
         public required string UserId { get; set; }
 
         /// <summary>
+        /// Relevance score of the memory for the search query.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("score")]
+        public double? Score { get; set; }
+
+        /// <summary>
         /// Additional metadata associated with the memory
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
@@ -40,13 +46,6 @@ namespace Mem0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("categories")]
         public global::System.Collections.Generic.IList<string>? Categories { get; set; }
-
-        /// <summary>
-        /// Whether the memory is immutable.<br/>
-        /// Default Value: false
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("immutable")]
-        public bool? Immutable { get; set; }
 
         /// <summary>
         /// The date when the memory will expire. Format: YYYY-MM-DD.<br/>
@@ -93,15 +92,14 @@ namespace Mem0
         /// <param name="updatedAt">
         /// The timestamp when the memory was last updated.
         /// </param>
+        /// <param name="score">
+        /// Relevance score of the memory for the search query.
+        /// </param>
         /// <param name="metadata">
         /// Additional metadata associated with the memory
         /// </param>
         /// <param name="categories">
         /// Categories associated with the memory
-        /// </param>
-        /// <param name="immutable">
-        /// Whether the memory is immutable.<br/>
-        /// Default Value: false
         /// </param>
         /// <param name="expirationDate">
         /// The date when the memory will expire. Format: YYYY-MM-DD.<br/>
@@ -116,17 +114,17 @@ namespace Mem0
             string userId,
             global::System.DateTime createdAt,
             global::System.DateTime updatedAt,
+            double? score,
             object? metadata,
             global::System.Collections.Generic.IList<string>? categories,
-            bool? immutable,
             global::System.DateTime? expirationDate)
         {
             this.Id = id;
             this.Memory = memory ?? throw new global::System.ArgumentNullException(nameof(memory));
             this.UserId = userId ?? throw new global::System.ArgumentNullException(nameof(userId));
+            this.Score = score;
             this.Metadata = metadata;
             this.Categories = categories;
-            this.Immutable = immutable;
             this.ExpirationDate = expirationDate;
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;

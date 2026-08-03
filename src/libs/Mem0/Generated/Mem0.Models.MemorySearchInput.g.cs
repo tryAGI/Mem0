@@ -74,7 +74,7 @@ namespace Mem0
 
         /// <summary>
         /// The search method supports two output formats: `v1.0` (default) and `v1.1`. We recommend using `v1.1` as `v1.0` will be deprecated soon.<br/>
-        /// Default Value: v1.1
+        /// Default Value: v1.0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("output_format")]
         public string? OutputFormat { get; set; }
@@ -155,7 +155,7 @@ namespace Mem0
         /// </param>
         /// <param name="outputFormat">
         /// The search method supports two output formats: `v1.0` (default) and `v1.1`. We recommend using `v1.1` as `v1.0` will be deprecated soon.<br/>
-        /// Default Value: v1.1
+        /// Default Value: v1.0
         /// </param>
         /// <param name="orgId">
         /// The unique identifier of the organization associated with the memory.

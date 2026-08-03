@@ -51,7 +51,7 @@ namespace Mem0
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Mem0.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Mem0.EntitiesListResponseItem>> EntitiesListAsync(
+        public async global::System.Threading.Tasks.Task<global::Mem0.EntitiesListResponse> EntitiesListAsync(
             string? orgId = default,
             string? projectId = default,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
@@ -74,7 +74,7 @@ namespace Mem0
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Mem0.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Mem0.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Mem0.EntitiesListResponseItem>>> EntitiesListAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Mem0.AutoSDKHttpResponse<global::Mem0.EntitiesListResponse>> EntitiesListAsResponseAsync(
             string? orgId = default,
             string? projectId = default,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
@@ -359,9 +359,9 @@ namespace Mem0
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = (global::System.Collections.Generic.IList<global::Mem0.EntitiesListResponseItem>?)global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::Mem0.EntitiesListResponseItem>), JsonSerializerContext) ??
+                                    var __value = global::Mem0.EntitiesListResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Mem0.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Mem0.EntitiesListResponseItem>>(
+                                    return new global::Mem0.AutoSDKHttpResponse<global::Mem0.EntitiesListResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Mem0.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -391,9 +391,9 @@ namespace Mem0
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = (global::System.Collections.Generic.IList<global::Mem0.EntitiesListResponseItem>?)await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::Mem0.EntitiesListResponseItem>), JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Mem0.EntitiesListResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Mem0.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Mem0.EntitiesListResponseItem>>(
+                                    return new global::Mem0.AutoSDKHttpResponse<global::Mem0.EntitiesListResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Mem0.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
