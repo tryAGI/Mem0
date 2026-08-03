@@ -46,7 +46,7 @@ namespace Mem0
         /// URL endpoint for the webhook.
         /// </param>
         /// <param name="eventTypes">
-        /// List of event types to subscribe to.
+        /// List of event types to subscribe to. Required: omitting this field does not fall back to a usable default.
         /// </param>
         /// <param name="isActive">
         /// Whether the webhook is active
@@ -59,9 +59,9 @@ namespace Mem0
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Mem0.CreateWebhookResponse> CreateWebhookAsync(
             string projectId,
+            string name,
             string url,
-            string? name = default,
-            global::System.Collections.Generic.IList<global::Mem0.CreateWebhookRequestEventType>? eventTypes = default,
+            global::System.Collections.Generic.IList<global::Mem0.CreateWebhookRequestEventType> eventTypes,
             bool? isActive = default,
             string? requestProjectId = default,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,

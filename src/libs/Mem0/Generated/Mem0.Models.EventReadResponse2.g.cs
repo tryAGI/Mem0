@@ -9,10 +9,11 @@ namespace Mem0
     public sealed partial class EventReadResponse2
     {
         /// <summary>
-        /// 
+        /// Example: Event not found or you don't have permission to access it.
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("detail")]
-        public string? Detail { get; set; }
+        /// <example>Event not found or you don't have permission to access it.</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("error")]
+        public string? Error { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -23,14 +24,16 @@ namespace Mem0
         /// <summary>
         /// Initializes a new instance of the <see cref="EventReadResponse2" /> class.
         /// </summary>
-        /// <param name="detail"></param>
+        /// <param name="error">
+        /// Example: Event not found or you don't have permission to access it.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public EventReadResponse2(
-            string? detail)
+            string? error)
         {
-            this.Detail = detail;
+            this.Error = error;
         }
 
         /// <summary>

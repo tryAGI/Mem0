@@ -64,8 +64,8 @@ namespace Mem0
         public bool? Infer { get; set; }
 
         /// <summary>
-        /// Controls the response format structure. `v1.0` (deprecated) returns a direct array of memory objects: `[{...}, {...}]`. `v1.1` (recommended) returns an object with a 'results' key containing the array: `{"results": [...]}`. The `v1.0` format will be removed in future versions.<br/>
-        /// Default Value: v1.1
+        /// Controls the response format structure. `v1.0` (default) returns a direct array of memory objects: `[{...}, {...}]`. `v1.1` returns an object with a 'results' key containing the array: `{"results": [...]}`.<br/>
+        /// Default Value: v1.0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("output_format")]
         public string? OutputFormat { get; set; }
@@ -165,8 +165,8 @@ namespace Mem0
         /// Default Value: true
         /// </param>
         /// <param name="outputFormat">
-        /// Controls the response format structure. `v1.0` (deprecated) returns a direct array of memory objects: `[{...}, {...}]`. `v1.1` (recommended) returns an object with a 'results' key containing the array: `{"results": [...]}`. The `v1.0` format will be removed in future versions.<br/>
-        /// Default Value: v1.1
+        /// Controls the response format structure. `v1.0` (default) returns a direct array of memory objects: `[{...}, {...}]`. `v1.1` returns an object with a 'results' key containing the array: `{"results": [...]}`.<br/>
+        /// Default Value: v1.0
         /// </param>
         /// <param name="customCategories">
         /// A list of categories with category name and its description.

@@ -546,6 +546,15 @@ namespace Mem0
         /// <param name="referenceDate">
         /// Optional query anchor time for relative temporal interpretation. Accepts Unix epoch, YYYY-MM-DD, or ISO datetime.
         /// </param>
+        /// <param name="fields">
+        /// Restrict the fields returned per memory.
+        /// </param>
+        /// <param name="categories">
+        /// Filter results to memories tagged with any of these categories.
+        /// </param>
+        /// <param name="metadata">
+        /// Filter results to memories matching this metadata.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -557,6 +566,9 @@ namespace Mem0
             double? threshold = default,
             bool? rerank = default,
             global::Mem0.OneOf<int?, double?, string>? referenceDate = default,
+            global::System.Collections.Generic.IList<string>? fields = default,
+            global::System.Collections.Generic.IList<string>? categories = default,
+            object? metadata = default,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -569,6 +581,9 @@ namespace Mem0
                 Threshold = threshold,
                 Rerank = rerank,
                 ReferenceDate = referenceDate,
+                Fields = fields,
+                Categories = categories,
+                Metadata = metadata,
             };
 
             return await MemoriesSearchV3Async(

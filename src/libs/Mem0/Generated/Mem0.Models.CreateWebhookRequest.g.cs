@@ -12,7 +12,8 @@ namespace Mem0
         /// Name of the webhook
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
-        public string? Name { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Name { get; set; }
 
         /// <summary>
         /// URL endpoint for the webhook.
@@ -22,10 +23,11 @@ namespace Mem0
         public required string Url { get; set; }
 
         /// <summary>
-        /// List of event types to subscribe to.
+        /// List of event types to subscribe to. Required: omitting this field does not fall back to a usable default.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("event_types")]
-        public global::System.Collections.Generic.IList<global::Mem0.CreateWebhookRequestEventType>? EventTypes { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::Mem0.CreateWebhookRequestEventType> EventTypes { get; set; }
 
         /// <summary>
         /// Whether the webhook is active
@@ -48,14 +50,14 @@ namespace Mem0
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateWebhookRequest" /> class.
         /// </summary>
-        /// <param name="url">
-        /// URL endpoint for the webhook.
-        /// </param>
         /// <param name="name">
         /// Name of the webhook
         /// </param>
+        /// <param name="url">
+        /// URL endpoint for the webhook.
+        /// </param>
         /// <param name="eventTypes">
-        /// List of event types to subscribe to.
+        /// List of event types to subscribe to. Required: omitting this field does not fall back to a usable default.
         /// </param>
         /// <param name="isActive">
         /// Whether the webhook is active
@@ -67,15 +69,15 @@ namespace Mem0
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateWebhookRequest(
+            string name,
             string url,
-            string? name,
-            global::System.Collections.Generic.IList<global::Mem0.CreateWebhookRequestEventType>? eventTypes,
+            global::System.Collections.Generic.IList<global::Mem0.CreateWebhookRequestEventType> eventTypes,
             bool? isActive,
             string? projectId)
         {
-            this.Name = name;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Url = url ?? throw new global::System.ArgumentNullException(nameof(url));
-            this.EventTypes = eventTypes;
+            this.EventTypes = eventTypes ?? throw new global::System.ArgumentNullException(nameof(eventTypes));
             this.IsActive = isActive;
             this.ProjectId = projectId;
         }

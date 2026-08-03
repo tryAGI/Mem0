@@ -76,6 +76,18 @@ namespace Mem0
         public double? Latency { get; set; }
 
         /// <summary>
+        /// Status of graph memory processing for this event, if graph memory is enabled.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("graph_status")]
+        public string? GraphStatus { get; set; }
+
+        /// <summary>
+        /// Error message if the event failed to process.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("error")]
+        public string? Error { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -117,6 +129,12 @@ namespace Mem0
         /// <param name="latency">
         /// Processing time in milliseconds.
         /// </param>
+        /// <param name="graphStatus">
+        /// Status of graph memory processing for this event, if graph memory is enabled.
+        /// </param>
+        /// <param name="error">
+        /// Error message if the event failed to process.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -131,7 +149,9 @@ namespace Mem0
             global::System.DateTime? updatedAt,
             global::System.DateTime? startedAt,
             global::System.DateTime? completedAt,
-            double? latency)
+            double? latency,
+            string? graphStatus,
+            string? error)
         {
             this.Id = id;
             this.EventType = eventType;
@@ -144,6 +164,8 @@ namespace Mem0
             this.StartedAt = startedAt;
             this.CompletedAt = completedAt;
             this.Latency = latency;
+            this.GraphStatus = graphStatus;
+            this.Error = error;
         }
 
         /// <summary>

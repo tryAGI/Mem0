@@ -38,6 +38,11 @@ namespace Mem0
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
+        partial void ProcessEntitiesReadResponseContent(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
+            ref string content);
+
         /// <summary>
         /// 
         /// </summary>
@@ -46,18 +51,20 @@ namespace Mem0
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Mem0.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task EntitiesReadAsync(
+        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Mem0.EntitiesReadResponseItem>> EntitiesReadAsync(
             global::Mem0.EntitiesReadEntityType entityType,
             string entityId,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            await EntitiesReadAsResponseAsync(
+            var __response = await EntitiesReadAsResponseAsync(
                 entityType: entityType,
                 entityId: entityId,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
+
+            return __response.Body;
         }
         /// <summary>
         /// 
@@ -67,7 +74,7 @@ namespace Mem0
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Mem0.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Mem0.AutoSDKHttpResponse> EntitiesReadAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Mem0.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Mem0.EntitiesReadResponseItem>>> EntitiesReadAsResponseAsync(
             global::Mem0.EntitiesReadEntityType entityType,
             string entityId,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
@@ -339,15 +346,22 @@ namespace Mem0
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
+                                ProcessEntitiesReadResponseContent(
+                                    httpClient: HttpClient,
+                                    httpResponseMessage: __response,
+                                    content: ref __content);
 
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                return new global::Mem0.AutoSDKHttpResponse(
+                                    var __value = (global::System.Collections.Generic.IList<global::Mem0.EntitiesReadResponseItem>?)global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::Mem0.EntitiesReadResponseItem>), JsonSerializerContext) ??
+                                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                                    return new global::Mem0.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Mem0.EntitiesReadResponseItem>>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Mem0.AutoSDKHttpResponse.CreateHeaders(__response),
-                                        requestUri: __response.RequestMessage?.RequestUri);
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -367,10 +381,19 @@ namespace Mem0
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
-                                    return new global::Mem0.AutoSDKHttpResponse(
+                                    using var __content = await __response.Content.ReadAsStreamAsync(
+                #if NET5_0_OR_GREATER
+                                        __effectiveCancellationToken
+                #endif
+                                    ).ConfigureAwait(false);
+
+                                    var __value = (global::System.Collections.Generic.IList<global::Mem0.EntitiesReadResponseItem>?)await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::Mem0.EntitiesReadResponseItem>), JsonSerializerContext).ConfigureAwait(false) ??
+                                        throw new global::System.InvalidOperationException("Response deserialization failed.");
+                                    return new global::Mem0.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Mem0.EntitiesReadResponseItem>>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Mem0.AutoSDKHttpResponse.CreateHeaders(__response),
-                                        requestUri: __response.RequestMessage?.RequestUri);
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {

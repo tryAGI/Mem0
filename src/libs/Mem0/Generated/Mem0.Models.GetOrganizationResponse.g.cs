@@ -9,13 +9,7 @@ namespace Mem0
     public sealed partial class GetOrganizationResponse
     {
         /// <summary>
-        /// Unique identifier for the organization.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("id")]
-        public int? Id { get; set; }
-
-        /// <summary>
-        /// Unique organization ID
+        /// Organization's unique string identifier.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("org_id")]
         public string? OrgId { get; set; }
@@ -25,42 +19,6 @@ namespace Mem0
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         public string? Name { get; set; }
-
-        /// <summary>
-        /// Description of the organization
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("description")]
-        public string? Description { get; set; }
-
-        /// <summary>
-        /// Address of the organization
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("address")]
-        public string? Address { get; set; }
-
-        /// <summary>
-        /// Contact email for the organization
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("contact_email")]
-        public string? ContactEmail { get; set; }
-
-        /// <summary>
-        /// Phone number of the organization
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("phone_number")]
-        public string? PhoneNumber { get; set; }
-
-        /// <summary>
-        /// Website of the organization
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("website")]
-        public string? Website { get; set; }
-
-        /// <summary>
-        /// Indicates if the organization is on a paid plan
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("on_paid_plan")]
-        public bool? OnPaidPlan { get; set; }
 
         /// <summary>
         /// Timestamp of when the organization was created.
@@ -75,16 +33,46 @@ namespace Mem0
         public global::System.DateTime? UpdatedAt { get; set; }
 
         /// <summary>
-        /// Identifier of the organization's owner
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("owner")]
-        public int? Owner { get; set; }
-
-        /// <summary>
-        /// List of member identifiers belonging to the organization.
+        /// Members belonging to the organization.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("members")]
-        public global::System.Collections.Generic.IList<int>? Members { get; set; }
+        public global::System.Collections.Generic.IList<global::Mem0.GetOrganizationResponseMember>? Members { get; set; }
+
+        /// <summary>
+        /// Whether this is the caller's default organization.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_default")]
+        public bool? IsDefault { get; set; }
+
+        /// <summary>
+        /// Whether bring-your-own-key is enabled for the organization.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("byok_enabled")]
+        public bool? ByokEnabled { get; set; }
+
+        /// <summary>
+        /// Pending invitations for the organization.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("invitations")]
+        public global::System.Collections.Generic.IList<object>? Invitations { get; set; }
+
+        /// <summary>
+        /// Pricing plan of the organization owner.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("owner_pricing_plan")]
+        public string? OwnerPricingPlan { get; set; }
+
+        /// <summary>
+        /// Whether the caller owns the organization.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("is_owner")]
+        public bool? IsOwner { get; set; }
+
+        /// <summary>
+        /// The caller's role within the organization.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("user_role")]
+        public string? UserRole { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -95,32 +83,11 @@ namespace Mem0
         /// <summary>
         /// Initializes a new instance of the <see cref="GetOrganizationResponse" /> class.
         /// </summary>
-        /// <param name="id">
-        /// Unique identifier for the organization.
-        /// </param>
         /// <param name="orgId">
-        /// Unique organization ID
+        /// Organization's unique string identifier.
         /// </param>
         /// <param name="name">
         /// Name of the organization.
-        /// </param>
-        /// <param name="description">
-        /// Description of the organization
-        /// </param>
-        /// <param name="address">
-        /// Address of the organization
-        /// </param>
-        /// <param name="contactEmail">
-        /// Contact email for the organization
-        /// </param>
-        /// <param name="phoneNumber">
-        /// Phone number of the organization
-        /// </param>
-        /// <param name="website">
-        /// Website of the organization
-        /// </param>
-        /// <param name="onPaidPlan">
-        /// Indicates if the organization is on a paid plan
         /// </param>
         /// <param name="createdAt">
         /// Timestamp of when the organization was created.
@@ -128,43 +95,54 @@ namespace Mem0
         /// <param name="updatedAt">
         /// Timestamp of when the organization was last updated.
         /// </param>
-        /// <param name="owner">
-        /// Identifier of the organization's owner
-        /// </param>
         /// <param name="members">
-        /// List of member identifiers belonging to the organization.
+        /// Members belonging to the organization.
+        /// </param>
+        /// <param name="isDefault">
+        /// Whether this is the caller's default organization.
+        /// </param>
+        /// <param name="byokEnabled">
+        /// Whether bring-your-own-key is enabled for the organization.
+        /// </param>
+        /// <param name="invitations">
+        /// Pending invitations for the organization.
+        /// </param>
+        /// <param name="ownerPricingPlan">
+        /// Pricing plan of the organization owner.
+        /// </param>
+        /// <param name="isOwner">
+        /// Whether the caller owns the organization.
+        /// </param>
+        /// <param name="userRole">
+        /// The caller's role within the organization.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public GetOrganizationResponse(
-            int? id,
             string? orgId,
             string? name,
-            string? description,
-            string? address,
-            string? contactEmail,
-            string? phoneNumber,
-            string? website,
-            bool? onPaidPlan,
             global::System.DateTime? createdAt,
             global::System.DateTime? updatedAt,
-            int? owner,
-            global::System.Collections.Generic.IList<int>? members)
+            global::System.Collections.Generic.IList<global::Mem0.GetOrganizationResponseMember>? members,
+            bool? isDefault,
+            bool? byokEnabled,
+            global::System.Collections.Generic.IList<object>? invitations,
+            string? ownerPricingPlan,
+            bool? isOwner,
+            string? userRole)
         {
-            this.Id = id;
             this.OrgId = orgId;
             this.Name = name;
-            this.Description = description;
-            this.Address = address;
-            this.ContactEmail = contactEmail;
-            this.PhoneNumber = phoneNumber;
-            this.Website = website;
-            this.OnPaidPlan = onPaidPlan;
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.Owner = owner;
             this.Members = members;
+            this.IsDefault = isDefault;
+            this.ByokEnabled = byokEnabled;
+            this.Invitations = invitations;
+            this.OwnerPricingPlan = ownerPricingPlan;
+            this.IsOwner = isOwner;
+            this.UserRole = userRole;
         }
 
         /// <summary>

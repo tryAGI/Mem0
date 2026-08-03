@@ -50,12 +50,30 @@ namespace Mem0
         public required string UserId { get; set; }
 
         /// <summary>
+        /// Categories associated with the memory at this point in its history
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("categories")]
+        public global::System.Collections.Generic.IList<string>? Categories { get; set; }
+
+        /// <summary>
         /// The type of event that occurred
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("event")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Mem0.JsonConverters.MemoriesHistoryListResponseItemEventJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Mem0.MemoriesHistoryListResponseItemEvent Event { get; set; }
+
+        /// <summary>
+        /// Previous internal embedding representation (Qwen model), if applicable
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("previous_embedding_qwen")]
+        public string? PreviousEmbeddingQwen { get; set; }
+
+        /// <summary>
+        /// Internal embedding representation (Qwen model), if available
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("embedding_qwen")]
+        public string? EmbeddingQwen { get; set; }
 
         /// <summary>
         /// Additional metadata associated with the memory change
@@ -113,6 +131,15 @@ namespace Mem0
         /// <param name="oldMemory">
         /// The previous state of the memory, if applicable
         /// </param>
+        /// <param name="categories">
+        /// Categories associated with the memory at this point in its history
+        /// </param>
+        /// <param name="previousEmbeddingQwen">
+        /// Previous internal embedding representation (Qwen model), if applicable
+        /// </param>
+        /// <param name="embeddingQwen">
+        /// Internal embedding representation (Qwen model), if available
+        /// </param>
         /// <param name="metadata">
         /// Additional metadata associated with the memory change
         /// </param>
@@ -129,6 +156,9 @@ namespace Mem0
             global::System.DateTime createdAt,
             global::System.DateTime updatedAt,
             string? oldMemory,
+            global::System.Collections.Generic.IList<string>? categories,
+            string? previousEmbeddingQwen,
+            string? embeddingQwen,
             object? metadata)
         {
             this.Id = id;
@@ -137,7 +167,10 @@ namespace Mem0
             this.OldMemory = oldMemory;
             this.NewMemory = newMemory ?? throw new global::System.ArgumentNullException(nameof(newMemory));
             this.UserId = userId ?? throw new global::System.ArgumentNullException(nameof(userId));
+            this.Categories = categories;
             this.Event = @event;
+            this.PreviousEmbeddingQwen = previousEmbeddingQwen;
+            this.EmbeddingQwen = embeddingQwen;
             this.Metadata = metadata;
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;

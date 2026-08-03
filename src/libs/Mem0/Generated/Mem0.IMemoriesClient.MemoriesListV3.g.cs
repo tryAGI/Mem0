@@ -75,6 +75,27 @@ namespace Mem0
         /// When true, include memories whose `expiration_date` has passed. Expired memories are hidden by default.<br/>
         /// Default Value: false
         /// </param>
+        /// <param name="startDate">
+        /// Only include memories created on or after this date (YYYY-MM-DD).
+        /// </param>
+        /// <param name="endDate">
+        /// Only include memories created on or before this date (YYYY-MM-DD).
+        /// </param>
+        /// <param name="categories">
+        /// Restrict results to memories tagged with any of these categories.
+        /// </param>
+        /// <param name="fields">
+        /// Restrict the fields returned per memory, e.g. ["id", "memory"].
+        /// </param>
+        /// <param name="keywords">
+        /// Free-text keyword filter applied on top of filters.
+        /// </param>
+        /// <param name="requestPage">
+        /// 1-indexed page number. Also accepted here in the request body; the query parameter of the same name takes precedence.
+        /// </param>
+        /// <param name="requestPageSize">
+        /// Results per page. Also accepted here in the request body; the query parameter of the same name takes precedence.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -83,6 +104,13 @@ namespace Mem0
             int? page = default,
             int? pageSize = default,
             bool? showExpired = default,
+            global::System.DateTime? startDate = default,
+            global::System.DateTime? endDate = default,
+            global::System.Collections.Generic.IList<string>? categories = default,
+            global::System.Collections.Generic.IList<string>? fields = default,
+            string? keywords = default,
+            int? requestPage = default,
+            int? requestPageSize = default,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

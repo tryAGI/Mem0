@@ -48,7 +48,7 @@ namespace Mem0
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Mem0.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Mem0.CreateRun> RunsCreateAsync(
+        public async global::System.Threading.Tasks.Task<global::Mem0.RunResponse> RunsCreateAsync(
 
             global::Mem0.CreateRun request,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
@@ -70,7 +70,7 @@ namespace Mem0
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Mem0.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Mem0.AutoSDKHttpResponse<global::Mem0.CreateRun>> RunsCreateAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Mem0.AutoSDKHttpResponse<global::Mem0.RunResponse>> RunsCreateAsResponseAsync(
 
             global::Mem0.CreateRun request,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
@@ -357,9 +357,9 @@ namespace Mem0
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Mem0.CreateRun.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Mem0.RunResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Mem0.AutoSDKHttpResponse<global::Mem0.CreateRun>(
+                                    return new global::Mem0.AutoSDKHttpResponse<global::Mem0.RunResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Mem0.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -389,9 +389,9 @@ namespace Mem0
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::Mem0.CreateRun.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Mem0.RunResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Mem0.AutoSDKHttpResponse<global::Mem0.CreateRun>(
+                                    return new global::Mem0.AutoSDKHttpResponse<global::Mem0.RunResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Mem0.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -440,9 +440,9 @@ namespace Mem0
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Mem0.CreateRun> RunsCreateAsync(
+        public async global::System.Threading.Tasks.Task<global::Mem0.RunResponse> RunsCreateAsync(
             string runId,
-            string? name = default,
+            string name,
             object? metadata = default,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)

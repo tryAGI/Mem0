@@ -4,7 +4,7 @@
 namespace Mem0
 {
     /// <summary>
-    /// 
+    /// Additional metadata associated with the memory
     /// </summary>
     public sealed partial class MemoriesListV2ResponseItemMetadata
     {

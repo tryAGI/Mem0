@@ -38,7 +38,7 @@ namespace Mem0
         /// Schema definition for the export
         /// </param>
         /// <param name="filters">
-        /// Filters to apply while exporting memories. Available fields are: user_id, agent_id, app_id, run_id.
+        /// Filters to apply while exporting memories, using the structured AND/OR filter format (see `/v2/memories/search/`), e.g. `{"AND": [{"user_id": "&lt;user_id&gt;"}]}`. Available fields are: user_id, agent_id, app_id, run_id. Flat filter objects (e.g. `{"user_id": "&lt;user_id&gt;"}`) are rejected with a 400 error.
         /// </param>
         /// <param name="orgId">
         /// Filter exports by organization ID.
@@ -51,7 +51,7 @@ namespace Mem0
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Mem0.ExportsCreateResponse> ExportsCreateAsync(
             object schema,
-            global::Mem0.ExportsCreateRequestFilters? filters = default,
+            object? filters = default,
             string? orgId = default,
             string? projectId = default,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,

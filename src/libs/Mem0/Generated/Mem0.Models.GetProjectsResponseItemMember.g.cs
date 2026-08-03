@@ -21,6 +21,12 @@ namespace Mem0
         public string? Role { get; set; }
 
         /// <summary>
+        /// Email address of the project member.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("email")]
+        public string? Email { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -35,15 +41,20 @@ namespace Mem0
         /// <param name="role">
         /// Role of the member in the project.
         /// </param>
+        /// <param name="email">
+        /// Email address of the project member.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public GetProjectsResponseItemMember(
             string? username,
-            string? role)
+            string? role,
+            string? email)
         {
             this.Username = username;
             this.Role = role;
+            this.Email = email;
         }
 
         /// <summary>

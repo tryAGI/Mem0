@@ -33,6 +33,12 @@ namespace Mem0
         public global::System.Collections.Generic.IList<string>? EventTypes { get; set; }
 
         /// <summary>
+        /// Username of the webhook's owner.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("owner")]
+        public string? Owner { get; set; }
+
+        /// <summary>
         /// Whether the webhook is active
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("is_active")]
@@ -77,6 +83,9 @@ namespace Mem0
         /// <param name="eventTypes">
         /// List of event types the webhook subscribes to.
         /// </param>
+        /// <param name="owner">
+        /// Username of the webhook's owner.
+        /// </param>
         /// <param name="isActive">
         /// Whether the webhook is active
         /// </param>
@@ -97,6 +106,7 @@ namespace Mem0
             string? name,
             string? url,
             global::System.Collections.Generic.IList<string>? eventTypes,
+            string? owner,
             bool? isActive,
             string? project,
             global::System.DateTime? createdAt,
@@ -106,6 +116,7 @@ namespace Mem0
             this.Name = name;
             this.Url = url;
             this.EventTypes = eventTypes;
+            this.Owner = owner;
             this.IsActive = isActive;
             this.Project = project;
             this.CreatedAt = createdAt;

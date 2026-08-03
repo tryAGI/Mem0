@@ -19,7 +19,8 @@ namespace Mem0
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
-        public string? Name { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Name { get; set; }
 
         /// <summary>
         /// 
@@ -44,11 +45,11 @@ namespace Mem0
 #endif
         public CreateApp(
             string appId,
-            string? name,
+            string name,
             object? metadata)
         {
             this.AppId = appId ?? throw new global::System.ArgumentNullException(nameof(appId));
-            this.Name = name;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Metadata = metadata;
         }
 
