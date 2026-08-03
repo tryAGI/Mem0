@@ -27,13 +27,15 @@ namespace Mem0
             };
         partial void PrepareMemoriesEntityReadArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string entityType,
-            ref string entityId);
+            ref global::Mem0.MemoriesEntityReadEntityType entityType,
+            ref string entityId,
+            ref int? page);
         partial void PrepareMemoriesEntityReadRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string entityType,
-            string entityId);
+            global::Mem0.MemoriesEntityReadEntityType entityType,
+            string entityId,
+            int? page);
         partial void ProcessMemoriesEntityReadResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -44,22 +46,25 @@ namespace Mem0
             ref string content);
 
         /// <summary>
-        /// 
+        /// Returns a paginated list of memories belonging to the given entity.
         /// </summary>
         /// <param name="entityType"></param>
         /// <param name="entityId"></param>
+        /// <param name="page"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Mem0.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Mem0.MemoriesEntityReadResponse> MemoriesEntityReadAsync(
-            string entityType,
+            global::Mem0.MemoriesEntityReadEntityType entityType,
             string entityId,
+            int? page = default,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __response = await MemoriesEntityReadAsResponseAsync(
                 entityType: entityType,
                 entityId: entityId,
+                page: page,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -67,16 +72,18 @@ namespace Mem0
             return __response.Body;
         }
         /// <summary>
-        /// 
+        /// Returns a paginated list of memories belonging to the given entity.
         /// </summary>
         /// <param name="entityType"></param>
         /// <param name="entityId"></param>
+        /// <param name="page"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Mem0.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Mem0.AutoSDKHttpResponse<global::Mem0.MemoriesEntityReadResponse>> MemoriesEntityReadAsResponseAsync(
-            string entityType,
+            global::Mem0.MemoriesEntityReadEntityType entityType,
             string entityId,
+            int? page = default,
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -85,7 +92,8 @@ namespace Mem0
             PrepareMemoriesEntityReadArguments(
                 httpClient: HttpClient,
                 entityType: ref entityType,
-                entityId: ref entityId);
+                entityId: ref entityId,
+                page: ref page);
 
 
             var __authorizations = global::Mem0.EndPointSecurityResolver.ResolveAuthorizations(
@@ -111,8 +119,11 @@ namespace Mem0
             {
 
                             var __pathBuilder = new global::Mem0.PathBuilder(
-                                path: $"/v1/memories/{entityType}/{entityId}/",
+                                path: $"/v1/memories/{(global::System.Uri.EscapeDataString(entityType.ToValueString()))}/{entityId}/",
                                 baseUri: HttpClient.BaseAddress);
+                            __pathBuilder
+                                .AddOptionalParameter("page", page?.ToString())
+                                ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Mem0.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
@@ -154,7 +165,8 @@ namespace Mem0
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     entityType: entityType!,
-                    entityId: entityId!);
+                    entityId: entityId!,
+                    page: page);
 
                 return __httpRequest;
             }
@@ -173,7 +185,7 @@ namespace Mem0
                             context: global::Mem0.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "MemoriesEntityRead",
                                 methodName: "MemoriesEntityReadAsync",
-                                pathTemplate: "$\"/v1/memories/{entityType}/{entityId}/\"",
+                                pathTemplate: "$\"/v1/memories/{(global::System.Uri.EscapeDataString(entityType.ToValueString()))}/{entityId}/\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -207,7 +219,7 @@ namespace Mem0
                             context: global::Mem0.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "MemoriesEntityRead",
                                 methodName: "MemoriesEntityReadAsync",
-                                pathTemplate: "$\"/v1/memories/{entityType}/{entityId}/\"",
+                                pathTemplate: "$\"/v1/memories/{(global::System.Uri.EscapeDataString(entityType.ToValueString()))}/{entityId}/\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -248,7 +260,7 @@ namespace Mem0
                             context: global::Mem0.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "MemoriesEntityRead",
                                 methodName: "MemoriesEntityReadAsync",
-                                pathTemplate: "$\"/v1/memories/{entityType}/{entityId}/\"",
+                                pathTemplate: "$\"/v1/memories/{(global::System.Uri.EscapeDataString(entityType.ToValueString()))}/{entityId}/\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -296,7 +308,7 @@ namespace Mem0
                             context: global::Mem0.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "MemoriesEntityRead",
                                 methodName: "MemoriesEntityReadAsync",
-                                pathTemplate: "$\"/v1/memories/{entityType}/{entityId}/\"",
+                                pathTemplate: "$\"/v1/memories/{(global::System.Uri.EscapeDataString(entityType.ToValueString()))}/{entityId}/\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -318,7 +330,7 @@ namespace Mem0
                             context: global::Mem0.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "MemoriesEntityRead",
                                 methodName: "MemoriesEntityReadAsync",
-                                pathTemplate: "$\"/v1/memories/{entityType}/{entityId}/\"",
+                                pathTemplate: "$\"/v1/memories/{(global::System.Uri.EscapeDataString(entityType.ToValueString()))}/{entityId}/\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -365,6 +377,43 @@ namespace Mem0
                                     innerException: __exception_400,
                                     responseBody: __content_400,
                                     responseObject: __value_400,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
+                            // Invalid page.
+                            if ((int)__response.StatusCode == 404)
+                            {
+                                string? __content_404 = null;
+                                global::System.Exception? __exception_404 = null;
+                                global::Mem0.MemoriesEntityReadResponse3? __value_404 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_404 = global::Mem0.MemoriesEntityReadResponse3.FromJson(__content_404, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_404 = global::Mem0.MemoriesEntityReadResponse3.FromJson(__content_404, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_404 = __ex;
+                                }
+
+
+                                throw global::Mem0.ApiException<global::Mem0.MemoriesEntityReadResponse3>.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_404,
+                                    responseBody: __content_404,
+                                    responseObject: __value_404,
                                     responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,

@@ -50,6 +50,24 @@ namespace Mem0
         public required string UserId { get; set; }
 
         /// <summary>
+        /// The identifier of the agent associated with this memory, if any.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("agent_id")]
+        public string? AgentId { get; set; }
+
+        /// <summary>
+        /// The identifier of the app associated with this memory, if any.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("app_id")]
+        public string? AppId { get; set; }
+
+        /// <summary>
+        /// The run identifier associated with this memory, returned as `session_id`.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("session_id")]
+        public string? SessionId { get; set; }
+
+        /// <summary>
         /// Categories associated with the memory at this point in its history
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("categories")]
@@ -131,6 +149,15 @@ namespace Mem0
         /// <param name="oldMemory">
         /// The previous state of the memory, if applicable
         /// </param>
+        /// <param name="agentId">
+        /// The identifier of the agent associated with this memory, if any.
+        /// </param>
+        /// <param name="appId">
+        /// The identifier of the app associated with this memory, if any.
+        /// </param>
+        /// <param name="sessionId">
+        /// The run identifier associated with this memory, returned as `session_id`.
+        /// </param>
         /// <param name="categories">
         /// Categories associated with the memory at this point in its history
         /// </param>
@@ -156,6 +183,9 @@ namespace Mem0
             global::System.DateTime createdAt,
             global::System.DateTime updatedAt,
             string? oldMemory,
+            string? agentId,
+            string? appId,
+            string? sessionId,
             global::System.Collections.Generic.IList<string>? categories,
             string? previousEmbeddingQwen,
             string? embeddingQwen,
@@ -167,6 +197,9 @@ namespace Mem0
             this.OldMemory = oldMemory;
             this.NewMemory = newMemory ?? throw new global::System.ArgumentNullException(nameof(newMemory));
             this.UserId = userId ?? throw new global::System.ArgumentNullException(nameof(userId));
+            this.AgentId = agentId;
+            this.AppId = appId;
+            this.SessionId = sessionId;
             this.Categories = categories;
             this.Event = @event;
             this.PreviousEmbeddingQwen = previousEmbeddingQwen;

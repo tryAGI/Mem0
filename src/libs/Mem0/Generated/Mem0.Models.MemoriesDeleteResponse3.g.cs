@@ -6,12 +6,12 @@ namespace Mem0
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class MemoriesReadResponse2
+    public sealed partial class MemoriesDeleteResponse3
     {
         /// <summary>
-        /// Example: memory_id should be a valid UUID
+        /// Example: Memory not found!
         /// </summary>
-        /// <example>memory_id should be a valid UUID</example>
+        /// <example>Memory not found!</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("error")]
         public string? Error { get; set; }
 
@@ -22,24 +22,24 @@ namespace Mem0
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MemoriesReadResponse2" /> class.
+        /// Initializes a new instance of the <see cref="MemoriesDeleteResponse3" /> class.
         /// </summary>
         /// <param name="error">
-        /// Example: memory_id should be a valid UUID
+        /// Example: Memory not found!
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public MemoriesReadResponse2(
+        public MemoriesDeleteResponse3(
             string? error)
         {
             this.Error = error;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MemoriesReadResponse2" /> class.
+        /// Initializes a new instance of the <see cref="MemoriesDeleteResponse3" /> class.
         /// </summary>
-        public MemoriesReadResponse2()
+        public MemoriesDeleteResponse3()
         {
         }
 

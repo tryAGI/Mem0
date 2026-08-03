@@ -51,7 +51,7 @@ namespace Mem0
         public bool? Rerank { get; set; }
 
         /// <summary>
-        /// Optional query anchor time for relative temporal interpretation. Accepts Unix epoch, YYYY-MM-DD, or ISO datetime.
+        /// Date and time to simulate the search from. Accepts a Unix epoch, YYYY-MM-DD, or ISO datetime.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("reference_date")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Mem0.JsonConverters.OneOfJsonConverter<int?, double?, string>))]
@@ -107,7 +107,7 @@ namespace Mem0
         /// Default Value: false
         /// </param>
         /// <param name="referenceDate">
-        /// Optional query anchor time for relative temporal interpretation. Accepts Unix epoch, YYYY-MM-DD, or ISO datetime.
+        /// Date and time to simulate the search from. Accepts a Unix epoch, YYYY-MM-DD, or ISO datetime.
         /// </param>
         /// <param name="fields">
         /// Restrict the fields returned per memory.

@@ -5,7 +5,7 @@ namespace Mem0
     public partial interface IMemoriesClient
     {
         /// <summary>
-        /// Get or Update or delete a memory.
+        /// Delete a memory.
         /// </summary>
         /// <param name="memoryId"></param>
         /// <param name="deleteLinked">
@@ -20,7 +20,7 @@ namespace Mem0
             global::Mem0.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Get or Update or delete a memory.
+        /// Delete a memory.
         /// </summary>
         /// <param name="memoryId"></param>
         /// <param name="deleteLinked">

@@ -27,6 +27,24 @@ namespace Mem0
         public string? UserId { get; set; }
 
         /// <summary>
+        /// The identifier of the agent associated with this memory, if any.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("agent_id")]
+        public string? AgentId { get; set; }
+
+        /// <summary>
+        /// The identifier of the app associated with this memory, if any.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("app_id")]
+        public string? AppId { get; set; }
+
+        /// <summary>
+        /// The run identifier associated with this memory, returned as `session_id`.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("session_id")]
+        public string? SessionId { get; set; }
+
+        /// <summary>
         /// Additional metadata associated with the memory
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
@@ -98,6 +116,15 @@ namespace Mem0
         /// <param name="userId">
         /// Identifier of the user associated with this memory
         /// </param>
+        /// <param name="agentId">
+        /// The identifier of the agent associated with this memory, if any.
+        /// </param>
+        /// <param name="appId">
+        /// The identifier of the app associated with this memory, if any.
+        /// </param>
+        /// <param name="sessionId">
+        /// The run identifier associated with this memory, returned as `session_id`.
+        /// </param>
         /// <param name="metadata">
         /// Additional metadata associated with the memory
         /// </param>
@@ -130,6 +157,9 @@ namespace Mem0
             global::System.Guid? id,
             string? memory,
             string? userId,
+            string? agentId,
+            string? appId,
+            string? sessionId,
             object? metadata,
             global::System.Collections.Generic.IList<string>? categories,
             global::System.DateTime? createdAt,
@@ -143,6 +173,9 @@ namespace Mem0
             this.Id = id;
             this.Memory = memory;
             this.UserId = userId;
+            this.AgentId = agentId;
+            this.AppId = appId;
+            this.SessionId = sessionId;
             this.Metadata = metadata;
             this.Categories = categories;
             this.CreatedAt = createdAt;

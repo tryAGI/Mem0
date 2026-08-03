@@ -6,14 +6,14 @@ namespace Mem0
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class MemoriesReadResponse2
+    public sealed partial class MemoriesEventsListResponse2
     {
         /// <summary>
-        /// Example: memory_id should be a valid UUID
+        /// Example: Invalid page.
         /// </summary>
-        /// <example>memory_id should be a valid UUID</example>
-        [global::System.Text.Json.Serialization.JsonPropertyName("error")]
-        public string? Error { get; set; }
+        /// <example>Invalid page.</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("detail")]
+        public string? Detail { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -22,24 +22,24 @@ namespace Mem0
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MemoriesReadResponse2" /> class.
+        /// Initializes a new instance of the <see cref="MemoriesEventsListResponse2" /> class.
         /// </summary>
-        /// <param name="error">
-        /// Example: memory_id should be a valid UUID
+        /// <param name="detail">
+        /// Example: Invalid page.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public MemoriesReadResponse2(
-            string? error)
+        public MemoriesEventsListResponse2(
+            string? detail)
         {
-            this.Error = error;
+            this.Detail = detail;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MemoriesReadResponse2" /> class.
+        /// Initializes a new instance of the <see cref="MemoriesEventsListResponse2" /> class.
         /// </summary>
-        public MemoriesReadResponse2()
+        public MemoriesEventsListResponse2()
         {
         }
 
