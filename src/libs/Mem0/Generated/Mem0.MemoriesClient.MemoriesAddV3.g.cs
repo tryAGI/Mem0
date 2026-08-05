@@ -546,6 +546,9 @@ namespace Mem0
         /// <param name="customInstructions">
         /// Project-level instructions that guide extraction for this call.
         /// </param>
+        /// <param name="agentCustomInstructions">
+        /// Extraction instructions for agent-scoped memories, overriding the project-level setting for this call. Applied when `agent_id` is sent without `user_id`; when both are sent it governs the assistant-attributed memories while `custom_instructions` governs the rest.
+        /// </param>
         /// <param name="customCategories">
         /// Category catalog for this call. Replaces the project-level list rather than merging with it. Omit to fall back to the project list, then the default catalog.
         /// </param>
@@ -604,6 +607,7 @@ namespace Mem0
             object? metadata = default,
             global::System.DateTime? expirationDate = default,
             string? customInstructions = default,
+            string? agentCustomInstructions = default,
             global::System.Collections.Generic.IList<global::System.Collections.Generic.Dictionary<string, string>>? customCategories = default,
             bool? infer = default,
             string? appId = default,
@@ -631,6 +635,7 @@ namespace Mem0
                 Metadata = metadata,
                 ExpirationDate = expirationDate,
                 CustomInstructions = customInstructions,
+                AgentCustomInstructions = agentCustomInstructions,
                 CustomCategories = customCategories,
                 Infer = infer,
                 AppId = appId,

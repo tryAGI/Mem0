@@ -83,6 +83,12 @@ namespace Mem0
         public string? CustomInstructions { get; set; }
 
         /// <summary>
+        /// Extraction instructions that apply only to agent-scoped memories. Used when `agent_id` is sent without `user_id`; when both are sent it governs the assistant-attributed memories while `custom_instructions` governs the rest. Falls back to `custom_instructions` when unset.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("agent_custom_instructions")]
+        public string? AgentCustomInstructions { get; set; }
+
+        /// <summary>
         /// Whether the memory is immutable.<br/>
         /// Default Value: false
         /// </summary>
@@ -174,6 +180,9 @@ namespace Mem0
         /// <param name="customInstructions">
         /// Defines project-specific guidelines for handling and organizing memories. When set at the project level, they apply to all new memories in that project.
         /// </param>
+        /// <param name="agentCustomInstructions">
+        /// Extraction instructions that apply only to agent-scoped memories. Used when `agent_id` is sent without `user_id`; when both are sent it governs the assistant-attributed memories while `custom_instructions` governs the rest. Falls back to `custom_instructions` when unset.
+        /// </param>
         /// <param name="immutable">
         /// Whether the memory is immutable.<br/>
         /// Default Value: false
@@ -213,6 +222,7 @@ namespace Mem0
             string? outputFormat,
             object? customCategories,
             string? customInstructions,
+            string? agentCustomInstructions,
             bool? immutable,
             bool? asyncMode,
             global::System.DateTimeOffset? timestamp,
@@ -233,6 +243,7 @@ namespace Mem0
             this.OutputFormat = outputFormat;
             this.CustomCategories = customCategories;
             this.CustomInstructions = customInstructions;
+            this.AgentCustomInstructions = agentCustomInstructions;
             this.Immutable = immutable;
             this.AsyncMode = asyncMode;
             this.Timestamp = timestamp;

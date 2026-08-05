@@ -27,6 +27,12 @@ namespace Mem0
         public global::System.Collections.Generic.IList<string>? CustomInstructions { get; set; }
 
         /// <summary>
+        /// Extraction instructions for agent-scoped memories. Falls back to `custom_instructions` when unset. Send an empty string to clear it.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("agent_custom_instructions")]
+        public string? AgentCustomInstructions { get; set; }
+
+        /// <summary>
         /// List of custom categories to be used for memory categorization.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("custom_categories")]
@@ -80,6 +86,9 @@ namespace Mem0
         /// <param name="customInstructions">
         /// Custom instructions for memory processing in this project
         /// </param>
+        /// <param name="agentCustomInstructions">
+        /// Extraction instructions for agent-scoped memories. Falls back to `custom_instructions` when unset. Send an empty string to clear it.
+        /// </param>
         /// <param name="customCategories">
         /// List of custom categories to be used for memory categorization.
         /// </param>
@@ -105,6 +114,7 @@ namespace Mem0
             string? name,
             string? description,
             global::System.Collections.Generic.IList<string>? customInstructions,
+            string? agentCustomInstructions,
             global::System.Collections.Generic.IList<object>? customCategories,
             bool? multilingual,
             string? memoryDepth,
@@ -115,6 +125,7 @@ namespace Mem0
             this.Name = name;
             this.Description = description;
             this.CustomInstructions = customInstructions;
+            this.AgentCustomInstructions = agentCustomInstructions;
             this.CustomCategories = customCategories;
             this.Multilingual = multilingual;
             this.MemoryDepth = memoryDepth;
