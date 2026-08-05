@@ -52,6 +52,12 @@ namespace Mem0
         public string? CustomInstructions { get; set; }
 
         /// <summary>
+        /// Extraction instructions for agent-scoped memories, overriding the project-level setting for this call. Applied when `agent_id` is sent without `user_id`; when both are sent it governs the assistant-attributed memories while `custom_instructions` governs the rest.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("agent_custom_instructions")]
+        public string? AgentCustomInstructions { get; set; }
+
+        /// <summary>
         /// Category catalog for this call. Replaces the project-level list rather than merging with it. Omit to fall back to the project list, then the default catalog.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("custom_categories")]
@@ -173,6 +179,9 @@ namespace Mem0
         /// <param name="customInstructions">
         /// Project-level instructions that guide extraction for this call.
         /// </param>
+        /// <param name="agentCustomInstructions">
+        /// Extraction instructions for agent-scoped memories, overriding the project-level setting for this call. Applied when `agent_id` is sent without `user_id`; when both are sent it governs the assistant-attributed memories while `custom_instructions` governs the rest.
+        /// </param>
         /// <param name="customCategories">
         /// Category catalog for this call. Replaces the project-level list rather than merging with it. Omit to fall back to the project list, then the default catalog.
         /// </param>
@@ -231,6 +240,7 @@ namespace Mem0
             object? metadata,
             global::System.DateTime? expirationDate,
             string? customInstructions,
+            string? agentCustomInstructions,
             global::System.Collections.Generic.IList<global::System.Collections.Generic.Dictionary<string, string>>? customCategories,
             bool? infer,
             string? appId,
@@ -254,6 +264,7 @@ namespace Mem0
             this.Metadata = metadata;
             this.ExpirationDate = expirationDate;
             this.CustomInstructions = customInstructions;
+            this.AgentCustomInstructions = agentCustomInstructions;
             this.CustomCategories = customCategories;
             this.Infer = infer;
             this.AppId = appId;

@@ -503,6 +503,9 @@ namespace Mem0
         /// <param name="customInstructions">
         /// Custom instructions for memory processing in this project
         /// </param>
+        /// <param name="agentCustomInstructions">
+        /// Extraction instructions for agent-scoped memories. Falls back to `custom_instructions` when unset. Send an empty string to clear it.
+        /// </param>
         /// <param name="customCategories">
         /// List of custom categories to be used for memory categorization.
         /// </param>
@@ -530,6 +533,7 @@ namespace Mem0
             string? name = default,
             string? description = default,
             global::System.Collections.Generic.IList<string>? customInstructions = default,
+            string? agentCustomInstructions = default,
             global::System.Collections.Generic.IList<object>? customCategories = default,
             bool? multilingual = default,
             string? memoryDepth = default,
@@ -544,6 +548,7 @@ namespace Mem0
                 Name = name,
                 Description = description,
                 CustomInstructions = customInstructions,
+                AgentCustomInstructions = agentCustomInstructions,
                 CustomCategories = customCategories,
                 Multilingual = multilingual,
                 MemoryDepth = memoryDepth,
