@@ -4,40 +4,40 @@
 namespace Mem0
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum UpdateWebhookRequestEventType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         IngestJobCancelled,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         IngestJobCompleted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         IngestJobFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         IngestJobPartiallyCompleted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MemoryAdd,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MemoryCategorize,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MemoryDelete,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MemoryUpdate,
     }

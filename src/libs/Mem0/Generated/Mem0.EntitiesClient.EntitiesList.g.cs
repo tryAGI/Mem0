@@ -44,7 +44,7 @@ namespace Mem0
             ref string content);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="orgId"></param>
         /// <param name="projectId"></param>
@@ -67,7 +67,7 @@ namespace Mem0
             return __response.Body;
         }
         /// <summary>
-        /// 
+        ///
         /// </summary>
         /// <param name="orgId"></param>
         /// <param name="projectId"></param>
@@ -144,7 +144,7 @@ namespace Mem0
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Mem0.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

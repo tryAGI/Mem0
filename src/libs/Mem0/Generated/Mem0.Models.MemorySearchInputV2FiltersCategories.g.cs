@@ -4,12 +4,12 @@
 namespace Mem0
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class MemorySearchInputV2FiltersCategories
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("in")]
         public global::System.Collections.Generic.IList<string>? In { get; set; }

@@ -124,7 +124,7 @@ namespace Mem0
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Mem0.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

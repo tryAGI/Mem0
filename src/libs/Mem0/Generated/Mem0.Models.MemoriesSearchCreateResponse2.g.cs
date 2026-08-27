@@ -9,14 +9,14 @@ namespace Mem0
     public sealed partial class MemoriesSearchCreateResponse2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("results")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<global::Mem0.MemoriesSearchCreateResponseResult> Results { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("relations")]
         [global::System.Text.Json.Serialization.JsonRequired]

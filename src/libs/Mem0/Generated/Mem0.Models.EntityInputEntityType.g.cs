@@ -9,19 +9,19 @@ namespace Mem0
     public enum EntityInputEntityType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Agent,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         App,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Run,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         User,
     }

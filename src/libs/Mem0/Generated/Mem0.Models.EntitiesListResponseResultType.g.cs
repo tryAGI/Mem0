@@ -4,24 +4,24 @@
 namespace Mem0
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum EntitiesListResponseResultType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Agent,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         App,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Run,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         User,
     }

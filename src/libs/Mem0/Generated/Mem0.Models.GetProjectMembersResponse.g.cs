@@ -4,12 +4,12 @@
 namespace Mem0
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetProjectMembersResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("members")]
         public global::System.Collections.Generic.IList<global::Mem0.GetProjectMembersResponseMember>? Members { get; set; }

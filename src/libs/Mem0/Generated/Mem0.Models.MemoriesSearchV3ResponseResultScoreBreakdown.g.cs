@@ -9,19 +9,19 @@ namespace Mem0
     public sealed partial class MemoriesSearchV3ResponseResultScoreBreakdown
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("semantic")]
         public double? Semantic { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("bm25")]
         public double? Bm25 { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("entity")]
         public double? Entity { get; set; }
