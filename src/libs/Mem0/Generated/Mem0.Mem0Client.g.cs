@@ -11,7 +11,7 @@ namespace Mem0
     public sealed partial class Mem0Client : global::Mem0.IMem0Client, global::System.IDisposable
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public const string DefaultBaseUrl = "https://api.mem0.ai/";
 
@@ -38,7 +38,7 @@ namespace Mem0
         internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Mem0.SourceGenerationContext.Default);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {
@@ -48,7 +48,7 @@ namespace Mem0
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AgentsClient Agents => new AgentsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -57,7 +57,7 @@ namespace Mem0
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AppsClient Apps => new AppsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -66,7 +66,7 @@ namespace Mem0
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public EntitiesClient Entities => new EntitiesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -75,7 +75,7 @@ namespace Mem0
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public EventsClient Events => new EventsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -84,7 +84,7 @@ namespace Mem0
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ExportsClient Exports => new ExportsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -93,7 +93,7 @@ namespace Mem0
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public FeedbackClient Feedback => new FeedbackClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -102,7 +102,7 @@ namespace Mem0
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public MemoriesClient Memories => new MemoriesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -111,7 +111,7 @@ namespace Mem0
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public OrganizationsClient Organizations => new OrganizationsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -120,7 +120,7 @@ namespace Mem0
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ProjectClient Project => new ProjectClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -129,7 +129,7 @@ namespace Mem0
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ProjectsClient Projects => new ProjectsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -138,7 +138,7 @@ namespace Mem0
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public RunsClient Runs => new RunsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -147,7 +147,7 @@ namespace Mem0
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public StatsClient Stats => new StatsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -156,7 +156,7 @@ namespace Mem0
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UsersClient Users => new UsersClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -165,7 +165,7 @@ namespace Mem0
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public WebhooksClient Webhooks => new WebhooksClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {

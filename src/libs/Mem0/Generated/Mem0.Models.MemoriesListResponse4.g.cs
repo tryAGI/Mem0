@@ -10,7 +10,7 @@ namespace Mem0
     public sealed partial class MemoriesListResponse4
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("error")]
         public string? Error { get; set; }

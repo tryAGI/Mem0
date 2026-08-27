@@ -9,15 +9,15 @@ namespace Mem0
     public enum MemoriesEventsListResponseResultEvent
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Add,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Delete,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Update,
     }

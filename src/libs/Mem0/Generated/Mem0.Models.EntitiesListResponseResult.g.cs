@@ -4,7 +4,7 @@
 namespace Mem0
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class EntitiesListResponseResult
     {
@@ -50,7 +50,7 @@ namespace Mem0
         public object? Metadata { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Mem0.JsonConverters.EntitiesListResponseResultTypeJsonConverter))]

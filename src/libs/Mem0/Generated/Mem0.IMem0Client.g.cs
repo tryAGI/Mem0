@@ -40,78 +40,78 @@ namespace Mem0
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext { get; set; }
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AgentsClient Agents { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AppsClient Apps { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public EntitiesClient Entities { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public EventsClient Events { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ExportsClient Exports { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public FeedbackClient Feedback { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public MemoriesClient Memories { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public OrganizationsClient Organizations { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ProjectClient Project { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ProjectsClient Projects { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public RunsClient Runs { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public StatsClient Stats { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UsersClient Users { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public WebhooksClient Webhooks { get; }
 

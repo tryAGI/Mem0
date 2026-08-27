@@ -4,12 +4,12 @@
 namespace Mem0
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class MemoriesAddV3RequestMessage
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("role")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Mem0.JsonConverters.MemoriesAddV3RequestMessageRoleJsonConverter))]
@@ -17,7 +17,7 @@ namespace Mem0
         public required global::Mem0.MemoriesAddV3RequestMessageRole Role { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("content")]
         [global::System.Text.Json.Serialization.JsonRequired]

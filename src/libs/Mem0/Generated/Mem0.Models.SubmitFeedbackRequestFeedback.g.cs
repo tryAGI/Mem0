@@ -9,15 +9,15 @@ namespace Mem0
     public enum SubmitFeedbackRequestFeedback
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Negative,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Positive,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VeryNegative,
     }

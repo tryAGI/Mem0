@@ -4,20 +4,20 @@
 namespace Mem0
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum MemoriesAddV3RequestMessageRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Assistant,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         System,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         User,
     }

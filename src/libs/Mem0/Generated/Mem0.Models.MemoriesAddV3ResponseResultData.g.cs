@@ -4,12 +4,12 @@
 namespace Mem0
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class MemoriesAddV3ResponseResultData
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("memory")]
         public string? Memory { get; set; }

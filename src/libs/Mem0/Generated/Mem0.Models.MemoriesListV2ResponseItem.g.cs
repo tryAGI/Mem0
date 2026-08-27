@@ -4,7 +4,7 @@
 namespace Mem0
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class MemoriesListV2ResponseItem
     {
@@ -53,7 +53,7 @@ namespace Mem0
         public object? Metadata { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("categories")]
         public global::System.Collections.Generic.IList<string>? Categories { get; set; }

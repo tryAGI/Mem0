@@ -9,11 +9,11 @@ namespace Mem0
     public enum MemoriesHistoryListResponseItemInputItemRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Assistant,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         User,
     }

@@ -20,7 +20,7 @@ namespace Mem0.JsonConverters
                     {
                         return global::Mem0.EntityInputEntityTypeExtensions.ToEnum(stringValue) ?? default;
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

@@ -9,15 +9,15 @@ namespace Mem0
     public enum MemoriesHistoryListResponseItemEvent
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Add,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Delete,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Update,
     }
