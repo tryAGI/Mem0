@@ -33,6 +33,10 @@ namespace Mem0
 
             typeof(global::Mem0.JsonConverters.UpdateWebhookRequestEventTypeNullableJsonConverter),
 
+            typeof(global::Mem0.JsonConverters.UpdateDreamConfigRequestReflectionModeJsonConverter),
+
+            typeof(global::Mem0.JsonConverters.UpdateDreamConfigRequestReflectionModeNullableJsonConverter),
+
             typeof(global::Mem0.JsonConverters.EntitiesDeleteV1EntityTypeJsonConverter),
 
             typeof(global::Mem0.JsonConverters.EntitiesDeleteV1EntityTypeNullableJsonConverter),
@@ -80,6 +84,22 @@ namespace Mem0
             typeof(global::Mem0.JsonConverters.SubmitFeedbackResponseFeedbackJsonConverter),
 
             typeof(global::Mem0.JsonConverters.SubmitFeedbackResponseFeedbackNullableJsonConverter),
+
+            typeof(global::Mem0.JsonConverters.GetDreamConfigResponseConfigReflectionModeJsonConverter),
+
+            typeof(global::Mem0.JsonConverters.GetDreamConfigResponseConfigReflectionModeNullableJsonConverter),
+
+            typeof(global::Mem0.JsonConverters.UpdateDreamConfigResponseConfigReflectionModeJsonConverter),
+
+            typeof(global::Mem0.JsonConverters.UpdateDreamConfigResponseConfigReflectionModeNullableJsonConverter),
+
+            typeof(global::Mem0.JsonConverters.GetDreamActivityResponseResultTransitionJsonConverter),
+
+            typeof(global::Mem0.JsonConverters.GetDreamActivityResponseResultTransitionNullableJsonConverter),
+
+            typeof(global::Mem0.JsonConverters.GetDreamMemorySourcesResponseSourceLifecycleStateJsonConverter),
+
+            typeof(global::Mem0.JsonConverters.GetDreamMemorySourcesResponseSourceLifecycleStateNullableJsonConverter),
 
             typeof(global::Mem0.JsonConverters.OneOfJsonConverter<int?, double?, string>),
 
@@ -170,6 +190,8 @@ namespace Mem0
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.UpdateWebhookRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.UpdateWebhookRequestEventType>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.UpdateWebhookRequestEventType), TypeInfoPropertyName = "UpdateWebhookRequestEventType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.UpdateDreamConfigRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.UpdateDreamConfigRequestReflectionMode), TypeInfoPropertyName = "UpdateDreamConfigRequestReflectionMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.EntitiesDeleteV1EntityType), TypeInfoPropertyName = "EntitiesDeleteV1EntityType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.EntitiesReadEntityType), TypeInfoPropertyName = "EntitiesReadEntityType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.EntitiesDeleteEntityType), TypeInfoPropertyName = "EntitiesDeleteEntityType2")]
@@ -347,6 +369,45 @@ namespace Mem0
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.DeleteWebhookResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.DeleteWebhookResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.DeleteWebhookResponse3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.GetDreamConfigResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.GetDreamConfigResponseConfig))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.GetDreamConfigResponseConfigReflectionMode), TypeInfoPropertyName = "GetDreamConfigResponseConfigReflectionMode2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.GetDreamConfigResponseEntitlements))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::Mem0.GetDreamConfigResponseEntitlementsFeatures2>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.GetDreamConfigResponseEntitlementsFeatures2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.UpdateDreamConfigResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.UpdateDreamConfigResponseConfig))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.UpdateDreamConfigResponseConfigReflectionMode), TypeInfoPropertyName = "UpdateDreamConfigResponseConfigReflectionMode2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.UpdateDreamConfigResponseEntitlements))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::Mem0.UpdateDreamConfigResponseEntitlementsFeatures2>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.UpdateDreamConfigResponseEntitlementsFeatures2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.GetDreamStatsResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.GetDreamActivityResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.GetDreamActivityResponseResult>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.GetDreamActivityResponseResult))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.GetDreamActivityResponseResultTransition), TypeInfoPropertyName = "GetDreamActivityResponseResultTransition2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.GetDreamActivityResponseResultReplacedBy))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.GetDreamActivityResponseResultSource>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.GetDreamActivityResponseResultSource))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.GetDreamRunsResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.GetDreamRunsResponseResult>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.GetDreamRunsResponseResult))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.GetDreamRunsResponseResultSynthesizedItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.GetDreamRunsResponseResultSynthesizedItem))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.GetDreamRunsResponseResultSynthesizedItemSource>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.GetDreamRunsResponseResultSynthesizedItemSource))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.GetDreamRunsResponseResultSource>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.GetDreamRunsResponseResultSource))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.GetDreamRunMemoriesResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.GetDreamRunMemoriesResponseResult>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.GetDreamRunMemoriesResponseResult))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.GetDreamRunMemoriesResponseResultSource>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.GetDreamRunMemoriesResponseResultSource))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.GetDreamMemorySourcesResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.GetDreamMemorySourcesResponseSource>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.GetDreamMemorySourcesResponseSource))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.GetDreamMemorySourcesResponseSourceLifecycleState), TypeInfoPropertyName = "GetDreamMemorySourcesResponseSourceLifecycleState2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.DreamPreviewResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::System.Collections.Generic.Dictionary<string, string?>>), TypeInfoPropertyName = "ListDictionaryStringString_System_Collections_Generic_List_global_System_Collections_Generic_Dictionary_string_string")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.MemoriesAddV3RequestMessage>))]
@@ -392,6 +453,15 @@ namespace Mem0
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.GetProjectResponseMember>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.GetProjectMembersResponseMember>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.GetProjectWebhooksResponseItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.GetDreamActivityResponseResult>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.GetDreamActivityResponseResultSource>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.GetDreamRunsResponseResult>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.GetDreamRunsResponseResultSynthesizedItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.GetDreamRunsResponseResultSynthesizedItemSource>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.GetDreamRunsResponseResultSource>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.GetDreamRunMemoriesResponseResult>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.GetDreamRunMemoriesResponseResultSource>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.GetDreamMemorySourcesResponseSource>))]
     public sealed partial class SourceGenerationContext : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }

@@ -4,11 +4,10 @@
 namespace Mem0
 {
     /// <summary>
-    /// mem0.ai API Docs<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>
-    public partial interface IMem0Client : global::System.IDisposable
+    public partial interface IDreamClient : global::System.IDisposable
     {
         /// <summary>
         /// The HttpClient instance.
@@ -44,81 +43,6 @@ namespace Mem0
         /// </summary>
         global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext { get; set; }
 
-
-        /// <summary>
-        ///
-        /// </summary>
-        public AgentsClient Agents { get; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        public AppsClient Apps { get; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        public DreamClient Dream { get; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        public EntitiesClient Entities { get; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        public EventsClient Events { get; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        public ExportsClient Exports { get; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        public FeedbackClient Feedback { get; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        public MemoriesClient Memories { get; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        public OrganizationsClient Organizations { get; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        public ProjectClient Project { get; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        public ProjectsClient Projects { get; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        public RunsClient Runs { get; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        public StatsClient Stats { get; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        public UsersClient Users { get; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        public WebhooksClient Webhooks { get; }
 
     }
 }
