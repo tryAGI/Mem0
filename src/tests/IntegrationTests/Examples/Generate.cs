@@ -16,9 +16,12 @@ public partial class Tests
         using var client = GetAuthenticatedClient();
 
         //// Search for relevant memories using a natural language query.
-        var results = await client.Memories.MemoriesSearchCreateAsync(
+        var results = await client.Memories.MemoriesSearchV3Async(
             query: "What are the user preferences?",
-            userId: "test-user",
+            filters: new Dictionary<string, string>
+            {
+                ["user_id"] = "test-user",
+            },
             topK: 5);
 
         Assert.IsNotNull(results);
