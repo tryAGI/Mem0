@@ -16,12 +16,12 @@ public partial class Tests
         using var client = GetAuthenticatedClient();
 
         //// Add a memory from a user conversation.
-        var results = await client.Memories.MemoriesCreateAsync(
+        var results = await client.Memories.MemoriesAddV3Async(
             messages: [
-                new Dictionary<string, string?>
+                new MemoriesAddV3RequestMessage
                 {
-                    ["role"] = "user",
-                    ["content"] = "I prefer dark mode in all my applications.",
+                    Role = MemoriesAddV3RequestMessageRole.User,
+                    Content = "I prefer dark mode in all my applications.",
                 },
             ],
             userId: "test-user");
