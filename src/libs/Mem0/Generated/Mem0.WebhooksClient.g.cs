@@ -34,7 +34,7 @@ namespace Mem0
         /// <inheritdoc/>
         public global::Mem0.AutoSDKClientOptions Options { get; }
 
-        internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Mem0.SourceGenerationContext.Default);
+        internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Mem0.WebhooksSourceGenerationContext.Default);
 
         /// <summary>
         ///
