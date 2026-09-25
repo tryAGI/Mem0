@@ -37,6 +37,14 @@ namespace Mem0
 
             typeof(global::Mem0.JsonConverters.UpdateDreamConfigRequestReflectionModeNullableJsonConverter),
 
+            typeof(global::Mem0.JsonConverters.ProfilesCreateJobRequestOperationJsonConverter),
+
+            typeof(global::Mem0.JsonConverters.ProfilesCreateJobRequestOperationNullableJsonConverter),
+
+            typeof(global::Mem0.JsonConverters.ProfilesCreateJobRequestEntityTypeJsonConverter),
+
+            typeof(global::Mem0.JsonConverters.ProfilesCreateJobRequestEntityTypeNullableJsonConverter),
+
             typeof(global::Mem0.JsonConverters.EntitiesDeleteV1EntityTypeJsonConverter),
 
             typeof(global::Mem0.JsonConverters.EntitiesDeleteV1EntityTypeNullableJsonConverter),
@@ -52,6 +60,10 @@ namespace Mem0
             typeof(global::Mem0.JsonConverters.MemoriesEntityReadEntityTypeJsonConverter),
 
             typeof(global::Mem0.JsonConverters.MemoriesEntityReadEntityTypeNullableJsonConverter),
+
+            typeof(global::Mem0.JsonConverters.ProfilesReadEntityTypeJsonConverter),
+
+            typeof(global::Mem0.JsonConverters.ProfilesReadEntityTypeNullableJsonConverter),
 
             typeof(global::Mem0.JsonConverters.EntitiesListResponseResultTypeJsonConverter),
 
@@ -100,6 +112,18 @@ namespace Mem0
             typeof(global::Mem0.JsonConverters.GetDreamMemorySourcesResponseSourceLifecycleStateJsonConverter),
 
             typeof(global::Mem0.JsonConverters.GetDreamMemorySourcesResponseSourceLifecycleStateNullableJsonConverter),
+
+            typeof(global::Mem0.JsonConverters.ProfilesReadResponseStatusJsonConverter),
+
+            typeof(global::Mem0.JsonConverters.ProfilesReadResponseStatusNullableJsonConverter),
+
+            typeof(global::Mem0.JsonConverters.ProfilesReadResponseEntityTypeJsonConverter),
+
+            typeof(global::Mem0.JsonConverters.ProfilesReadResponseEntityTypeNullableJsonConverter),
+
+            typeof(global::Mem0.JsonConverters.ProfilesGetJobResponseJobStatusJsonConverter),
+
+            typeof(global::Mem0.JsonConverters.ProfilesGetJobResponseJobStatusNullableJsonConverter),
 
             typeof(global::Mem0.JsonConverters.OneOfJsonConverter<int?, double?, string>),
 
@@ -193,10 +217,17 @@ namespace Mem0
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.UpdateWebhookRequestEventType), TypeInfoPropertyName = "UpdateWebhookRequestEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.UpdateDreamConfigRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.UpdateDreamConfigRequestReflectionMode), TypeInfoPropertyName = "UpdateDreamConfigRequestReflectionMode2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ProfilesSettingsUpdateRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ProfilesSettingsUpdateRequestEntities))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ProfilesSettingsUpdateRequestEntitiesUser))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ProfilesCreateJobRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ProfilesCreateJobRequestOperation), TypeInfoPropertyName = "ProfilesCreateJobRequestOperation2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ProfilesCreateJobRequestEntityType), TypeInfoPropertyName = "ProfilesCreateJobRequestEntityType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.EntitiesDeleteV1EntityType), TypeInfoPropertyName = "EntitiesDeleteV1EntityType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.EntitiesReadEntityType), TypeInfoPropertyName = "EntitiesReadEntityType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.EntitiesDeleteEntityType), TypeInfoPropertyName = "EntitiesDeleteEntityType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.MemoriesEntityReadEntityType), TypeInfoPropertyName = "MemoriesEntityReadEntityType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ProfilesReadEntityType), TypeInfoPropertyName = "ProfilesReadEntityType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.EntitiesListResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Mem0.EntitiesListResponseResult>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.EntitiesListResponseResult))]
@@ -409,6 +440,21 @@ namespace Mem0
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.GetDreamMemorySourcesResponseSource))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.GetDreamMemorySourcesResponseSourceLifecycleState), TypeInfoPropertyName = "GetDreamMemorySourcesResponseSourceLifecycleState2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.DreamPreviewResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ProfilesReadResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ProfilesReadResponseStatus), TypeInfoPropertyName = "ProfilesReadResponseStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ProfilesReadResponseEntityType), TypeInfoPropertyName = "ProfilesReadResponseEntityType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ProfilesSettingsReadResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ProfilesSettingsReadResponseEntities))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ProfilesSettingsReadResponseEntitiesUser))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ProfilesSettingsReadResponseCapabilities))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ProfilesSettingsUpdateResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ProfilesSettingsUpdateResponseEntities))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ProfilesSettingsUpdateResponseEntitiesUser))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ProfilesSettingsUpdateResponseCapabilities))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ProfilesCreateJobResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ProfilesGetJobResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ProfilesGetJobResponseJob))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.ProfilesGetJobResponseJobStatus), TypeInfoPropertyName = "ProfilesGetJobResponseJobStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::System.Collections.Generic.Dictionary<string, string?>>), TypeInfoPropertyName = "ListDictionaryStringString_System_Collections_Generic_List_global_System_Collections_Generic_Dictionary_string_string")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Mem0.MemoriesAddV3RequestMessage>))]
