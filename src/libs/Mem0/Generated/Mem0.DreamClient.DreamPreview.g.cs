@@ -155,8 +155,8 @@ namespace Mem0
                 PrepareDreamPreviewRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    orgId: orgId!,
-                    projectId: projectId!);
+                    orgId: orgId,
+                    projectId: projectId);
 
                 return __httpRequest;
             }
@@ -178,7 +178,7 @@ namespace Mem0
                                 pathTemplate: "$\"/api/v1/orgs/organizations/{orgId}/projects/{projectId}/dream/preview/\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -212,7 +212,7 @@ namespace Mem0
                                 pathTemplate: "$\"/api/v1/orgs/organizations/{orgId}/projects/{projectId}/dream/preview/\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -253,7 +253,7 @@ namespace Mem0
                                 pathTemplate: "$\"/api/v1/orgs/organizations/{orgId}/projects/{projectId}/dream/preview/\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -301,7 +301,7 @@ namespace Mem0
                                 pathTemplate: "$\"/api/v1/orgs/organizations/{orgId}/projects/{projectId}/dream/preview/\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -323,7 +323,7 @@ namespace Mem0
                                 pathTemplate: "$\"/api/v1/orgs/organizations/{orgId}/projects/{projectId}/dream/preview/\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,

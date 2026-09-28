@@ -157,8 +157,8 @@ namespace Mem0
                 PrepareProfilesReadRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    entityType: entityType!,
-                    entityId: entityId!);
+                    entityType: entityType,
+                    entityId: entityId);
 
                 return __httpRequest;
             }
@@ -180,7 +180,7 @@ namespace Mem0
                                 pathTemplate: "$\"/v2/entities/{(global::System.Uri.EscapeDataString(entityType.ToValueString()))}/{entityId}/profile/\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -214,7 +214,7 @@ namespace Mem0
                                 pathTemplate: "$\"/v2/entities/{(global::System.Uri.EscapeDataString(entityType.ToValueString()))}/{entityId}/profile/\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -255,7 +255,7 @@ namespace Mem0
                                 pathTemplate: "$\"/v2/entities/{(global::System.Uri.EscapeDataString(entityType.ToValueString()))}/{entityId}/profile/\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -303,7 +303,7 @@ namespace Mem0
                                 pathTemplate: "$\"/v2/entities/{(global::System.Uri.EscapeDataString(entityType.ToValueString()))}/{entityId}/profile/\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -325,7 +325,7 @@ namespace Mem0
                                 pathTemplate: "$\"/v2/entities/{(global::System.Uri.EscapeDataString(entityType.ToValueString()))}/{entityId}/profile/\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
