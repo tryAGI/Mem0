@@ -340,19 +340,19 @@ namespace Mem0
                             {
                                 string? __content_404 = null;
                                 global::System.Exception? __exception_404 = null;
-                                global::Mem0.DeleteProjectResponse2? __value_404 = null;
+                                global::Mem0.DeleteProjectResponse? __value_404 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_404 = global::Mem0.DeleteProjectResponse2.FromJson(__content_404, JsonSerializerContext);
+                                        __value_404 = global::Mem0.DeleteProjectResponse.FromJson(__content_404, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_404 = global::Mem0.DeleteProjectResponse2.FromJson(__content_404, JsonSerializerContext);
+                                        __value_404 = global::Mem0.DeleteProjectResponse.FromJson(__content_404, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -361,7 +361,7 @@ namespace Mem0
                                 }
 
 
-                                throw global::Mem0.ApiException<global::Mem0.DeleteProjectResponse2>.Create(
+                                throw global::Mem0.ApiException<global::Mem0.DeleteProjectResponse>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_404,
@@ -377,19 +377,19 @@ namespace Mem0
                             {
                                 string? __content_403 = null;
                                 global::System.Exception? __exception_403 = null;
-                                global::Mem0.DeleteProjectResponse3? __value_403 = null;
+                                global::Mem0.DeleteProjectResponse? __value_403 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_403 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_403 = global::Mem0.DeleteProjectResponse3.FromJson(__content_403, JsonSerializerContext);
+                                        __value_403 = global::Mem0.DeleteProjectResponse.FromJson(__content_403, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_403 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_403 = global::Mem0.DeleteProjectResponse3.FromJson(__content_403, JsonSerializerContext);
+                                        __value_403 = global::Mem0.DeleteProjectResponse.FromJson(__content_403, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -398,7 +398,7 @@ namespace Mem0
                                 }
 
 
-                                throw global::Mem0.ApiException<global::Mem0.DeleteProjectResponse3>.Create(
+                                throw global::Mem0.ApiException<global::Mem0.DeleteProjectResponse>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_403 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_403,

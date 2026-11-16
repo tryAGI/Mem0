@@ -16,8 +16,6 @@ namespace Mem0
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Text.Json.JsonElement?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.DeleteProjectMemberResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.DeleteProjectMemberResponse2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Mem0.DeleteProjectMemberResponse3))]
     internal sealed partial class ProjectSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
