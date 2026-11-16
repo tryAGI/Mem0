@@ -9,9 +9,9 @@ namespace Mem0
     public sealed partial class CreateProjectResponse3
     {
         /// <summary>
-        /// Example: Project could not be created.
+        /// Example: Unauthorized to create projects in this organization.
         /// </summary>
-        /// <example>Project could not be created.</example>
+        /// <example>Unauthorized to create projects in this organization.</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("message")]
         public string? Message { get; set; }
 
@@ -25,7 +25,7 @@ namespace Mem0
         /// Initializes a new instance of the <see cref="CreateProjectResponse3" /> class.
         /// </summary>
         /// <param name="message">
-        /// Example: Project could not be created.
+        /// Example: Unauthorized to create projects in this organization.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
